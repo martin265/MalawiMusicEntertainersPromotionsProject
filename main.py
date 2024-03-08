@@ -9,7 +9,14 @@ def main(page: ft.Page):
     # ============= the function for the routing will be here ======== //
     def router(route):
         try:
-            page.views.clear() # === removing the fault bahaviour
+            page.views.clear()  # === removing the fault behaviour
+            if page.route == "/dashboard":
+                dashboard = Dashboard(page=page)
+                page.views.append(dashboard)
+                page.update()
+
+            page.on_route_change = router
+            page.go("/dashboard")
         except Exception as ex:
             page.snack_bar = ft.SnackBar(
                 content=ft.Row(
@@ -22,6 +29,7 @@ def main(page: ft.Page):
             )
             page.snack_bar.open = True
             page.update()
+
     page.update()
 
 
