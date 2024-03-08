@@ -13,7 +13,20 @@ class EventsPage(ft.Container):
                     content=ft.Column(
                         controls=[
                             #  ========= responsive row for the containers
-
+                            ft.ResponsiveRow(
+                                [
+                                    ft.Container(
+                                        bgcolor="blue",
+                                        height=200,
+                                        col={"sm": 12, "md": 12, "lg": 9}
+                                    ),
+                                    ft.Container(
+                                        bgcolor="black",
+                                        height=200,
+                                        col={"sm": 12, "md": 12, "lg": 3}
+                                    )
+                                ]
+                            )
                         ]
                     )
                 )

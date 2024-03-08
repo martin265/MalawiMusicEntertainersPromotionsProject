@@ -1,4 +1,6 @@
 import flet as ft
+# getting the pages here
+from Pages.events import EventsPage
 
 
 class Dashboard(ft.View):
@@ -14,7 +16,9 @@ class Dashboard(ft.View):
         }
 
         # =============== list for all the pages will be here ===//
-        self.all_available_pages = []
+        self.all_available_pages = [
+            EventsPage(page=page)
+        ]
         #  the navigation for the system will be here ==== //
         self.navigation_rail = ft.NavigationRail(
             leading=ft.FloatingActionButton(
@@ -85,3 +89,22 @@ class Dashboard(ft.View):
                 expand=True
             )
         ]
+
+    #  ========== functions to control page transitions
+    def selected_page_transitions(self):
+        try:
+            for single_page, index in enumerate(self.all_available_pages):
+                single_page.visible = True if index == self.navigation_rail.selected_index else False
+                self.update()
+        except Exception as ex:
+            self.page.snack_bar = ft.SnackBar(
+                content=ft.Row(
+                    controls=[
+                        ft.Text(
+                            "something went wrong at {}".format(ex)
+                        )
+                    ]
+                )
+            )
+            self.page.snack_bar.open = True
+            self.page.update()
