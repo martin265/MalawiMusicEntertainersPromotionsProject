@@ -1,4 +1,5 @@
 import flet as ft
+import datetime
 
 
 class InputControls(ft.Container):
@@ -137,6 +138,23 @@ class InputControls(ft.Container):
             ]
         )
 
+        #  ============== the fields for the event date and the event time ============ //
+        self.event_date = ft.DatePicker(
+            first_date=datetime.datetime(2021, 1, 1, 1),
+            last_date=datetime.datetime(2030, 1, 1, 1),
+        )
+        self.page.overlay.append(self.event_date)
+        #  ========== the button to select the date here ======== //
+        self.date_button = ft.ElevatedButton(
+            text="select event date",
+            style=ft.ButtonStyle(
+                color={
+                    ft.MaterialState.DEFAULT: ft.colors.BLUE
+                }
+            ),
+            on_click=lambda _: self.event_date.pick_date()
+        )
+
 
 class EventsPage(ft.Container):
     def __init__(self, page: ft.Page):
@@ -223,6 +241,27 @@ class EventsPage(ft.Container):
                                                                         #  ======== the text fields will be here
                                                                         ft.Container(
                                                                             content=self.inputControls.event_category,
+                                                                            padding=ft.padding.only(top=10),
+                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                        ),
+
+                                                                        ft.Container(
+                                                                            content=self.inputControls.event_location,
+                                                                            padding=ft.padding.only(top=10),
+                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                        ),
+
+                                                                    ],
+                                                                    run_spacing=0
+                                                                ),
+
+                                                                # ============== the second control container =======
+                                                                ft.ResponsiveRow(
+                                                                    alignment=ft.MainAxisAlignment.CENTER,
+                                                                    controls=[
+                                                                        #  ======== the text fields will be here
+                                                                        ft.Container(
+                                                                            content=self.inputControls.date_button,
                                                                             padding=ft.padding.only(top=10),
                                                                             col={"md": 5.5, "sm": 5.5, "lg": 5.5}
                                                                         ),
