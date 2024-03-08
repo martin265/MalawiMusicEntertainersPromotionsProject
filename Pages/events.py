@@ -273,7 +273,7 @@ class InputControls(ft.Container):
 
         # ================= // the payment options and additional details ========== //
         self.payment_types = ft.Dropdown(
-            prefix_icon=ft.icons.REDUCE_CAPACITY_ROUNDED,
+            prefix_icon=ft.icons.PAYMENT_ROUNDED,
             helper_text="select the payment type".title(),
             helper_style=ft.TextStyle(
                 color="#212121",
@@ -290,16 +290,46 @@ class InputControls(ft.Container):
                 font_family="manrope-sem-bold",
                 weight=ft.FontWeight.BOLD
             ),
-            label="event capacity".title(),
+            label="payment type".title(),
             label_style=ft.TextStyle(
                 color="#212121",
                 size=14,
                 font_family="manrope-sem-bold"
             ),
             options=[
-                ft.dropdown.Option("Large".title()),
-                ft.dropdown.Option("Medium".title()),
+                ft.dropdown.Option("Cash".title()),
+                ft.dropdown.Option("Card".title()),
+                ft.dropdown.Option("Airtel Money".title()),
+                ft.dropdown.Option("Mpamba".title()),
             ]
+        )
+
+        #  ================ the description will be here ========== //
+        self.additional_details = ft.TextField(
+            prefix_icon=ft.icons.DETAILS_ROUNDED,
+            helper_text="add other additional details".title(),
+            helper_style=ft.TextStyle(
+                color="#212121",
+                size=10,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            keyboard_type=ft.KeyboardType.TEXT,
+            border_radius=ft.border_radius.all(5),
+            border_color="#212121",
+            text_size=14,
+            text_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            label="additional details".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
         )
 
 
@@ -319,12 +349,14 @@ class EventsPage(ft.Container):
 
         # ========= the user controls will be here ====== //
         self.content = ft.Container(
+            adaptive=True,
             content=ft.SafeArea(
                 content=ft.ResponsiveRow(
                     #  ======== the first container for the events details will be here ========= //
                     [
                         ft.Container(
                             content=ft.Column(
+                                auto_scroll=True,
                                 controls=[
                                     # ======== the container for the top information
                                     ft.Container(
@@ -439,6 +471,26 @@ class EventsPage(ft.Container):
                                                                         ),
                                                                         ft.Container(
                                                                             content=self.inputControls.ticket_types,
+                                                                            padding=ft.padding.only(top=10),
+                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                        ),
+
+                                                                    ],
+                                                                    run_spacing=10
+                                                                ),
+
+                                                                # ============== the second control container =======
+                                                                ft.ResponsiveRow(
+                                                                    alignment=ft.MainAxisAlignment.CENTER,
+                                                                    controls=[
+                                                                        #  ======== the text fields will be here
+                                                                        ft.Container(
+                                                                            content=self.inputControls.payment_types,
+                                                                            padding=ft.padding.only(top=10),
+                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                        ),
+                                                                        ft.Container(
+                                                                            content=self.inputControls.additional_details,
                                                                             padding=ft.padding.only(top=10),
                                                                             col={"md": 5.5, "sm": 5.5, "lg": 5.5}
                                                                         ),
