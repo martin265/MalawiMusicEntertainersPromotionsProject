@@ -1,6 +1,19 @@
 import flet as ft
 
 
+class InputControls(ft.Container):
+    def __init__(self, page: ft.Page):
+        super().__init__()
+        self.page = page
+        #  ============ the input controls will be here ========= //
+        self.page.fonts = {
+            "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
+            "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
+            "manrop-bold": "assets/fonts/Manrope/static/Manrope-Bold.ttf"
+        }
+        #  =========== the input fields here ========== //
+
+
 class EventsPage(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
@@ -49,6 +62,18 @@ class EventsPage(ft.Container):
                                                                 )
                                                             )
                                                         ]
+                                                    )
+                                                ),
+
+                                                #  ========= container for some additional cards ======= //
+                                                ft.Container(
+                                                    content=ft.SafeArea(
+                                                        content=ft.ResponsiveRow(
+                                                            [
+                                                                #  ======== the text fields will be here
+
+                                                            ]
+                                                        )
                                                     )
                                                 )
                                             ]
