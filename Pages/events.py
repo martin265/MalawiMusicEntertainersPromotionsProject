@@ -369,7 +369,7 @@ class EventsPage(ft.Container):
         self.content = ft.Column(
             adaptive=True,
             scroll=ft.ScrollMode.AUTO,
-            height=900,
+            height=800,
             controls=[
                 ft.SafeArea(
                     content=ft.ResponsiveRow(
@@ -386,7 +386,6 @@ class EventsPage(ft.Container):
                                 ),
                                 border_radius=ft.border_radius.all(10),
                                 content=ft.Column(
-                                    auto_scroll=True,
                                     controls=[
                                         # ======== the container for the top information
                                         ft.Container(
@@ -562,7 +561,22 @@ class EventsPage(ft.Container):
 
                             ft.Container(
                                 height=100,
-                                bgcolor="yellow",
+                                content=ft.ResponsiveRow(
+                                    controls=[
+                                        ft.Container(
+                                            height=200,
+                                            shadow=ft.BoxShadow(
+
+                                            ),
+                                            gradient=ft.LinearGradient(
+                                                colors=[
+                                                    "",
+                                                    ""
+                                                ]
+                                            )
+                                        )
+                                    ]
+                                ),
                                 col={"sm": 12, "md": 12, "lg": 3}
                             ),
                         ]
@@ -571,8 +585,8 @@ class EventsPage(ft.Container):
 
                 #  ============= the other safe area for the other controls here ========== //
                 ft.SafeArea(
-                    height=500,
-                    content=ft.Text("hello")
+                    height=200,
+                    content=ft.Text("")
                 )
             ]
         )
