@@ -19,7 +19,24 @@ class Dashboard(ft.View):
                         ]
                     )
                 )
-            )
+            ),
+            selected_index=0,
+            group_alignment=-0.9,
+            label_type=ft.NavigationRailLabelType.ALL,
+            min_width=80,
+            min_extended_width=250,
+            extended=False,
+
+            #  ============ the destinations for the page will be here ======= //
+            destinations=[
+                ft.NavigationRailDestination(
+                    icon_content=ft.Icon(
+                        ft.icons.DASHBOARD_ROUNDED,
+                        size=30,
+                        color="#212121"
+                    )
+                )
+            ]
         )
         #  ========== returning the controls here
         self.controls = [
