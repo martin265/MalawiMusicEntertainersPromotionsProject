@@ -5,12 +5,16 @@ class Dashboard(ft.View):
     def __init__(self, page: ft.Page):
         super().__init__(route="/dashboard")
         self.page = page
+        self.page.theme_mode = "light"
         #  ======== the fonts for the system will be here ======= //
-        page.fonts = {
+        self.page.fonts = {
             "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
             "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
             "manrop-bold": "assets/fonts/Manrope/static/Manrope-Bold.ttf"
         }
+
+        # =============== list for all the pages will be here ===//
+        self.all_available_pages = []
         #  the navigation for the system will be here ==== //
         self.navigation_rail = ft.NavigationRail(
             leading=ft.FloatingActionButton(
@@ -45,7 +49,7 @@ class Dashboard(ft.View):
                     label_content=ft.Text(
                         "home".title(),
                         style=ft.TextStyle(
-                            size=18,
+                            size=15,
                             font_family="manrop-bold"
                         ),
                         tooltip="home".title()
@@ -61,9 +65,9 @@ class Dashboard(ft.View):
                         tooltip="events".title(),
                     ),
                     label_content=ft.Text(
-                        "home".title(),
+                        "events".title(),
                         style=ft.TextStyle(
-                            size=18,
+                            size=15,
                             font_family="manrop-bold"
                         ),
                         tooltip="events".title()
@@ -73,12 +77,11 @@ class Dashboard(ft.View):
         )
         #  ========== returning the controls here
         self.controls = [
-            ft.SafeArea(
-                content=ft.Container(
-                    content=ft.Text(
-                        "hello",
-                        color="black"
-                    )
-                )
+            ft.Row(
+                controls=[
+                    self.navigation_rail,
+                    ft.Column(self.all_available_pages, alignment=ft.MainAxisAlignment.START, expand=True),
+                ],
+                expand=True
             )
         ]
