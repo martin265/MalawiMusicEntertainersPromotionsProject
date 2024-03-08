@@ -12,6 +12,30 @@ class InputControls(ft.Container):
             "manrop-bold": "assets/fonts/Manrope/static/Manrope-Bold.ttf"
         }
         #  =========== the input fields here ========== //
+        self.event_title = ft.TextField(
+            helper_text="enter event title".title(),
+            helper_style=ft.TextStyle(
+                color="#212121",
+                size=10,
+                font_family="manrope-sem-bold"
+            ),
+            keyboard_type=ft.KeyboardType.TEXT,
+            autofocus=True,
+            border_radius=ft.border_radius.all(8),
+            border_color="#212121",
+            text_size=14,
+            text_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
+            label="event title".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
+        )
 
 
 class EventsPage(ft.Container):
