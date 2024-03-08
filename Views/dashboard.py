@@ -8,7 +8,8 @@ class Dashboard(ft.View):
         #  ======== the fonts for the system will be here ======= //
         page.fonts = {
             "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
-            "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf"
+            "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
+            "manrop-bold": "assets/fonts/Manrope/static/Manrope-Bold.ttf"
         }
         #  the navigation for the system will be here ==== //
         self.navigation_rail = ft.NavigationRail(
@@ -38,14 +39,16 @@ class Dashboard(ft.View):
                     icon_content=ft.Icon(
                         ft.icons.DASHBOARD_ROUNDED,
                         size=30,
-                        color="#212121"
+                        color="#212121",
+                        tooltip="home".title(),
                     ),
                     label_content=ft.Text(
                         "home".title(),
                         style=ft.TextStyle(
                             size=18,
-                            font_family=""
-                        )
+                            font_family="manrop-bold"
+                        ),
+                        tooltip="home".title()
                     )
                 )
             ]
