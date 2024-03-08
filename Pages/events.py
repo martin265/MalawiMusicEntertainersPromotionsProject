@@ -205,6 +205,74 @@ class InputControls(ft.Container):
             on_click=lambda _: self.event_time.pick_time()
         )
 
+        # =============== // drop down for the ticket types and capacity limit =========== //
+        #  ============== drop down for the event category
+        self.event_category = ft.Dropdown(
+            prefix_icon=ft.icons.CATEGORY_ROUNDED,
+            helper_text="select event category".title(),
+            helper_style=ft.TextStyle(
+                color="#212121",
+                size=10,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            border_radius=ft.border_radius.all(5),
+            border_color="#212121",
+            text_size=14,
+            text_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            label="event category".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
+            options=[
+                ft.dropdown.Option("Conference".title()),
+                ft.dropdown.Option("Concert".title()),
+                ft.dropdown.Option("workshop".title()),
+                ft.dropdown.Option("fundraiser".title())
+            ]
+        )
+
+        # ==================== // ============================= //
+        #  ============== drop down for the event category
+        self.event_category = ft.Dropdown(
+            prefix_icon=ft.icons.CATEGORY_ROUNDED,
+            helper_text="select event category".title(),
+            helper_style=ft.TextStyle(
+                color="#212121",
+                size=10,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            border_radius=ft.border_radius.all(5),
+            border_color="#212121",
+            text_size=14,
+            text_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            label="event category".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
+            options=[
+                ft.dropdown.Option("Conference".title()),
+                ft.dropdown.Option("Concert".title()),
+                ft.dropdown.Option("workshop".title()),
+                ft.dropdown.Option("fundraiser".title())
+            ]
+        )
+
 
 class EventsPage(ft.Container):
     def __init__(self, page: ft.Page):
