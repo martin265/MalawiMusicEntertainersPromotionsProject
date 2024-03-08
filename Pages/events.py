@@ -369,6 +369,7 @@ class EventsPage(ft.Container):
         self.content = ft.Column(
             adaptive=True,
             scroll=ft.ScrollMode.AUTO,
+            expand=True,
             controls=[
                 ft.SafeArea(
                     content=ft.ResponsiveRow(
@@ -571,7 +572,8 @@ class EventsPage(ft.Container):
 
                 #  ============= the other safe area for the other controls here ========== //
                 ft.SafeArea(
-                    height=200
+                    height=200,
+                    content=ft.Text("hello")
                 )
             ]
         )
