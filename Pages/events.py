@@ -369,7 +369,7 @@ class EventsPage(ft.Container):
         self.content = ft.Column(
             adaptive=True,
             scroll=ft.ScrollMode.AUTO,
-            expand=True,
+            height=900,
             controls=[
                 ft.SafeArea(
                     content=ft.ResponsiveRow(
