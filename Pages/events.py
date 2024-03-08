@@ -13,11 +13,13 @@ class InputControls(ft.Container):
         }
         #  =========== the input fields here ========== //
         self.event_title = ft.TextField(
+            prefix_icon=ft.icons.TITLE_ROUNDED,
             helper_text="enter event title".title(),
             helper_style=ft.TextStyle(
                 color="#212121",
                 size=10,
-                font_family="manrope-sem-bold"
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
             ),
             keyboard_type=ft.KeyboardType.TEXT,
             border_radius=ft.border_radius.all(5),
@@ -38,11 +40,13 @@ class InputControls(ft.Container):
         )
 
         self.event_description = ft.TextField(
+            prefix_icon=ft.icons.DESCRIPTION_ROUNDED,
             helper_text="enter event description".title(),
             helper_style=ft.TextStyle(
                 color="#212121",
                 size=10,
-                font_family="manrope-sem-bold"
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
             ),
             keyboard_type=ft.KeyboardType.TEXT,
             border_radius=ft.border_radius.all(5),
@@ -64,11 +68,13 @@ class InputControls(ft.Container):
 
         #  ============== drop down for the event category
         self.event_category = ft.Dropdown(
+            prefix_icon=ft.icons.CATEGORY_ROUNDED,
             helper_text="select event category".title(),
             helper_style=ft.TextStyle(
                 color="#212121",
                 size=10,
-                font_family="manrope-sem-bold"
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
             ),
             border_radius=ft.border_radius.all(5),
             border_color="#212121",
@@ -86,7 +92,48 @@ class InputControls(ft.Container):
                 font_family="manrope-sem-bold"
             ),
             options=[
-                ft.dropdown.Option("event")
+                ft.dropdown.Option("Conference".title()),
+                ft.dropdown.Option("Concert".title()),
+                ft.dropdown.Option("workshop".title()),
+                ft.dropdown.Option("fundraiser".title())
+            ]
+        )
+
+        #  ============== drop down for the event category
+        self.event_location = ft.Dropdown(
+            prefix_icon=ft.icons.LOCATION_ON_ROUNDED,
+            prefix_style=ft.TextStyle(
+                color="blue"
+            ),
+            helper_text="select event location".title(),
+            helper_style=ft.TextStyle(
+                color="#212121",
+                size=10,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            border_radius=ft.border_radius.all(5),
+            border_color="#212121",
+            text_size=14,
+            text_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            label="event location".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
+            options=[
+                ft.dropdown.Option("Lilongwe"),
+                ft.dropdown.Option("Blantyre"),
+                ft.dropdown.Option("Zomba"),
+                ft.dropdown.Option("Mzuzu"),
+                ft.dropdown.Option("Karonga"),
+                ft.dropdown.Option("Mulanje"),
             ]
         )
 
@@ -161,7 +208,7 @@ class EventsPage(ft.Container):
                                                                         ),
 
                                                                         ft.Container(
-                                                                            content=self.inputControls.event_title,
+                                                                            content=self.inputControls.event_description,
                                                                             col={"md": 5.5, "sm": 5.5, "lg": 5.5}
                                                                         ),
 
@@ -181,7 +228,7 @@ class EventsPage(ft.Container):
                                                                         ),
 
                                                                         ft.Container(
-                                                                            content=self.inputControls.event_title,
+                                                                            content=self.inputControls.event_location,
                                                                             padding=ft.padding.only(top=10),
                                                                             col={"md": 5.5, "sm": 5.5, "lg": 5.5}
                                                                         ),
