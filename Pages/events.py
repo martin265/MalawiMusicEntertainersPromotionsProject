@@ -145,16 +145,64 @@ class InputControls(ft.Container):
         )
         self.page.overlay.append(self.event_date)
         #  ========== the button to select the date here ======== //
-        self.date_button = ft.ElevatedButton(
-            text="select event date".title(),
+        self.event_start_button = ft.ElevatedButton(
+            text="select event start date".title(),
             icon=ft.icons.DATE_RANGE_ROUNDED,
+            icon_color="#f5f5f5",
+            bgcolor="#212121",
+            color="#f5f5f5",
+            height=50,
+            style=ft.ButtonStyle(
+                color={
+                    ft.MaterialState.DEFAULT: "#212121",
+                },
+            ),
+            on_click=lambda _: self.event_date.pick_date()
+        )
+
+        #  ============ event end date will be here =============== //
+        self.event_end_date = ft.DatePicker(
+            first_date=datetime.datetime(2021, 1, 1, 1),
+            last_date=datetime.datetime(2030, 1, 1, 1),
+        )
+        self.page.overlay.append(self.event_end_date)
+        #  ========== the button to select the date here ======== //
+        self.event_end_button = ft.ElevatedButton(
+            text="select event end date".title(),
+            icon=ft.icons.CALENDAR_VIEW_DAY_ROUNDED,
+            icon_color="#f5f5f5",
+            bgcolor="#412728",
+            color="#f5f5f5",
             height=50,
             style=ft.ButtonStyle(
                 color={
                     ft.MaterialState.DEFAULT: "#212121"
                 },
             ),
-            on_click=lambda _: self.event_date.pick_date()
+            on_click=lambda _: self.event_end_date.pick_date()
+        )
+
+        #  ============ event end date will be here =============== //
+        self.event_time = ft.TimePicker(
+            confirm_text="Confirm",
+            error_invalid_text="Time out of range",
+            help_text="Pick your time slot",
+        )
+        self.page.overlay.append(self.event_time)
+        #  ========== the button to select the date here ======== //
+        self.event_time_button = ft.ElevatedButton(
+            text="select event end date".title(),
+            icon=ft.icons.TIMER_ROUNDED,
+            icon_color="#f5f5f5",
+            bgcolor="#7F4D3E",
+            color="#f5f5f5",
+            height=50,
+            style=ft.ButtonStyle(
+                color={
+                    ft.MaterialState.DEFAULT: "#212121"
+                },
+            ),
+            on_click=lambda _: self.event_time.pick_time()
         )
 
 
@@ -263,19 +311,23 @@ class EventsPage(ft.Container):
                                                                     controls=[
                                                                         #  ======== the text fields will be here
                                                                         ft.Container(
-                                                                            content=self.inputControls.date_button,
+                                                                            content=self.inputControls.event_start_button,
                                                                             padding=ft.padding.only(top=10),
-                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                            col={"md": 4, "sm": 3.5, "lg": 3.5}
                                                                         ),
-
                                                                         ft.Container(
-                                                                            content=self.inputControls.event_location,
+                                                                            content=self.inputControls.event_end_button,
                                                                             padding=ft.padding.only(top=10),
-                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                            col={"md": 4, "sm": 3.5, "lg": 3.5}
+                                                                        ),
+                                                                        ft.Container(
+                                                                            content=self.inputControls.event_time_button,
+                                                                            padding=ft.padding.only(top=10),
+                                                                            col={"md": 4, "sm": 3.5, "lg": 3.5}
                                                                         ),
 
                                                                     ],
-                                                                    run_spacing=0
+                                                                    run_spacing=10
                                                                 ),
 
                                                             ]
