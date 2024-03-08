@@ -560,19 +560,23 @@ class EventsPage(ft.Container):
                             ),
 
                             ft.Container(
-                                height=100,
                                 content=ft.ResponsiveRow(
                                     controls=[
                                         ft.Container(
-                                            height=200,
+                                            height=500,
+                                            border_radius=ft.border_radius.all(9),
                                             shadow=ft.BoxShadow(
-
+                                                blur_radius=0.3,
+                                                color="#412728",
+                                                blur_style=ft.ShadowBlurStyle.OUTER
                                             ),
                                             gradient=ft.LinearGradient(
                                                 colors=[
-                                                    "",
-                                                    ""
-                                                ]
+                                                    "#2A272A",
+                                                    "#2A272A"
+                                                ],
+                                                begin=ft.alignment.top_left,
+                                                end=ft.alignment.bottom_right
                                             )
                                         )
                                     ]
