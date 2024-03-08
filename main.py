@@ -4,7 +4,6 @@ from Views.dashboard import Dashboard
 
 def main(page: ft.Page):
     page.theme_mode = "light"
-    page.bgcolor = "#eeeeee"
     page.window_center()
     page.window_min_width = 768
 

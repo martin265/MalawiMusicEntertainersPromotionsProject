@@ -207,9 +207,9 @@ class InputControls(ft.Container):
 
         # =============== // drop down for the ticket types and capacity limit =========== //
         #  ============== drop down for the event category
-        self.event_category = ft.Dropdown(
-            prefix_icon=ft.icons.CATEGORY_ROUNDED,
-            helper_text="select event category".title(),
+        self.ticket_types = ft.Dropdown(
+            prefix_icon=ft.icons.AIRPLANE_TICKET_ROUNDED,
+            helper_text="select ticket type".title(),
             helper_style=ft.TextStyle(
                 color="#212121",
                 size=10,
@@ -225,25 +225,25 @@ class InputControls(ft.Container):
                 font_family="manrope-sem-bold",
                 weight=ft.FontWeight.BOLD
             ),
-            label="event category".title(),
+            label="event ticket type".title(),
             label_style=ft.TextStyle(
                 color="#212121",
                 size=14,
                 font_family="manrope-sem-bold"
             ),
             options=[
-                ft.dropdown.Option("Conference".title()),
-                ft.dropdown.Option("Concert".title()),
-                ft.dropdown.Option("workshop".title()),
-                ft.dropdown.Option("fundraiser".title())
+                ft.dropdown.Option("Gold".title()),
+                ft.dropdown.Option("Silver".title()),
+                ft.dropdown.Option("Diamond".title()),
+                ft.dropdown.Option("Basic".title())
             ]
         )
 
         # ==================== // ============================= //
         #  ============== drop down for the event category
-        self.event_category = ft.Dropdown(
-            prefix_icon=ft.icons.CATEGORY_ROUNDED,
-            helper_text="select event category".title(),
+        self.capacity_limit = ft.Dropdown(
+            prefix_icon=ft.icons.REDUCE_CAPACITY_ROUNDED,
+            helper_text="select the capacity to be accommodated".title(),
             helper_style=ft.TextStyle(
                 color="#212121",
                 size=10,
@@ -259,17 +259,46 @@ class InputControls(ft.Container):
                 font_family="manrope-sem-bold",
                 weight=ft.FontWeight.BOLD
             ),
-            label="event category".title(),
+            label="event capacity".title(),
             label_style=ft.TextStyle(
                 color="#212121",
                 size=14,
                 font_family="manrope-sem-bold"
             ),
             options=[
-                ft.dropdown.Option("Conference".title()),
-                ft.dropdown.Option("Concert".title()),
-                ft.dropdown.Option("workshop".title()),
-                ft.dropdown.Option("fundraiser".title())
+                ft.dropdown.Option("Large".title()),
+                ft.dropdown.Option("Medium".title()),
+            ]
+        )
+
+        # ================= // the payment options and additional details ========== //
+        self.payment_types = ft.Dropdown(
+            prefix_icon=ft.icons.REDUCE_CAPACITY_ROUNDED,
+            helper_text="select the payment type".title(),
+            helper_style=ft.TextStyle(
+                color="#212121",
+                size=10,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            border_radius=ft.border_radius.all(5),
+            border_color="#212121",
+            text_size=14,
+            text_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            label="event capacity".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
+            options=[
+                ft.dropdown.Option("Large".title()),
+                ft.dropdown.Option("Medium".title()),
             ]
         )
 
@@ -299,7 +328,7 @@ class EventsPage(ft.Container):
                                 controls=[
                                     # ======== the container for the top information
                                     ft.Container(
-                                        margin=ft.margin.only(top=40),
+                                        margin=ft.margin.only(top=40, bottom=30),
                                         content=ft.Column(
                                             controls=[
                                                 ft.Row(
@@ -398,6 +427,25 @@ class EventsPage(ft.Container):
                                                                     run_spacing=10
                                                                 ),
 
+                                                                # ============== the second control container =======
+                                                                ft.ResponsiveRow(
+                                                                    alignment=ft.MainAxisAlignment.CENTER,
+                                                                    controls=[
+                                                                        #  ======== the text fields will be here
+                                                                        ft.Container(
+                                                                            content=self.inputControls.capacity_limit,
+                                                                            padding=ft.padding.only(top=10),
+                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                        ),
+                                                                        ft.Container(
+                                                                            content=self.inputControls.ticket_types,
+                                                                            padding=ft.padding.only(top=10),
+                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                        ),
+
+                                                                    ],
+                                                                    run_spacing=10
+                                                                ),
                                                             ]
                                                         )
                                                     )
