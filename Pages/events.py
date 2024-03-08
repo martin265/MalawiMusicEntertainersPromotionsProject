@@ -13,6 +13,7 @@ class InputControls(ft.Container):
         }
         #  =========== the input fields here ========== //
         self.event_title = ft.TextField(
+            width=450,
             helper_text="enter event title".title(),
             helper_style=ft.TextStyle(
                 color="#212121",
@@ -20,16 +21,42 @@ class InputControls(ft.Container):
                 font_family="manrope-sem-bold"
             ),
             keyboard_type=ft.KeyboardType.TEXT,
-            autofocus=True,
-            border_radius=ft.border_radius.all(8),
+            border_radius=ft.border_radius.all(3),
             border_color="#212121",
             text_size=14,
             text_style=ft.TextStyle(
                 color="#212121",
                 size=14,
-                font_family="manrope-sem-bold"
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
             ),
             label="event title".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
+        )
+
+        self.event_description = ft.TextField(
+            width=450,
+            helper_text="enter event description".title(),
+            helper_style=ft.TextStyle(
+                color="#212121",
+                size=10,
+                font_family="manrope-sem-bold"
+            ),
+            keyboard_type=ft.KeyboardType.TEXT,
+            border_radius=ft.border_radius.all(3),
+            border_color="#212121",
+            text_size=14,
+            text_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            label="event description".title(),
             label_style=ft.TextStyle(
                 color="#212121",
                 size=14,
@@ -48,6 +75,9 @@ class EventsPage(ft.Container):
             "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
             "manrop-bold": "assets/fonts/Manrope/static/Manrope-Bold.ttf"
         }
+
+        #  ================ getting the controls here from the class
+        self.inputControls = InputControls(page=page)
 
         # ========= the user controls will be here ====== //
         self.content = ft.Container(
@@ -91,12 +121,21 @@ class EventsPage(ft.Container):
 
                                                 #  ========= container for some additional cards ======= //
                                                 ft.Container(
+                                                    margin=ft.margin.only(top=30),
                                                     content=ft.SafeArea(
                                                         content=ft.ResponsiveRow(
                                                             [
                                                                 #  ======== the text fields will be here
-
-                                                            ]
+                                                                ft.Container(
+                                                                    content=ft.Row(
+                                                                        alignment=ft.MainAxisAlignment.CENTER,
+                                                                        controls=[
+                                                                            self.inputControls.event_title,
+                                                                            self.inputControls.event_description
+                                                                        ]
+                                                                    )
+                                                                )
+                                                            ],
                                                         )
                                                     )
                                                 )
