@@ -7,7 +7,19 @@ class Dashboard(ft.View):
         self.page = page
         #  the navigation for the system will be here ==== //
         self.navigation_rail = ft.NavigationRail(
-
+            leading=ft.FloatingActionButton(
+                content=ft.Container(
+                    content=ft.Row(
+                        alignment=ft.MainAxisAlignment.CENTER,
+                        controls=[
+                            ft.Icon(
+                                ft.icons.MUSIC_NOTE_ROUNDED,
+                                size=30
+                            )
+                        ]
+                    )
+                )
+            )
         )
         #  ========== returning the controls here
         self.controls = [
