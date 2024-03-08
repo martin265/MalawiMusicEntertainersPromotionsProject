@@ -557,14 +557,13 @@ class EventsPage(ft.Container):
                                     ]
                                 ),
 
-                                col={"sm": 12, "md": 9, "lg": 9}
+                                col={"sm": 12, "md": 12, "lg": 9}
                             ),
 
                             ft.Container(
-                                content=ft.Text("hello"),
-                                height=300,
+                                height=100,
                                 bgcolor="yellow",
-                                col={"sm": 12, "md": 3, "lg": 3}
+                                col={"sm": 12, "md": 12, "lg": 3}
                             ),
                         ]
                     )
@@ -572,7 +571,7 @@ class EventsPage(ft.Container):
 
                 #  ============= the other safe area for the other controls here ========== //
                 ft.SafeArea(
-                    height=200,
+                    height=500,
                     content=ft.Text("hello")
                 )
             ]
