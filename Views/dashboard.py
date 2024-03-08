@@ -77,8 +77,12 @@ class Dashboard(ft.View):
                         tooltip="events".title()
                     )
                 ),
-            ]
+            ],
+            on_change=self.destination_page
         )
+        #  ============ calling the function here ======== //
+        self.selected_page_transitions()
+
         #  ========== returning the controls here
         self.controls = [
             ft.Row(
@@ -96,6 +100,23 @@ class Dashboard(ft.View):
             for single_page, index in enumerate(self.all_available_pages):
                 single_page.visible = True if index == self.navigation_rail.selected_index else False
                 self.update()
+        except Exception as ex:
+            self.page.snack_bar = ft.SnackBar(
+                content=ft.Row(
+                    controls=[
+                        ft.Text(
+                            "something went wrong at {}".format(ex)
+                        )
+                    ]
+                )
+            )
+            self.page.snack_bar.open = True
+            self.page.update()
+
+    #  ======== function to get the selected page here ========== //
+    def destination_page(self, e):
+        try:
+            self.selected_page_transitions()
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
                 content=ft.Row(
