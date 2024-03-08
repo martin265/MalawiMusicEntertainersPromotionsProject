@@ -50,7 +50,25 @@ class Dashboard(ft.View):
                         ),
                         tooltip="home".title()
                     )
-                )
+                ),
+
+                # ============ // the other navigation component will be here ===== //
+                ft.NavigationRailDestination(
+                    icon_content=ft.Icon(
+                        ft.icons.EVENT_NOTE_ROUNDED,
+                        size=30,
+                        color="#212121",
+                        tooltip="events".title(),
+                    ),
+                    label_content=ft.Text(
+                        "home".title(),
+                        style=ft.TextStyle(
+                            size=18,
+                            font_family="manrop-bold"
+                        ),
+                        tooltip="events".title()
+                    )
+                ),
             ]
         )
         #  ========== returning the controls here
