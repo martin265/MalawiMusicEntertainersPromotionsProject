@@ -13,7 +13,6 @@ class InputControls(ft.Container):
         }
         #  =========== the input fields here ========== //
         self.event_title = ft.TextField(
-            width=450,
             helper_text="enter event title".title(),
             helper_style=ft.TextStyle(
                 color="#212121",
@@ -21,7 +20,7 @@ class InputControls(ft.Container):
                 font_family="manrope-sem-bold"
             ),
             keyboard_type=ft.KeyboardType.TEXT,
-            border_radius=ft.border_radius.all(3),
+            border_radius=ft.border_radius.all(5),
             border_color="#212121",
             text_size=14,
             text_style=ft.TextStyle(
@@ -39,7 +38,6 @@ class InputControls(ft.Container):
         )
 
         self.event_description = ft.TextField(
-            width=450,
             helper_text="enter event description".title(),
             helper_style=ft.TextStyle(
                 color="#212121",
@@ -47,7 +45,7 @@ class InputControls(ft.Container):
                 font_family="manrope-sem-bold"
             ),
             keyboard_type=ft.KeyboardType.TEXT,
-            border_radius=ft.border_radius.all(3),
+            border_radius=ft.border_radius.all(5),
             border_color="#212121",
             text_size=14,
             text_style=ft.TextStyle(
@@ -62,6 +60,34 @@ class InputControls(ft.Container):
                 size=14,
                 font_family="manrope-sem-bold"
             ),
+        )
+
+        #  ============== drop down for the event category
+        self.event_category = ft.Dropdown(
+            helper_text="select event category".title(),
+            helper_style=ft.TextStyle(
+                color="#212121",
+                size=10,
+                font_family="manrope-sem-bold"
+            ),
+            border_radius=ft.border_radius.all(5),
+            border_color="#212121",
+            text_size=14,
+            text_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            label="event category".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
+            options=[
+                ft.dropdown.Option("event")
+            ]
         )
 
 
@@ -123,19 +149,48 @@ class EventsPage(ft.Container):
                                                 ft.Container(
                                                     margin=ft.margin.only(top=30),
                                                     content=ft.SafeArea(
-                                                        content=ft.ResponsiveRow(
-                                                            [
-                                                                #  ======== the text fields will be here
-                                                                ft.Container(
-                                                                    content=ft.Row(
-                                                                        alignment=ft.MainAxisAlignment.CENTER,
-                                                                        controls=[
-                                                                            self.inputControls.event_title,
-                                                                            self.inputControls.event_description
-                                                                        ]
-                                                                    )
-                                                                )
-                                                            ],
+                                                        content=ft.Column(
+                                                            controls=[
+                                                                ft.ResponsiveRow(
+                                                                    alignment=ft.MainAxisAlignment.CENTER,
+                                                                    controls=[
+                                                                        #  ======== the text fields will be here
+                                                                        ft.Container(
+                                                                            content=self.inputControls.event_title,
+                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                        ),
+
+                                                                        ft.Container(
+                                                                            content=self.inputControls.event_title,
+                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                        ),
+
+                                                                    ],
+                                                                    run_spacing=0
+                                                                ),
+
+                                                                # ============== the second control container =======
+                                                                ft.ResponsiveRow(
+                                                                    alignment=ft.MainAxisAlignment.CENTER,
+                                                                    controls=[
+                                                                        #  ======== the text fields will be here
+                                                                        ft.Container(
+                                                                            content=self.inputControls.event_category,
+                                                                            padding=ft.padding.only(top=10),
+                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                        ),
+
+                                                                        ft.Container(
+                                                                            content=self.inputControls.event_title,
+                                                                            padding=ft.padding.only(top=10),
+                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                        ),
+
+                                                                    ],
+                                                                    run_spacing=0
+                                                                ),
+
+                                                            ]
                                                         )
                                                     )
                                                 )
