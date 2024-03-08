@@ -146,10 +146,11 @@ class InputControls(ft.Container):
         self.page.overlay.append(self.event_date)
         #  ========== the button to select the date here ======== //
         self.date_button = ft.ElevatedButton(
-            text="select event date",
+            text="select event date".title(),
+            icon=ft.icons.DATE_RANGE_ROUNDED,
             style=ft.ButtonStyle(
                 color={
-                    ft.MaterialState.DEFAULT: ft.colors.BLUE
+                    ft.MaterialState.DEFAULT: "#212121"
                 }
             ),
             on_click=lambda _: self.event_date.pick_date()
