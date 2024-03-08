@@ -18,11 +18,13 @@ class EventsPage(ft.Container):
                                     ft.Container(
                                         bgcolor="blue",
                                         height=200,
+                                        content=ft.Text("hello"),
                                         col={"sm": 12, "md": 12, "lg": 9}
                                     ),
                                     ft.Container(
                                         bgcolor="black",
                                         height=200,
+                                        content=ft.Text("hello"),
                                         col={"sm": 12, "md": 12, "lg": 3}
                                     )
                                 ]

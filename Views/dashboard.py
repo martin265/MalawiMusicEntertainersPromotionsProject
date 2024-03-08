@@ -17,7 +17,7 @@ class Dashboard(ft.View):
 
         # =============== list for all the pages will be here ===//
         self.all_available_pages = [
-            EventsPage(page=page)
+            EventsPage(page=page),
         ]
         #  the navigation for the system will be here ==== //
         self.navigation_rail = ft.NavigationRail(
@@ -97,7 +97,7 @@ class Dashboard(ft.View):
     #  ========== functions to control page transitions
     def selected_page_transitions(self):
         try:
-            for single_page, index in enumerate(self.all_available_pages):
+            for index, single_page in enumerate(self.all_available_pages):
                 single_page.visible = True if index == self.navigation_rail.selected_index else False
                 self.update()
         except Exception as ex:
