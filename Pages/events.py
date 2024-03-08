@@ -319,6 +319,7 @@ class InputControls(ft.Container):
             border_color="#212121",
             text_size=14,
             multiline=True,
+            max_lines=100,
             text_style=ft.TextStyle(
                 color="#212121",
                 size=14,
@@ -331,6 +332,22 @@ class InputControls(ft.Container):
                 size=14,
                 font_family="manrope-sem-bold"
             ),
+        )
+
+        #  ============= button for saving the details will be here ========== //
+        self.save_details_button = ft.ElevatedButton(
+            text="save event details".title(),
+            icon=ft.icons.SAVE_ROUNDED,
+            icon_color="#f5f5f5",
+            bgcolor="#212121",
+            color="#f5f5f5",
+            height=50,
+            style=ft.ButtonStyle(
+                color={
+                    ft.MaterialState.DEFAULT: "#212121"
+                },
+            ),
+            on_click={}
         )
 
 
@@ -349,184 +366,212 @@ class EventsPage(ft.Container):
         self.inputControls = InputControls(page=page)
 
         # ========= the user controls will be here ====== //
-        self.content = ft.Container(
+        self.content = ft.Column(
             adaptive=True,
-            content=ft.SafeArea(
-                content=ft.ResponsiveRow(
-                    #  ======== the first container for the events details will be here ========= //
-                    [
-                        ft.Container(
-                            content=ft.Column(
-                                auto_scroll=True,
-                                controls=[
-                                    # ======== the container for the top information
-                                    ft.Container(
-                                        margin=ft.margin.only(top=40, bottom=30),
-                                        content=ft.Column(
-                                            controls=[
-                                                ft.Row(
-                                                    alignment=ft.MainAxisAlignment.CENTER,
-                                                    controls=[
-                                                        ft.Icon(
-                                                            ft.icons.EVENT_NOTE_ROUNDED,
-                                                            size=60,
-                                                            color="#212121"
-                                                        )
-                                                    ]
-                                                ),
-                                                # ====== container for the text ======== //
-                                                ft.Container(
-                                                    content=ft.Row(
+            scroll=ft.ScrollMode.AUTO,
+            controls=[
+                ft.SafeArea(
+                    content=ft.ResponsiveRow(
+                        #  ======== the first container for the events details will be here ========= //
+                        [
+                            ft.Container(
+                                gradient=ft.LinearGradient(
+                                    colors=[
+                                        "#CBCCFF",
+                                        "#CBCCFF"
+                                    ],
+                                    begin=ft.alignment.center_left,
+                                    end=ft.alignment.top_right
+                                ),
+                                border_radius=ft.border_radius.all(10),
+                                content=ft.Column(
+                                    auto_scroll=True,
+                                    controls=[
+                                        # ======== the container for the top information
+                                        ft.Container(
+                                            margin=ft.margin.only(top=40, bottom=30),
+                                            content=ft.Column(
+                                                controls=[
+                                                    ft.Row(
                                                         alignment=ft.MainAxisAlignment.CENTER,
                                                         controls=[
-                                                            ft.Text(
-                                                                "add event details".title(),
-                                                                size=30,
-                                                                style=ft.TextStyle(
-                                                                    font_family="manrop-bold"
-                                                                )
+                                                            ft.Icon(
+                                                                ft.icons.EVENT_NOTE_ROUNDED,
+                                                                size=60,
+                                                                color="#212121"
                                                             )
                                                         ]
-                                                    )
-                                                ),
-
-                                                #  ========= container for some additional cards ======= //
-                                                ft.Container(
-                                                    margin=ft.margin.only(top=30),
-                                                    content=ft.SafeArea(
-                                                        content=ft.Column(
+                                                    ),
+                                                    # ====== container for the text ======== //
+                                                    ft.Container(
+                                                        content=ft.Row(
+                                                            alignment=ft.MainAxisAlignment.CENTER,
                                                             controls=[
-                                                                ft.ResponsiveRow(
-                                                                    alignment=ft.MainAxisAlignment.CENTER,
-                                                                    controls=[
-                                                                        #  ======== the text fields will be here
-                                                                        ft.Container(
-                                                                            content=self.inputControls.event_title,
-                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
-                                                                        ),
-
-                                                                        ft.Container(
-                                                                            content=self.inputControls.event_description,
-                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
-                                                                        ),
-
-                                                                    ],
-                                                                    run_spacing=0
-                                                                ),
-
-                                                                # ============== the second control container =======
-                                                                ft.ResponsiveRow(
-                                                                    alignment=ft.MainAxisAlignment.CENTER,
-                                                                    controls=[
-                                                                        #  ======== the text fields will be here
-                                                                        ft.Container(
-                                                                            content=self.inputControls.event_category,
-                                                                            padding=ft.padding.only(top=10),
-                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
-                                                                        ),
-
-                                                                        ft.Container(
-                                                                            content=self.inputControls.event_location,
-                                                                            padding=ft.padding.only(top=10),
-                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
-                                                                        ),
-
-                                                                    ],
-                                                                    run_spacing=0
-                                                                ),
-
-                                                                # ============== the second control container =======
-                                                                ft.ResponsiveRow(
-                                                                    alignment=ft.MainAxisAlignment.CENTER,
-                                                                    controls=[
-                                                                        #  ======== the text fields will be here
-                                                                        ft.Container(
-                                                                            content=self.inputControls.event_start_button,
-                                                                            padding=ft.padding.only(top=10),
-                                                                            col={"md": 4, "sm": 3.5, "lg": 3.5}
-                                                                        ),
-                                                                        ft.Container(
-                                                                            content=self.inputControls.event_end_button,
-                                                                            padding=ft.padding.only(top=10),
-                                                                            col={"md": 4, "sm": 3.5, "lg": 3.5}
-                                                                        ),
-                                                                        ft.Container(
-                                                                            content=self.inputControls.event_time_button,
-                                                                            padding=ft.padding.only(top=10),
-                                                                            col={"md": 4, "sm": 3.5, "lg": 3.5}
-                                                                        ),
-
-                                                                    ],
-                                                                    run_spacing=10
-                                                                ),
-
-                                                                # ============== the second control container =======
-                                                                ft.ResponsiveRow(
-                                                                    alignment=ft.MainAxisAlignment.CENTER,
-                                                                    controls=[
-                                                                        #  ======== the text fields will be here
-                                                                        ft.Container(
-                                                                            content=self.inputControls.capacity_limit,
-                                                                            padding=ft.padding.only(top=10),
-                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
-                                                                        ),
-                                                                        ft.Container(
-                                                                            content=self.inputControls.ticket_types,
-                                                                            padding=ft.padding.only(top=10),
-                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
-                                                                        ),
-
-                                                                    ],
-                                                                    run_spacing=10
-                                                                ),
-
-                                                                # ============== the second control container =======
-                                                                ft.ResponsiveRow(
-                                                                    alignment=ft.MainAxisAlignment.CENTER,
-                                                                    controls=[
-                                                                        #  ======== the text fields will be here
-                                                                        ft.Container(
-                                                                            content=self.inputControls.payment_types,
-                                                                            padding=ft.padding.only(top=10),
-                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
-                                                                        ),
-                                                                        ft.Container(
-                                                                            content=self.inputControls.additional_details,
-                                                                            padding=ft.padding.only(top=10),
-                                                                            col={"md": 5.5, "sm": 5.5, "lg": 5.5}
-                                                                        ),
-
-                                                                    ],
-                                                                    run_spacing=10
-                                                                ),
+                                                                ft.Text(
+                                                                    "add event details".title(),
+                                                                    size=30,
+                                                                    style=ft.TextStyle(
+                                                                        font_family="manrop-bold"
+                                                                    )
+                                                                )
                                                             ]
                                                         )
-                                                    )
-                                                )
-                                            ]
-                                        )
-                                    ),
-                                ]
-                            ),
-                            gradient=ft.LinearGradient(
-                                colors=[
-                                    "#CBCCFF",
-                                    "#CBCCFF"
-                                ],
-                                begin=ft.alignment.center_left,
-                                end=ft.alignment.top_right
-                            ),
-                            border_radius=ft.border_radius.all(10),
-                            col={"sm": 12, "md": 9, "lg": 9}
-                        ),
+                                                    ),
 
-                        ft.Container(
-                            content=ft.Text("hello"),
-                            height=300,
-                            bgcolor="yellow",
-                            col={"sm": 12, "md": 3, "lg": 3}
-                        ),
-                    ]
+                                                    #  ========= container for some additional cards ======= //
+                                                    ft.Container(
+                                                        margin=ft.margin.only(top=30),
+                                                        content=ft.SafeArea(
+                                                            content=ft.Column(
+                                                                controls=[
+                                                                    ft.ResponsiveRow(
+                                                                        alignment=ft.MainAxisAlignment.CENTER,
+                                                                        controls=[
+                                                                            #  ======== the text fields will be here
+                                                                            ft.Container(
+                                                                                content=self.inputControls.event_title,
+                                                                                col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                            ),
+
+                                                                            ft.Container(
+                                                                                content=self.inputControls.event_description,
+                                                                                col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                            ),
+
+                                                                        ],
+                                                                        run_spacing=0
+                                                                    ),
+
+                                                                    # ============== the second control container
+                                                                    # =======
+                                                                    ft.ResponsiveRow(
+                                                                        alignment=ft.MainAxisAlignment.CENTER,
+                                                                        controls=[
+                                                                            #  ======== the text fields will be here
+                                                                            ft.Container(
+                                                                                content=self.inputControls.event_category,
+                                                                                padding=ft.padding.only(top=10),
+                                                                                col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                            ),
+
+                                                                            ft.Container(
+                                                                                content=self.inputControls.event_location,
+                                                                                padding=ft.padding.only(top=10),
+                                                                                col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                            ),
+
+                                                                        ],
+                                                                        run_spacing=0
+                                                                    ),
+
+                                                                    # ============== the second control container
+                                                                    # =======
+                                                                    ft.ResponsiveRow(
+                                                                        alignment=ft.MainAxisAlignment.CENTER,
+                                                                        controls=[
+                                                                            #  ======== the text fields will be here
+                                                                            ft.Container(
+                                                                                content=self.inputControls.event_start_button,
+                                                                                padding=ft.padding.only(top=10),
+                                                                                col={"md": 4, "sm": 3.5, "lg": 3.5}
+                                                                            ),
+                                                                            ft.Container(
+                                                                                content=self.inputControls.event_end_button,
+                                                                                padding=ft.padding.only(top=10),
+                                                                                col={"md": 4, "sm": 3.5, "lg": 3.5}
+                                                                            ),
+                                                                            ft.Container(
+                                                                                content=self.inputControls.event_time_button,
+                                                                                padding=ft.padding.only(top=10),
+                                                                                col={"md": 4, "sm": 3.5, "lg": 3.5}
+                                                                            ),
+
+                                                                        ],
+                                                                        run_spacing=10
+                                                                    ),
+
+                                                                    # ============== the second control container
+                                                                    # =======
+                                                                    ft.ResponsiveRow(
+                                                                        alignment=ft.MainAxisAlignment.CENTER,
+                                                                        controls=[
+                                                                            #  ======== the text fields will be here
+                                                                            ft.Container(
+                                                                                content=self.inputControls.capacity_limit,
+                                                                                padding=ft.padding.only(top=10),
+                                                                                col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                            ),
+                                                                            ft.Container(
+                                                                                content=self.inputControls.ticket_types,
+                                                                                padding=ft.padding.only(top=10),
+                                                                                col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                            ),
+
+                                                                        ],
+                                                                        run_spacing=10
+                                                                    ),
+
+                                                                    # ============== the second control container
+                                                                    # =======
+                                                                    ft.ResponsiveRow(
+                                                                        alignment=ft.MainAxisAlignment.CENTER,
+                                                                        controls=[
+                                                                            #  ======== the text fields will be here
+                                                                            ft.Container(
+                                                                                content=self.inputControls.payment_types,
+                                                                                padding=ft.padding.only(top=10),
+                                                                                col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                            ),
+                                                                            ft.Container(
+                                                                                content=self.inputControls.additional_details,
+                                                                                padding=ft.padding.only(top=10),
+                                                                                col={"md": 5.5, "sm": 5.5, "lg": 5.5}
+                                                                            ),
+
+                                                                        ],
+                                                                        run_spacing=10
+                                                                    ),
+
+                                                                    #  ============ the container for the button to save
+                                                                    ft.ResponsiveRow(
+                                                                        alignment=ft.MainAxisAlignment.START,
+                                                                        controls=[
+                                                                            #  ======== the text fields will be here
+                                                                            ft.Container(
+                                                                                content=self.inputControls.save_details_button,
+                                                                                padding=ft.padding.only(top=10),
+                                                                                margin=ft.margin.only(left=40),
+                                                                                col={"md": 4, "sm": 4, "lg": 4}
+                                                                            ),
+                                                                        ],
+                                                                        run_spacing=10
+                                                                    ),
+                                                                ]
+                                                            )
+                                                        )
+                                                    )
+                                                ]
+                                            )
+                                        ),
+                                    ]
+                                ),
+
+                                col={"sm": 12, "md": 9, "lg": 9}
+                            ),
+
+                            ft.Container(
+                                content=ft.Text("hello"),
+                                height=300,
+                                bgcolor="yellow",
+                                col={"sm": 12, "md": 3, "lg": 3}
+                            ),
+                        ]
+                    )
+                ),
+
+                #  ============= the other safe area for the other controls here ========== //
+                ft.SafeArea(
+                    height=200
                 )
-            )
+            ]
         )
