@@ -148,10 +148,11 @@ class InputControls(ft.Container):
         self.date_button = ft.ElevatedButton(
             text="select event date".title(),
             icon=ft.icons.DATE_RANGE_ROUNDED,
+            height=50,
             style=ft.ButtonStyle(
                 color={
                     ft.MaterialState.DEFAULT: "#212121"
-                }
+                },
             ),
             on_click=lambda _: self.event_date.pick_date()
         )
