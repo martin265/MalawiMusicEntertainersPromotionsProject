@@ -32,16 +32,16 @@ class Artists(ft.Container):
                             ),
                             content=ft.Column(
                                 controls=[
-                                    ft.Stack(
-                                        col={"sm": 12, "md": 12, "lg": 9},
-                                        controls=[
-                                            ft.Image(
-                                                expand=True,
-                                                src="https://images.pexels.com/photos/755416/pexels-photo-755416.jpeg"
-                                                    "?auto=compress&cs=tinysrgb&w=600",
-                                                fit=ft.ImageFit.FIT_WIDTH,
-                                            )
-                                        ]
+                                    #  ========== the top container for the controls will be here ======= //
+                                    ft.Container(
+                                        content=ft.Row(
+                                            alignment=ft.MainAxisAlignment.CENTER,
+                                            controls=[
+                                                ft.Text(
+                                                    "add artist details"
+                                                )
+                                            ]
+                                        )
                                     )
                                 ]
                             ),
