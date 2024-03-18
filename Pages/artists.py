@@ -34,11 +34,17 @@ class Artists(ft.Container):
                                 controls=[
                                     #  ========== the top container for the controls will be here ======= //
                                     ft.Container(
+                                        margin=ft.margin.only(top=40),
                                         content=ft.Row(
                                             alignment=ft.MainAxisAlignment.CENTER,
                                             controls=[
                                                 ft.Text(
-                                                    "add artist details"
+                                                    "add artist details".title(),
+                                                    font_family="manrop-bold",
+                                                    style=ft.TextStyle(
+                                                        color="#212121"
+                                                    ),
+                                                    size=30
                                                 )
                                             ]
                                         )
