@@ -19,6 +19,7 @@ class Dashboard(ft.View):
         # =============== list for all the pages will be here ===//
         self.all_available_pages = [
             EventsPage(page=page),
+            Artists(page=page)
         ]
         #  the navigation for the system will be here ==== //
         self.navigation_rail = ft.NavigationRail(
@@ -77,6 +78,30 @@ class Dashboard(ft.View):
                         ),
                         tooltip="events".title()
                     )
+                ),
+
+                # =============== // destination for the artists page ============ //
+                ft.NavigationRailDestination(
+                    icon_content=ft.Icon(
+                        ft.icons.MIC_ROUNDED,
+                        size=30,
+                        color="#212121",
+                        tooltip="events".title(),
+                    ),
+                    label_content=ft.Text(
+                        "events".title(),
+                        style=ft.TextStyle(
+                            size=15,
+                            font_family="manrop-bold"
+                        ),
+                        tooltip="events".title()
+                    ),
+                    selected_icon_content=ft.Icon(
+                        ft.icons.MIC_EXTERNAL_ON_ROUNDED,
+                        size=30,
+                        color="#212121",
+                        tooltip="events".title(),
+                    ),
                 ),
             ],
             on_change=self.destination_page
