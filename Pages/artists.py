@@ -39,7 +39,7 @@ class Artists(ft.Container):
                                                 expand=True,
                                                 src="https://images.pexels.com/photos/755416/pexels-photo-755416.jpeg"
                                                     "?auto=compress&cs=tinysrgb&w=600",
-                                                fit=ft.ImageFit.FIT_WIDTH
+                                                fit=ft.ImageFit.FIT_WIDTH,
                                             )
                                         ]
                                     )
