@@ -22,6 +22,15 @@ class Artists(ft.Container):
                             expand=True,
                             content=ft.Text("hello"),
                             bgcolor=ft.colors.BLACK,
+                            border_radius=ft.border_radius.all(10),
+                            gradient=ft.LinearGradient(
+                                colors=[
+                                    "",
+                                    ""
+                                ],
+                                begin=ft.alignment.top_right,
+                                end=ft.alignment.bottom_left,
+                            ),
                             col={"sm": 12, "md": 12, "lg": 9}
                         )
                     ]
