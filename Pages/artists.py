@@ -21,7 +21,8 @@ class Artists(ft.Container):
                         ft.Container(
                             expand=True,
                             content=ft.Text("hello"),
-                            bgcolor=ft.colors.BLACK
+                            bgcolor=ft.colors.BLACK,
+                            col={"sm": 12, "md": 12, "lg": 9}
                         )
                     ]
                 )
