@@ -1,6 +1,7 @@
 import flet as ft
 # getting the pages here
 from Pages.events import EventsPage
+from Pages.artists import Artists
 
 
 class Dashboard(ft.View):
