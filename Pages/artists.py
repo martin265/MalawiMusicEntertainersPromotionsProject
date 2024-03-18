@@ -20,16 +20,26 @@ class Artists(ft.Container):
                     controls=[
                         ft.Container(
                             expand=True,
-                            content=ft.Text("hello"),
                             bgcolor=ft.colors.BLACK,
                             border_radius=ft.border_radius.all(10),
                             gradient=ft.LinearGradient(
                                 colors=[
-                                    "",
-                                    ""
+                                    "#CBCCFF",
+                                    "#CBCCFF"
                                 ],
                                 begin=ft.alignment.top_right,
                                 end=ft.alignment.bottom_left,
+                            ),
+                            content=ft.Column(
+                                controls=[
+                                    ft.Stack(
+                                        controls=[
+                                            ft.Image(
+                                                src=""
+                                            )
+                                        ]
+                                    )
+                                ]
                             ),
                             col={"sm": 12, "md": 12, "lg": 9}
                         )
