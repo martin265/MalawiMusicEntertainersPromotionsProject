@@ -6,6 +6,7 @@ class InputControls(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
         self.page = page
+        #  =========== the event handlers will be here ======= //
         #  ============ the input controls will be here ========= //
         self.page.fonts = {
             "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
