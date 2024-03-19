@@ -366,6 +366,7 @@ class Artists(ft.Container):
         self.content = ft.Column(
             scroll=ft.ScrollMode.AUTO,
             adaptive=True,
+
             controls=[
                 ft.ResponsiveRow(
                     controls=[
@@ -518,6 +519,8 @@ class Artists(ft.Container):
                             col={"sm": 12, "md": 12, "lg": 3}
                         )
                     ]
-                )
+                ),
+
+
             ]
         )
