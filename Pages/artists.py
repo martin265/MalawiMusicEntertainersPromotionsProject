@@ -76,7 +76,7 @@ class InputControls(ft.Container):
                 font_family="manrope-sem-bold",
                 weight=ft.FontWeight.BOLD
             ),
-            keyboard_type=ft.KeyboardType.TEXT,
+            keyboard_type=ft.KeyboardType.EMAIL,
             border_radius=ft.border_radius.all(5),
             border_color="#212121",
             text_size=14,
