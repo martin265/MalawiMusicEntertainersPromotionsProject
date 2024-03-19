@@ -89,18 +89,18 @@ class Dashboard(ft.View):
                         tooltip="events".title(),
                     ),
                     label_content=ft.Text(
-                        "events".title(),
+                        "artist".title(),
                         style=ft.TextStyle(
                             size=15,
                             font_family="manrop-bold"
                         ),
-                        tooltip="events".title()
+                        tooltip="artist".title()
                     ),
                     selected_icon_content=ft.Icon(
                         ft.icons.MIC_EXTERNAL_ON_ROUNDED,
                         size=30,
                         color="#212121",
-                        tooltip="events".title(),
+                        tooltip="artist".title(),
                     ),
                 ),
             ],

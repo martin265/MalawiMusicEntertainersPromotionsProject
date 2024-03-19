@@ -5,17 +5,65 @@ class InputControls(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
         self.page = page
+        self.page.fonts = {
+            "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
+            "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
+            "manrop-bold": "assets/fonts/Manrope/static/Manrope-Bold.ttf"
+        }
         #  =========== the input controls will be here ======= //
         self.first_name = ft.TextField(
-            helper_text="enter your name in characters".capitalize(),
+            prefix_icon=ft.icons.EDIT_DOCUMENT,
+            helper_text="enter first name".title(),
             helper_style=ft.TextStyle(
-                size=18,
                 color="#212121",
+                size=10,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
             ),
             keyboard_type=ft.KeyboardType.TEXT,
-            border_color="#212121",
             border_radius=ft.border_radius.all(5),
+            border_color="#212121",
+            text_size=14,
+            text_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            label="first name".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
+        )
 
+        #  =========== the input controls will be here ======= //
+        self.last_name = ft.TextField(
+            prefix_icon=ft.icons.EDIT_DOCUMENT,
+            helper_text="last name".title(),
+            helper_style=ft.TextStyle(
+                color="#212121",
+                size=10,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            keyboard_type=ft.KeyboardType.TEXT,
+            border_radius=ft.border_radius.all(5),
+            border_color="#212121",
+            text_size=14,
+            text_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            label="last name".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
         )
 
 
@@ -87,13 +135,20 @@ class Artists(ft.Container):
 
                                     # ============= container for the input fields will be here ======= //
                                     ft.Container(
+                                        margin=ft.margin.only(top=30),
                                         content=ft.Column(
                                             controls=[
                                                 ft.ResponsiveRow(
+                                                    alignment=ft.MainAxisAlignment.CENTER,
                                                     controls=[
                                                         ft.Container(
-
-                                                        )
+                                                            content=self.inputControls.first_name,
+                                                            col={"sm": 12, "md": 6, "lg": 5.5}
+                                                        ),
+                                                        ft.Container(
+                                                            content=self.inputControls.first_name,
+                                                            col={"sm": 12, "md": 6, "lg": 5.5}
+                                                        ),
                                                     ]
                                                 )
                                             ]
