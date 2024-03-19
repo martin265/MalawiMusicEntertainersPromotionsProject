@@ -66,6 +66,62 @@ class InputControls(ft.Container):
             ),
         )
 
+        # ================= // ====================== //
+        self.first_name = ft.TextField(
+            prefix_icon=ft.icons.EMAIL_ROUNDED,
+            helper_text="email".title(),
+            helper_style=ft.TextStyle(
+                color="#212121",
+                size=10,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            keyboard_type=ft.KeyboardType.TEXT,
+            border_radius=ft.border_radius.all(5),
+            border_color="#212121",
+            text_size=14,
+            text_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            label="email".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
+        )
+
+        #  =========== the input controls will be here ======= //
+        self.last_name = ft.TextField(
+            prefix_icon=ft.icons.EDIT_DOCUMENT,
+            helper_text="last name".title(),
+            helper_style=ft.TextStyle(
+                color="#212121",
+                size=10,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            keyboard_type=ft.KeyboardType.TEXT,
+            border_radius=ft.border_radius.all(5),
+            border_color="#212121",
+            text_size=14,
+            text_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            label="last name".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
+        )
+
 
 class Artists(ft.Container):
     def __init__(self, page: ft.Page):
