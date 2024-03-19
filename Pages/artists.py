@@ -253,7 +253,25 @@ class InputControls(ft.Container):
         )
 
     #  =========== function to validate the records here =========== //
+    def validate_artist_records(self, e):
+        """the function will be used in validating the input fields"""
+        try:
+            if not self.first_name.value:
+                self.first_name.error_text = "fill in the blanks".capitalize()
+                self.update()
 
+        except Exception as ex:
+            self.page.snack_bar = ft.SnackBar(
+                content=ft.Row(
+                    controls=[
+                        ft.Text(
+                            "something went wrong at {}".format(ex)
+                        )
+                    ]
+                )
+            )
+            self.page.snack_bar.open = True
+            self.page.update()
 
 
 
