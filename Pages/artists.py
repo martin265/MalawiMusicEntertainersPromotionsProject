@@ -245,9 +245,15 @@ class InputControls(ft.Container):
         #  ============ button to save the records here =============== //
         self.save_records_button = ft.ElevatedButton(
             adaptive=True,
-            expand=True,
+            bgcolor="#212121",
             icon=ft.icons.SAVE_ROUNDED,
             text="save artist records",
+            color="white",
+            height=70,
+            style=ft.ButtonStyle(
+                elevation=None,
+                shadow_color="#7F4D3E",
+            ),
             on_click=self.validate_artist_records
         )
 
@@ -439,6 +445,7 @@ class Artists(ft.Container):
                                                     alignment=ft.MainAxisAlignment.START,
                                                     controls=[
                                                         ft.Container(
+                                                            margin=ft.margin.only(left=20, bottom=20, top=20),
                                                             content=self.inputControls.save_records_button,
                                                             col={"sm": 5.5, "md": 5.5, "lg": 5.5}
                                                         ),
