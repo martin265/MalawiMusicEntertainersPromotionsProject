@@ -1,6 +1,15 @@
 import flet as ft
 
 
+class InputControls(ft.Container):
+    def __init__(self, page: ft.Page):
+        super().__init__()
+        self.page = page
+        #  =========== the input controls will be here ======= //
+        self.first_name = ft.TextField(
+
+        )
+
 class Artists(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
@@ -69,7 +78,13 @@ class Artists(ft.Container):
                                     ft.Container(
                                         content=ft.Column(
                                             controls=[
+                                                ft.ResponsiveRow(
+                                                    controls=[
+                                                        ft.Container(
 
+                                                        )
+                                                    ]
+                                                )
                                             ]
                                         )
                                     )
