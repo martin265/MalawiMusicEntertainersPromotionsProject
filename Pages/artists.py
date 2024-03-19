@@ -264,7 +264,9 @@ class InputControls(ft.Container):
             if not self.first_name.value:
                 self.first_name.error_text = "fill in the blanks".capitalize()
                 self.first_name.error_style = ft.TextStyle(
-                    color="blue"
+                    color="#d50000",
+                    size=15,
+                    font_family="manrope-sem-bold",
                 )
                 self.page.update()
             #  =============== // ================== //
