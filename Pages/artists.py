@@ -7,7 +7,11 @@ class InputControls(ft.Container):
         self.page = page
         #  =========== the input controls will be here ======= //
         self.first_name = ft.TextField(
-
+            helper_text="enter your name in characters".capitalize(),
+            helper_style=ft.TextStyle(
+                size=18,
+                color="#212121",
+            )
         )
 
 class Artists(ft.Container):
