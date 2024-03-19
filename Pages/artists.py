@@ -519,6 +519,7 @@ class Artists(ft.Container):
                             ),
                             col={"sm": 12, "md": 12, "lg": 3}
                         )
+
                     ]
                 ),
 
