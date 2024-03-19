@@ -11,7 +11,11 @@ class InputControls(ft.Container):
             helper_style=ft.TextStyle(
                 size=18,
                 color="#212121",
-            )
+            ),
+            keyboard_type=ft.KeyboardType.TEXT,
+            border_color="#212121",
+            border_radius=ft.border_radius.all(5),
+
         )
 
 
@@ -19,6 +23,8 @@ class Artists(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
         self.page = page
+        #  ======== passing the input fields ============ //
+        self.inputControls = InputControls(page=page)
         #  ======== the fonts for the system will be here ======= //
         self.page.fonts = {
             "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
