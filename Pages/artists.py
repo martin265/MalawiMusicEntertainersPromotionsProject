@@ -496,6 +496,25 @@ class Artists(ft.Container):
                                 ]
                             ),
                             col={"sm": 12, "md": 12, "lg": 9}
+                        ),
+
+                        #  ============ the side container for the page =============== //
+                        ft.Container(
+                            expand=True,
+                            bgcolor=ft.colors.BLACK,
+                            border_radius=ft.border_radius.all(10),
+                            gradient=ft.LinearGradient(
+                                colors=[
+                                    "#CBCCFF",
+                                    "#CBCCFF"
+                                ],
+                                begin=ft.alignment.top_right,
+                                end=ft.alignment.bottom_left,
+                            ),
+                            content=ft.Text(
+                                "hello world"
+                            ),
+                            col={"sm": 12, "md": 12, "lg": 3}
                         )
                     ]
                 )
