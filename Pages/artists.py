@@ -242,6 +242,14 @@ class InputControls(ft.Container):
             ),
         )
 
+        #  ============ button to save the records here =============== //
+        self.save_records_button = ft.ElevatedButton(
+            width=200,
+            icon=ft.icons.SAVE_ROUNDED,
+            text="save artist records",
+            on_click={}
+        )
+
 
 class Artists(ft.Container):
     def __init__(self, page: ft.Page):
@@ -377,10 +385,6 @@ class Artists(ft.Container):
                                                     controls=[
                                                         ft.Container(
                                                             content=self.inputControls.genre,
-                                                            col={"sm": 5.5, "md": 5.5, "lg": 5.5}
-                                                        ),
-                                                        ft.Container(
-                                                            content=self.inputControls.residence,
                                                             col={"sm": 5.5, "md": 5.5, "lg": 5.5}
                                                         ),
                                                     ]
