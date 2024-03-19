@@ -58,7 +58,8 @@ class Artists(ft.Container):
                                             controls=[
                                                 ft.Icon(
                                                     ft.icons.MIC_ROUNDED,
-                                                    size=50
+                                                    size=70,
+                                                    color=""
                                                 )
                                             ]
                                         )
