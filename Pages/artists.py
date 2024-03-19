@@ -266,7 +266,7 @@ class InputControls(ft.Container):
                 self.first_name.error_style = ft.TextStyle(
                     color="blue"
                 )
-                self.update()
+                self.page.update()
             #  =============== // ================== //
             elif not self.last_name.value:
                 self.last_name.error_text = "enter the last name ".capitalize()
