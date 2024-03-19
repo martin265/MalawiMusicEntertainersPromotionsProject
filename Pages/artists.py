@@ -59,7 +59,7 @@ class Artists(ft.Container):
                                                 ft.Icon(
                                                     ft.icons.MIC_ROUNDED,
                                                     size=70,
-                                                    color=""
+                                                    color="#212121"
                                                 )
                                             ]
                                         )
