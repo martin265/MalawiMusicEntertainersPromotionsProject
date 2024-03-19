@@ -264,6 +264,19 @@ class InputControls(ft.Container):
                 self.last_name.error_text = "enter the last name ".capitalize()
                 self.update()
 
+            # ===================== // ================= //
+            elif not self.email.value:
+                self.email.error_text = "provide an email".capitalize()
+                self.update()
+            # ===================== // ===================== //
+            elif not self.phone_number.value:
+                self.phone_number.error_text = "fill something for the phone number".capitalize()
+                self.update()
+            #  =================== // ==================== //
+            elif not self.gender.value:
+                self.gender.error_text = "select your gender first".capitalize()
+                self.update()
+
 
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
@@ -277,7 +290,6 @@ class InputControls(ft.Container):
             )
             self.page.snack_bar.open = True
             self.page.update()
-
 
 
 class Artists(ft.Container):
