@@ -366,7 +366,7 @@ class Artists(ft.Container):
         self.content = ft.Column(
             scroll=ft.ScrollMode.AUTO,
             adaptive=True,
-
+            height=self.page.height,
             controls=[
                 ft.ResponsiveRow(
                     controls=[
@@ -505,6 +505,7 @@ class Artists(ft.Container):
                             bgcolor=ft.colors.BLACK,
                             border_radius=ft.border_radius.all(10),
                             height=400,
+                            margin=ft.margin.only(bottom=30),
                             gradient=ft.LinearGradient(
                                 colors=[
                                     "#CBCCFF",
