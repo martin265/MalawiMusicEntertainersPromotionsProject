@@ -519,7 +519,8 @@ class Artists(ft.Container):
                                     ft.Image(
                                         width=self.page.width,
                                         src="https://images.pexels.com/photos/755416/pexels-photo-755416.jpeg?auto"
-                                            "=compress&cs=tinysrgb&w=600"
+                                            "=compress&cs=tinysrgb&w=600",
+                                        border_radius=ft.border_radius.only(top_left=10, top_right=10)
                                     )
                                 ]
                             ),
