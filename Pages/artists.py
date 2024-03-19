@@ -52,12 +52,13 @@ class Artists(ft.Container):
 
                                     #  ============= container for the icon will be here ========= //
                                     ft.Container(
-                                        margin=ft.margin.only(top=40),
+                                        margin=ft.margin.only(top=20),
                                         content=ft.Row(
                                             alignment=ft.MainAxisAlignment.CENTER,
                                             controls=[
                                                 ft.Icon(
                                                     ft.icons.MIC_ROUNDED,
+                                                    size=50
                                                 )
                                             ]
                                         )
