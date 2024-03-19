@@ -69,7 +69,7 @@ class InputControls(ft.Container):
         # ================= // ====================== //
         self.first_name = ft.TextField(
             prefix_icon=ft.icons.EMAIL_ROUNDED,
-            helper_text="email".title(),
+            helper_text="enter valid email".title(),
             helper_style=ft.TextStyle(
                 color="#212121",
                 size=10,
