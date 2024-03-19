@@ -14,6 +14,7 @@ class InputControls(ft.Container):
             )
         )
 
+
 class Artists(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
