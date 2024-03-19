@@ -122,6 +122,65 @@ class InputControls(ft.Container):
             ),
         )
 
+        #  ========== for the age and gender here =============== //
+        self.gender = ft.Dropdown(
+            prefix_icon=ft.icons.TRANSGENDER_ROUNDED,
+            helper_text="select your gender".title(),
+            helper_style=ft.TextStyle(
+                color="#212121",
+                size=10,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            border_radius=ft.border_radius.all(5),
+            border_color="#212121",
+            text_size=14,
+            text_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            label="gender".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
+            options=[
+                ft.dropdown.Option("Male"),
+                ft.dropdown.Option("Female")
+            ]
+        )
+
+        # ======================= the input for the age here ============== //
+        self.age = ft.TextField(
+            prefix_icon=ft.icons.NUMBERS_ROUNDED,
+            helper_text="enter your age".title(),
+            helper_style=ft.TextStyle(
+                color="#212121",
+                size=10,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            keyboard_type=ft.KeyboardType.NUMBER,
+            border_radius=ft.border_radius.all(5),
+            border_color="#212121",
+            text_size=14,
+            text_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            label="age".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
+        )
+
 
 class Artists(ft.Container):
     def __init__(self, page: ft.Page):
@@ -199,11 +258,11 @@ class Artists(ft.Container):
                                                     controls=[
                                                         ft.Container(
                                                             content=self.inputControls.first_name,
-                                                            col={"sm": 12, "md": 6, "lg": 5.5}
+                                                            col={"sm": 5.5, "md": 5.5, "lg": 5.5}
                                                         ),
                                                         ft.Container(
                                                             content=self.inputControls.last_name,
-                                                            col={"sm": 12, "md": 6, "lg": 5.5}
+                                                            col={"sm": 5.5, "md": 5.5, "lg": 5.5}
                                                         ),
                                                     ]
                                                 ),
@@ -212,12 +271,26 @@ class Artists(ft.Container):
                                                     alignment=ft.MainAxisAlignment.CENTER,
                                                     controls=[
                                                         ft.Container(
-                                                            content=self.inputControls.first_name,
-                                                            col={"sm": 12, "md": 6, "lg": 5.5}
+                                                            content=self.inputControls.email,
+                                                            col={"sm": 5.5, "md": 5.5, "lg": 5.5}
                                                         ),
                                                         ft.Container(
-                                                            content=self.inputControls.last_name,
-                                                            col={"sm": 12, "md": 6, "lg": 5.5}
+                                                            content=self.inputControls.phone_number,
+                                                            col={"sm": 5.5, "md": 5.5, "lg": 5.5}
+                                                        ),
+                                                    ]
+                                                ),
+                                                # ============= the other row will be here ============ //
+                                                ft.ResponsiveRow(
+                                                    alignment=ft.MainAxisAlignment.CENTER,
+                                                    controls=[
+                                                        ft.Container(
+                                                            content=self.inputControls.email,
+                                                            col={"sm": 5.5, "md": 5.5, "lg": 5.5}
+                                                        ),
+                                                        ft.Container(
+                                                            content=self.inputControls.phone_number,
+                                                            col={"sm": 5.5, "md": 5.5, "lg": 5.5}
                                                         ),
                                                     ]
                                                 ),
