@@ -588,10 +588,5 @@ class EventsPage(ft.Container):
                     )
                 ),
 
-                #  ============= the other safe area for the other controls here ========== //
-                ft.SafeArea(
-                    height=200,
-                    content=ft.Text("")
-                )
             ]
         )
