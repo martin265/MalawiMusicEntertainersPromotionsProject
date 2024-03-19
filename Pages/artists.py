@@ -15,7 +15,7 @@ class InputControls(ft.Container):
             prefix_icon=ft.icons.EDIT_DOCUMENT,
             helper_text="enter first name".title(),
             helper_style=ft.TextStyle(
-                color="white",
+                color="#0078D9",
                 size=10,
                 font_family="manrope-sem-bold",
                 weight=ft.FontWeight.BOLD
