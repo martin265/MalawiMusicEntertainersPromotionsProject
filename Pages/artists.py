@@ -290,7 +290,6 @@ class InputControls(ft.Container):
             else:
                 print("hello world")
 
-
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
                 content=ft.Row(
