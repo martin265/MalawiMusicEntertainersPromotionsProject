@@ -202,11 +202,26 @@ class Artists(ft.Container):
                                                             col={"sm": 12, "md": 6, "lg": 5.5}
                                                         ),
                                                         ft.Container(
-                                                            content=self.inputControls.first_name,
+                                                            content=self.inputControls.last_name,
                                                             col={"sm": 12, "md": 6, "lg": 5.5}
                                                         ),
                                                     ]
-                                                )
+                                                ),
+                                                # ============= the other row will be here ============ //
+                                                ft.ResponsiveRow(
+                                                    alignment=ft.MainAxisAlignment.CENTER,
+                                                    controls=[
+                                                        ft.Container(
+                                                            content=self.inputControls.first_name,
+                                                            col={"sm": 12, "md": 6, "lg": 5.5}
+                                                        ),
+                                                        ft.Container(
+                                                            content=self.inputControls.last_name,
+                                                            col={"sm": 12, "md": 6, "lg": 5.5}
+                                                        ),
+                                                    ]
+                                                ),
+
                                             ]
                                         )
                                     )
