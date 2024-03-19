@@ -259,6 +259,11 @@ class InputControls(ft.Container):
             if not self.first_name.value:
                 self.first_name.error_text = "fill in the blanks".capitalize()
                 self.update()
+            #  =============== // ================== //
+            elif not self.last_name.value:
+                self.last_name.error_text = "enter the last name ".capitalize()
+                self.update()
+
 
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
