@@ -272,31 +272,67 @@ class InputControls(ft.Container):
             #  =============== // ================== //
             elif not self.last_name.value:
                 self.last_name.error_text = "enter the last name ".capitalize()
-                self.update()
+                self.last_name.error_style = ft.TextStyle(
+                    color="#d50000",
+                    size=15,
+                    font_family="manrope-sem-bold",
+                )
+                self.page.update()
+
             # ===================== // ================= //
             elif not self.email.value:
                 self.email.error_text = "provide an email".capitalize()
-                self.update()
+                self.email.error_style = ft.TextStyle(
+                    color="#d50000",
+                    size=15,
+                    font_family="manrope-sem-bold",
+                )
+                self.page.update()
             # ===================== // ===================== //
             elif not self.phone_number.value:
                 self.phone_number.error_text = "fill something for the phone number".capitalize()
-                self.update()
+                self.phone_number.error_style = ft.TextStyle(
+                    color="#d50000",
+                    size=15,
+                    font_family="manrope-sem-bold",
+                )
+                self.page.update()
             #  =================== // ==================== //
             elif not self.gender.value:
                 self.gender.error_text = "select your gender first".capitalize()
-                self.update()
+                self.gender.error_style = ft.TextStyle(
+                    color="#d50000",
+                    size=15,
+                    font_family="manrope-sem-bold",
+                )
+                self.page.update()
             #  =================== // ======================== //
             elif not self.age.value:
                 self.age.error_text = "pass in your age please".capitalize()
-                self.update()
+                self.age.error_style = ft.TextStyle(
+                    color="#d50000",
+                    size=15,
+                    font_family="manrope-sem-bold",
+                )
+                self.page.update()
             #  ==================== // ========================== //
             elif not self.genre.value:
                 self.genre.error_text = "select the genre first".capitalize()
-                self.update()
+                self.genre.error_style = ft.TextStyle(
+                    color="#d50000",
+                    size=15,
+                    font_family="manrope-sem-bold",
+                )
+                self.page.update()
             #  ======================== // ===================== //
             elif not self.residence.value:
                 self.residence.error_text = "enter the artists location".capitalize()
-                self.update()
+                self.residence.error_style = ft.TextStyle(
+                    color="#d50000",
+                    size=15,
+                    font_family="manrope-sem-bold",
+                )
+                self.page.update()
             else:
                 print("hello world")
 
