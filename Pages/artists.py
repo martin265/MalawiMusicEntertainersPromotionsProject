@@ -252,6 +252,10 @@ class InputControls(ft.Container):
             on_click={}
         )
 
+    #  =========== function to validate the records here =========== //
+
+
+
 
 class Artists(ft.Container):
     def __init__(self, page: ft.Page):
