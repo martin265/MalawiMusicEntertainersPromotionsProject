@@ -561,6 +561,7 @@ class EventsPage(ft.Container):
                             ),
 
                             ft.Container(
+                                margin=ft.margin.only(bottom=30),
                                 content=ft.ResponsiveRow(
                                     controls=[
                                         ft.Container(
