@@ -249,7 +249,7 @@ class InputControls(ft.Container):
             icon=ft.icons.SAVE_ROUNDED,
             text="save artist records",
             color="white",
-            height=70,
+            height=50,
             style=ft.ButtonStyle(
                 elevation=None,
                 shadow_color="#7F4D3E",
