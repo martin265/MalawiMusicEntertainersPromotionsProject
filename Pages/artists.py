@@ -249,7 +249,7 @@ class InputControls(ft.Container):
             expand=True,
             icon=ft.icons.SAVE_ROUNDED,
             text="save artist records",
-            on_click={}
+            on_click=self.validate_artist_records
         )
 
     #  =========== function to validate the records here =========== //
@@ -258,6 +258,9 @@ class InputControls(ft.Container):
         try:
             if not self.first_name.value:
                 self.first_name.error_text = "fill in the blanks".capitalize()
+                self.first_name.error_style = ft.TextStyle(
+                    color="blue"
+                )
                 self.update()
             #  =============== // ================== //
             elif not self.last_name.value:
