@@ -514,8 +514,14 @@ class Artists(ft.Container):
                                 begin=ft.alignment.top_right,
                                 end=ft.alignment.bottom_left,
                             ),
-                            content=ft.Text(
-                                "hello world"
+                            content=ft.Column(
+                                controls=[
+                                    ft.Image(
+                                        width=self.page.width,
+                                        src="https://images.pexels.com/photos/755416/pexels-photo-755416.jpeg?auto"
+                                            "=compress&cs=tinysrgb&w=600"
+                                    )
+                                ]
                             ),
                             col={"sm": 12, "md": 12, "lg": 3}
                         )
