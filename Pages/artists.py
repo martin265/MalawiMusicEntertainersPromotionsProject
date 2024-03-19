@@ -245,6 +245,8 @@ class InputControls(ft.Container):
         #  ============ button to save the records here =============== //
         self.save_records_button = ft.ElevatedButton(
             width=200,
+            adaptive=True,
+            expand=True,
             icon=ft.icons.SAVE_ROUNDED,
             text="save artist records",
             on_click={}
