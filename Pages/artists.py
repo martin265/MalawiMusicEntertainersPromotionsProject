@@ -65,8 +65,14 @@ class Artists(ft.Container):
                                         )
                                     ),
 
-                                    # ============= container for the inpu fields will be here ======= //
+                                    # ============= container for the input fields will be here ======= //
+                                    ft.Container(
+                                        content=ft.Column(
+                                            controls=[
 
+                                            ]
+                                        )
+                                    )
                                 ]
                             ),
                             col={"sm": 12, "md": 12, "lg": 9}
