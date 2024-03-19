@@ -276,6 +276,20 @@ class InputControls(ft.Container):
             elif not self.gender.value:
                 self.gender.error_text = "select your gender first".capitalize()
                 self.update()
+            #  =================== // ======================== //
+            elif not self.age.value:
+                self.age.error_text = "pass in your age please".capitalize()
+                self.update()
+            #  ==================== // ========================== //
+            elif not self.genre.value:
+                self.genre.error_text = "select the genre first".capitalize()
+                self.update()
+            #  ======================== // ===================== //
+            elif not self.residence.value:
+                self.residence.error_text = "enter the artists location".capitalize()
+                self.update()
+            else:
+                print("hello world")
 
 
         except Exception as ex:
