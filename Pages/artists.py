@@ -97,14 +97,14 @@ class InputControls(ft.Container):
         #  =========== the input controls will be here ======= //
         self.phone_number = ft.TextField(
             prefix_icon=ft.icons.PHONE_IPHONE_ROUNDED,
-            helper_text="last name".title(),
+            helper_text="phone number".title(),
             helper_style=ft.TextStyle(
                 color="#212121",
                 size=10,
                 font_family="manrope-sem-bold",
                 weight=ft.FontWeight.BOLD
             ),
-            keyboard_type=ft.KeyboardType.TEXT,
+            keyboard_type=ft.KeyboardType.NUMBER,
             border_radius=ft.border_radius.all(5),
             border_color="#212121",
             text_size=14,
@@ -114,7 +114,7 @@ class InputControls(ft.Container):
                 font_family="manrope-sem-bold",
                 weight=ft.FontWeight.BOLD
             ),
-            label="last name".title(),
+            label="phone number".title(),
             label_style=ft.TextStyle(
                 color="#212121",
                 size=14,
