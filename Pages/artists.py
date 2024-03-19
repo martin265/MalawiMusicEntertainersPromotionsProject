@@ -263,7 +263,6 @@ class InputControls(ft.Container):
             elif not self.last_name.value:
                 self.last_name.error_text = "enter the last name ".capitalize()
                 self.update()
-
             # ===================== // ================= //
             elif not self.email.value:
                 self.email.error_text = "provide an email".capitalize()
