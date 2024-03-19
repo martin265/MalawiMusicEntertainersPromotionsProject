@@ -64,6 +64,9 @@ class Artists(ft.Container):
                                             ]
                                         )
                                     ),
+
+                                    # ============= container for the inpu fields will be here ======= //
+
                                 ]
                             ),
                             col={"sm": 12, "md": 12, "lg": 9}
