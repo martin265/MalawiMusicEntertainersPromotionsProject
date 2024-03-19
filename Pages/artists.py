@@ -15,7 +15,7 @@ class InputControls(ft.Container):
             prefix_icon=ft.icons.EDIT_DOCUMENT,
             helper_text="enter first name".title(),
             helper_style=ft.TextStyle(
-                color="#212121",
+                color="white",
                 size=10,
                 font_family="manrope-sem-bold",
                 weight=ft.FontWeight.BOLD
@@ -181,6 +181,67 @@ class InputControls(ft.Container):
             ),
         )
 
+        #  ========== for the age and gender here =============== //
+        self.genre = ft.Dropdown(
+            prefix_icon=ft.icons.RECORD_VOICE_OVER_ROUNDED,
+            helper_text="select artist genre".title(),
+            helper_style=ft.TextStyle(
+                color="#212121",
+                size=10,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            border_radius=ft.border_radius.all(5),
+            border_color="#212121",
+            text_size=14,
+            text_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            label="genre".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
+            options=[
+                ft.dropdown.Option("Hip Hop"),
+                ft.dropdown.Option("Local"),
+                ft.dropdown.Option("Dance hall"),
+                ft.dropdown.Option("RNb"),
+            ]
+        )
+
+        # ======================= the input for the age here ============== //
+        self.residence = ft.TextField(
+            prefix_icon=ft.icons.LOCATION_ON_ROUNDED,
+            helper_text="enter artist location".title(),
+            helper_style=ft.TextStyle(
+                color="#212121",
+                size=10,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            keyboard_type=ft.KeyboardType.NUMBER,
+            border_radius=ft.border_radius.all(5),
+            border_color="#212121",
+            text_size=14,
+            text_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            label="artist location".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
+        )
+
 
 class Artists(ft.Container):
     def __init__(self, page: ft.Page):
@@ -285,11 +346,26 @@ class Artists(ft.Container):
                                                     alignment=ft.MainAxisAlignment.CENTER,
                                                     controls=[
                                                         ft.Container(
-                                                            content=self.inputControls.email,
+                                                            content=self.inputControls.age,
                                                             col={"sm": 5.5, "md": 5.5, "lg": 5.5}
                                                         ),
                                                         ft.Container(
-                                                            content=self.inputControls.phone_number,
+                                                            content=self.inputControls.gender,
+                                                            col={"sm": 5.5, "md": 5.5, "lg": 5.5}
+                                                        ),
+                                                    ]
+                                                ),
+
+                                                # ============= the other row will be here ============ //
+                                                ft.ResponsiveRow(
+                                                    alignment=ft.MainAxisAlignment.CENTER,
+                                                    controls=[
+                                                        ft.Container(
+                                                            content=self.inputControls.genre,
+                                                            col={"sm": 5.5, "md": 5.5, "lg": 5.5}
+                                                        ),
+                                                        ft.Container(
+                                                            content=self.inputControls.residence,
                                                             col={"sm": 5.5, "md": 5.5, "lg": 5.5}
                                                         ),
                                                     ]
