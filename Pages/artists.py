@@ -503,6 +503,7 @@ class Artists(ft.Container):
                             expand=True,
                             bgcolor=ft.colors.BLACK,
                             border_radius=ft.border_radius.all(10),
+                            height=400,
                             gradient=ft.LinearGradient(
                                 colors=[
                                     "#CBCCFF",
