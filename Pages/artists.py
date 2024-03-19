@@ -484,7 +484,7 @@ class Artists(ft.Container):
                                                     alignment=ft.MainAxisAlignment.START,
                                                     controls=[
                                                         ft.Container(
-                                                            margin=ft.margin.only(left=20, bottom=20, top=20),
+                                                            margin=ft.margin.only(left=30, bottom=20, top=20),
                                                             content=self.inputControls.save_records_button,
                                                             col={"sm": 5.5, "md": 5.5, "lg": 5.5}
                                                         ),
