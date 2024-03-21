@@ -252,6 +252,7 @@ class InputControls(ft.Container):
                 font_family="manrope-sem-bold",
                 weight=ft.FontWeight.BOLD
             ),
+            multiline=True,
             keyboard_type=ft.KeyboardType.NUMBER,
             border_radius=ft.border_radius.all(5),
             border_color="#212121",
