@@ -44,7 +44,7 @@ class Home(ft.Container):
                                                             alignment=ft.MainAxisAlignment.CENTER,
                                                             controls=[
                                                                 ft.Text(
-                                                                    "available transactions",
+                                                                    "available transactions".capitalize(),
                                                                     font_family="manrop-bold",
                                                                     size=30
                                                                 )
