@@ -20,6 +20,6 @@ class Artist:
     def save_artist_records_func(self):
         """ the function to save the records to the database here"""
         try:
-
+            data = supabase.table("")
         except Exception as ex:
             print("something went wrong at {}".format(ex))
