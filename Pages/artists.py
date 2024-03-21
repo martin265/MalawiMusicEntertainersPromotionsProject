@@ -262,7 +262,7 @@ class InputControls(ft.Container):
                 font_family="manrope-sem-bold",
                 weight=ft.FontWeight.BOLD
             ),
-            label="artist location".title(),
+            label="artist bio".title(),
             label_style=ft.TextStyle(
                 color="#212121",
                 size=14,
