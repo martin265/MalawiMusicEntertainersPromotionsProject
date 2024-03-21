@@ -7,7 +7,7 @@ class InputControls(ft.Container):
         super().__init__()
         self.page = page
         # ==========passing the model class here ======== //
-
+        self.artist = Artist()
         self.page.fonts = {
             "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
             "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
