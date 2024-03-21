@@ -373,8 +373,7 @@ class InputControls(ft.Container):
                 )
                 self.page.update()
             else:
-
-                print(self.message)
+                print("hello"),
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
                 content=ft.Row(
@@ -388,11 +387,13 @@ class InputControls(ft.Container):
             self.page.snack_bar.open = True
             self.page.update()
 
-    def upload_profile_picture(self, e: ft.FilePickerUploadEvent):
+    def upload_profile_picture(self, e: ft.FilePickerResultEvent):
         """the function will be used to upload a profile picture for the artist"""
         self.selected_files.value = (
-
+            ", ".join(map(lambda f: f.name, e.files)) if e.files else "cancelled"
         )
+        self.selected_files.update()
+
 
 
 class Artists(ft.Container):
