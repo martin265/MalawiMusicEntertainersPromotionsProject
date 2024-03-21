@@ -405,12 +405,11 @@ class InputControls(ft.Container):
             self.page.snack_bar.open = True
             self.page.update()
 
-    def upload_profile_picture(self, e: ft.FilePickerResultEvent):
-        """the function will be used to upload a profile picture for the artist"""
+    async def pick_files_result(self, e: ft.FilePickerResultEvent):
         self.selected_files.value = (
-            ", ".join(map(lambda f: f.name, e.files)) if e.files else "cancelled"
+            ", ".join(map(lambda f: f.name, e.files)) if e.files else "Cancelled!"
         )
-        self.selected_files.update()
+        await self.selected_files.update_async()
 
 
 class Artists(ft.Container):
