@@ -298,7 +298,7 @@ class InputControls(ft.Container):
             self.age.value,
             self.genre.value,
             self.residence.value,
-            self.artist_biography
+            self.artist_biography.value
         )
 
     #  =========== function to validate the records here =========== //
