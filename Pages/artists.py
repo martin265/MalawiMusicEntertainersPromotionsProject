@@ -624,7 +624,6 @@ class Artists(ft.Container):
                             expand=True,
                             bgcolor=ft.colors.BLACK,
                             border_radius=ft.border_radius.all(10),
-                            height=400,
                             margin=ft.margin.only(bottom=30),
                             gradient=ft.LinearGradient(
                                 colors=[
@@ -646,7 +645,12 @@ class Artists(ft.Container):
 
                                     ft.Row(
                                         controls=[
-
+                                            ft.Text(
+                                                "On this section of the system, all the artists details "
+                                                "will be added to the online database that will be synced with"
+                                                "the mobile application. For coherent data make sure to provide"
+                                                "valid details"
+                                            )
                                         ]
                                     )
                                 ]
