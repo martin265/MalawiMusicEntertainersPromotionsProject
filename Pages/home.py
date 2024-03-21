@@ -13,8 +13,10 @@ class Home(ft.Container):
         }
         #  =========== the content for the page will be here ========== //
         self.content = ft.Column(
+            adaptive=True,
             controls=[
                 ft.ResponsiveRow(
+                    adaptive=True,
                     controls=[
                         ft.Container(
                             expand=True,
@@ -38,9 +40,6 @@ class Home(ft.Container):
                                                     ft.Container(
                                                         content=ft.Row(
                                                             controls=[
-                                                                ft.Icon(
-                                                                    ft.icons.DASHBOARD_ROUNDED
-                                                                ),
                                                                 ft.Text(
                                                                     "home",
                                                                     font_family="manrop-bold",
@@ -56,7 +55,12 @@ class Home(ft.Container):
                                             alignment=ft.MainAxisAlignment.CENTER,
                                             controls=[
                                                 ft.Container(
-                                                    content=ft.Text("hello world"),
+                                                    expand=True,
+                                                    content=ft.Column(
+                                                        controls=[
+
+                                                        ]
+                                                    ),
                                                     col={"sm": 12, "md": 12, "lg": 4}
                                                 ),
                                                 ft.Container(
