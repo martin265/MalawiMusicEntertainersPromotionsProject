@@ -415,6 +415,7 @@ class InputControls(ft.Container):
                         ]
                     )
                 )
+                self.page.snack_bar.open = True
                 self.page.update()
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
