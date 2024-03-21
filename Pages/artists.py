@@ -10,7 +10,7 @@ class InputControls(ft.Container):
             "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
             "manrop-bold": "assets/fonts/Manrope/static/Manrope-Bold.ttf"
         }
-        self.message = "hello word"
+        self.selected_files = ft.Text()
         #  =========== the input controls will be here ======= //
         self.first_name = ft.TextField(
             prefix_icon=ft.icons.EDIT_DOCUMENT,
@@ -390,7 +390,9 @@ class InputControls(ft.Container):
 
 
     def upload_profile_picture(self, e:ft.FilePickerUploadEvent):
+        self.selected_files.value = (
 
+        )
 
 
 
