@@ -2,6 +2,7 @@ import flet as ft
 # getting the pages here
 from Pages.events import EventsPage
 from Pages.artists import Artists
+from Pages.records import Records
 
 
 class Dashboard(ft.View):
@@ -19,7 +20,8 @@ class Dashboard(ft.View):
         # =============== list for all the pages will be here ===//
         self.all_available_pages = [
             EventsPage(page=page),
-            Artists(page=page)
+            Artists(page=page),
+            Records(page=page)
         ]
         #  the navigation for the system will be here ==== //
         self.navigation_rail = ft.NavigationRail(
