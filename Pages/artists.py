@@ -653,12 +653,14 @@ class Artists(ft.Container):
                                                         adaptive=True,
                                                         controls=[
                                                             ft.Text(
-                                                                "On this section of the system, all the artists details "
-                                                                "will be added to the online database that will be synced with"
-                                                                "the mobile application. For coherent data make sure to provide"
+                                                                "On this section of the system, all the artists details"
+                                                                "will be added to the online database that will be "
+                                                                "synced with"
+                                                                "the mobile application. For coherent data make sure "
+                                                                "to provide"
                                                                 "valid details",
                                                                 size=20,
-                                                                color="#212121",
+                                                                color="#2A272A",
                                                             )
                                                         ]
                                                     )
@@ -668,9 +670,19 @@ class Artists(ft.Container):
                                     ),
 
                                     ft.Container(
+                                        border_radius=ft.border_radius.all(10),
+                                        gradient=ft.LinearGradient(
+                                            colors=[
+                                                "#835CAF",
+                                                "#835CAF"
+                                            ],
+                                            begin=ft.alignment.top_right,
+                                            end=ft.alignment.bottom_left,
+                                        ),
                                         content=ft.Text(
                                             "hello"
-                                        )
+                                        ),
+                                        col={"sm": 12, "md": 12, "lg": 3}
                                     )
 
 
