@@ -242,6 +242,9 @@ class InputControls(ft.Container):
             ),
         )
 
+        #  ============== the artists bio will be here =========== //
+        self.artist_biography = ft.Text
+
         #  ============ button to save the records here =============== //
         self.save_records_button = ft.ElevatedButton(
             adaptive=True,
