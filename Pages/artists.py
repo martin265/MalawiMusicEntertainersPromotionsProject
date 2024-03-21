@@ -400,6 +400,22 @@ class InputControls(ft.Container):
                     self.artist_biography.value
                 )
                 self.artist.save_artist_records_func()
+                #  ============= // showing the snack bar here =========== //
+                self.page.snack_bar = ft.SnackBar(
+                    bgcolor="",
+                    content=ft.Row(
+                        controls=[
+                            ft.Text(
+                                "Artist records saved successfully".capitalize(),
+                                color="white",
+                                size=14,
+                                font_family="manrope-sem-bold",
+                                weight=ft.FontWeight.BOLD
+                            )
+                        ]
+                    )
+                )
+                self.page.update()
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
                 content=ft.Row(
