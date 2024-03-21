@@ -69,6 +69,7 @@ class Home(ft.Container):
                                                         controls=[
                                                             #  ============ // container for the events // ======//
                                                             ft.Container(
+                                                                margin=ft.margin.only(top=20),
                                                                 content=ft.Row(
                                                                     alignment=ft.MainAxisAlignment.CENTER,
                                                                     controls=[
