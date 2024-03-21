@@ -5,8 +5,7 @@ class Records(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
         self.page = page
-
-    def build_controls(self):
+        #  =========== the content for the page will be here ========== //
         self.content = ft.Column(
             controls=[
                 ft.Text(
@@ -14,3 +13,4 @@ class Records(ft.Container):
                 )
             ]
         )
+
