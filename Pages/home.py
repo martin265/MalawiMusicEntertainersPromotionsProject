@@ -77,7 +77,22 @@ class Home(ft.Container):
                                                                             ft.icons.EVENT_NOTE_ROUNDED,
                                                                             color="#212121",
                                                                             size=60
-                                                                        )
+                                                                        ),
+                                                                    ]
+                                                                )
+                                                            ),
+
+                                                            #  ============ // container for the events // ======//
+                                                            ft.Container(
+                                                                margin=ft.margin.only(top=20),
+                                                                content=ft.Row(
+                                                                    alignment=ft.MainAxisAlignment.CENTER,
+                                                                    controls=[
+                                                                        ft.Icon(
+                                                                            ft.icons.EVENT_NOTE_ROUNDED,
+                                                                            color="#212121",
+                                                                            size=60
+                                                                        ),
                                                                     ]
                                                                 )
                                                             )
