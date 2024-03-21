@@ -58,15 +58,17 @@ class Home(ft.Container):
                                                     expand=True,
                                                     gradient=ft.LinearGradient(
                                                         colors=[
-                                                            "",
-                                                            ""
+                                                            "#0075BD",
+                                                            "#0099C4"
                                                         ],
                                                         begin=ft.alignment.top_left,
                                                         end=ft.alignment.top_right
                                                     ),
                                                     content=ft.Column(
                                                         controls=[
-
+                                                            ft.Text(
+                                                                "hello world"
+                                                            )
                                                         ]
                                                     ),
                                                     col={"sm": 12, "md": 12, "lg": 4}
