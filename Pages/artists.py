@@ -10,6 +10,7 @@ class InputControls(ft.Container):
             "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
             "manrop-bold": "assets/fonts/Manrope/static/Manrope-Bold.ttf"
         }
+        self.message = "hello word"
         #  =========== the input controls will be here ======= //
         self.first_name = ft.TextField(
             prefix_icon=ft.icons.EDIT_DOCUMENT,
@@ -372,8 +373,8 @@ class InputControls(ft.Container):
                 )
                 self.page.update()
             else:
-                print("hello world")
 
+                print(self.message)
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
                 content=ft.Row(
@@ -386,6 +387,11 @@ class InputControls(ft.Container):
             )
             self.page.snack_bar.open = True
             self.page.update()
+
+
+    def upload_profile_picture(self, e:ft.FilePickerUploadEvent):
+
+
 
 
 class Artists(ft.Container):
@@ -573,6 +579,10 @@ class Artists(ft.Container):
                                             "=compress&cs=tinysrgb&w=600",
                                         border_radius=ft.border_radius.only(top_left=10, top_right=10),
                                         col={"sm": 12, "md": 12, "lg": 3}
+                                    ),
+
+                                    ft.Text(
+                                        f"the message is {self.inputControls.first_name.value}"
                                     )
                                 ]
                             ),
