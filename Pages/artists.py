@@ -663,7 +663,7 @@ class Artists(ft.Container):
                                     ),
 
                                     ft.Container(
-                                        margin=ft.margin.all(10),
+                                        bgcolor="#9496C6",
                                         content=ft.Row(
                                             controls=[
 
