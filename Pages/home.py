@@ -39,10 +39,12 @@ class Home(ft.Container):
                                                 controls=[
                                                     #  ========= container for the top text
                                                     ft.Container(
+                                                        margin=ft.margin.only(top=20, bottom=20),
                                                         content=ft.Row(
+                                                            alignment=ft.MainAxisAlignment.CENTER,
                                                             controls=[
                                                                 ft.Text(
-                                                                    "home",
+                                                                    "available transactions",
                                                                     font_family="manrop-bold",
                                                                     size=30
                                                                 )
