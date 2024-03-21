@@ -513,7 +513,7 @@ class Artists(ft.Container):
                                                     controls=[
                                                         ft.Container(
                                                             margin=ft.margin.only(left=30, bottom=20, top=20),
-                                                            content=self.inputControls.save_records_button,
+                                                            content=self.inputControls.artist_biography,
                                                             col={"sm": 5.5, "md": 5.5, "lg": 5.5}
                                                         ),
                                                     ]
@@ -525,11 +525,13 @@ class Artists(ft.Container):
                                                     controls=[
                                                         ft.Container(
                                                             margin=ft.margin.only(left=30, bottom=20, top=20),
-                                                            content=self.inputControls.artist_biography,
+                                                            content=self.inputControls.save_records_button,
                                                             col={"sm": 5.5, "md": 5.5, "lg": 5.5}
                                                         ),
                                                     ]
                                                 ),
+
+
 
                                             ]
                                         )
