@@ -21,7 +21,22 @@ class Records(ft.Container):
                                 end=ft.alignment.bottom_left,
                             ),
                             border_radius=ft.border_radius.all(10),
-                            content=ft.Text("hello world")
+                            content=ft.Container(
+                                content=ft.ResponsiveRow(
+                                    controls=[
+                                        ft.Container(
+                                            content=ft.Text("hello world")
+                                        ),
+                                        ft.Container(
+                                            content=ft.Text("hello world")
+                                        ),
+                                        ft.Container(
+                                            content=ft.Text("hello world")
+                                        ),
+
+                                    ]
+                                )
+                            )
                         )
                     ]
                 )
