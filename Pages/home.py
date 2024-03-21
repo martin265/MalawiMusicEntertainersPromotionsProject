@@ -106,7 +106,7 @@ class Home(ft.Container):
                                                     gradient=ft.LinearGradient(
                                                         colors=[
                                                             "#00583B",
-                                                            "#008D6A"
+                                                            "#00583B"
                                                         ],
                                                         begin=ft.alignment.top_left,
                                                         end=ft.alignment.top_right
@@ -152,8 +152,8 @@ class Home(ft.Container):
                                                     expand=True,
                                                     gradient=ft.LinearGradient(
                                                         colors=[
-                                                            "#69BAA4",
-                                                            "#4F8073"
+                                                            "#484554",
+                                                            "#484554"
                                                         ],
                                                         begin=ft.alignment.top_left,
                                                         end=ft.alignment.top_right
