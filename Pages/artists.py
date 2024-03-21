@@ -509,10 +509,9 @@ class Artists(ft.Container):
 
                                                 #  ============ adding the button to save the artists records here == //
                                                 ft.ResponsiveRow(
-                                                    alignment=ft.MainAxisAlignment.START,
+                                                    alignment=ft.MainAxisAlignment.CENTER,
                                                     controls=[
                                                         ft.Container(
-                                                            margin=ft.margin.only(left=30, bottom=20, top=20),
                                                             content=self.inputControls.artist_biography,
                                                             col={"sm": 5.5, "md": 5.5, "lg": 5.5}
                                                         ),
