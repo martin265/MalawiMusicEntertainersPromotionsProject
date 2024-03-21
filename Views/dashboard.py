@@ -103,6 +103,30 @@ class Dashboard(ft.View):
                         tooltip="artist".title(),
                     ),
                 ),
+
+                # =============== // destination for the artists page ============ //
+                ft.NavigationRailDestination(
+                    icon_content=ft.Icon(
+                        ft.icons.FILE_COPY_OUTLINED,
+                        size=30,
+                        color="#212121",
+                        tooltip="events".title(),
+                    ),
+                    label_content=ft.Text(
+                        "records".title(),
+                        style=ft.TextStyle(
+                            size=15,
+                            font_family="manrop-bold"
+                        ),
+                        tooltip="records".title()
+                    ),
+                    selected_icon_content=ft.Icon(
+                        ft.icons.FILE_COPY_ROUNDED,
+                        size=30,
+                        color="#212121",
+                        tooltip="artist".title(),
+                    ),
+                ),
             ],
             on_change=self.destination_page
         )
