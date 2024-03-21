@@ -6,8 +6,7 @@ class InputControls(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
         self.page = page
-        # ==========passing the model class here ======== //
-        self.artist = Artist()
+
         self.page.fonts = {
             "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
             "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
@@ -289,6 +288,19 @@ class InputControls(ft.Container):
             on_click=self.validate_artist_records
         )
 
+        # ==========passing the model class here ======== //
+        self.artist = Artist(
+            self.first_name.value,
+            self.last_name.value,
+            self.email.value,
+            self.phone_number.value,
+            self.gender.value,
+            self.age.value,
+            self.genre.value,
+            self.residence.value,
+            self.artist_biography
+        )
+
     #  =========== function to validate the records here =========== //
     def validate_artist_records(self, e):
         """the function will be used in validating the input fields"""
@@ -388,7 +400,6 @@ class InputControls(ft.Container):
             )
             self.page.snack_bar.open = True
             self.page.update()
-
 
 
 class Artists(ft.Container):
