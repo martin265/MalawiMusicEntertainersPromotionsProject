@@ -388,6 +388,17 @@ class InputControls(ft.Container):
                 self.page.update()
             else:
                 # ========= calling the function to save the details here ======== //
+                self.artist = Artist(
+                    self.first_name.value,
+                    self.last_name.value,
+                    self.email.value,
+                    self.phone_number.value,
+                    self.gender.value,
+                    self.age.value,
+                    self.genre.value,
+                    self.residence.value,
+                    self.artist_biography.value
+                )
                 self.artist.save_artist_records_func()
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(

@@ -20,7 +20,7 @@ class Artist:
     def save_artist_records_func(self):
         """ the function to save the records to the database here"""
         try:
-            data, count = supabase.table("Artist").insert(
+            data, count = supabase.table("Artists").insert(
                 {
                     "first_name": self.first_name,
                     "last_name": self.last_name,
