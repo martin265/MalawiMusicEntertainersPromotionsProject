@@ -19,5 +19,6 @@ class Artist:
 
     def save_artist_records_func(self):
         try:
+
         except Exception as ex:
             print("something went wrong at {}".format(ex))
