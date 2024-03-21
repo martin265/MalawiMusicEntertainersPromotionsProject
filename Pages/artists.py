@@ -388,12 +388,11 @@ class InputControls(ft.Container):
             self.page.snack_bar.open = True
             self.page.update()
 
-
-    def upload_profile_picture(self, e:ft.FilePickerUploadEvent):
+    def upload_profile_picture(self, e: ft.FilePickerUploadEvent):
+        """the function will be used to upload a profile picture for the artist"""
         self.selected_files.value = (
 
         )
-
 
 
 class Artists(ft.Container):
@@ -547,8 +546,6 @@ class Artists(ft.Container):
                                                         ),
                                                     ]
                                                 ),
-
-
 
                                             ]
                                         )
