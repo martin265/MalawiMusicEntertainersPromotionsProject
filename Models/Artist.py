@@ -20,15 +20,17 @@ class Artist:
         """ the function to save the records to the database here"""
         try:
             data, count = supabase.table("Artist").insert(
-                self.first_name,
-                self.last_name,
-                self.email,
-                self.phone_number,
-                self.gender,
-                self.age,
-                self.genre,
-                self.residence,
-                self.artist_biography
+                {
+                    "first_name": self.first_name,
+                    "last_name": self.last_name,
+                    "email": self.email,
+                    "phone_number": self.phone_number,
+                    "gender": self.gender,
+                    "age": self.age,
+                    "genre": self.genre,
+                    "residence": self.residence,
+                    "artist_biography": self.artist_biography
+                }
             )
 
         except Exception as ex:
