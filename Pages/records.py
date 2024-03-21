@@ -12,7 +12,15 @@ class Records(ft.Container):
                     controls=[
                         ft.Container(
                             expand=True,
-                            bgcolor="black",
+                            gradient=ft.LinearGradient(
+                                colors=[
+                                    "#CBCCFF",
+                                    "#CBCCFF"
+                                ],
+                                begin=ft.alignment.top_right,
+                                end=ft.alignment.bottom_left,
+                            ),
+                            border_radius=ft.border_radius.all(10),
                             content=ft.Text("hello world")
                         )
                     ]
