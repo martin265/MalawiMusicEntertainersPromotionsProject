@@ -243,7 +243,32 @@ class InputControls(ft.Container):
         )
 
         #  ============== the artists bio will be here =========== //
-        self.artist_biography = ft.Text
+        self.artist_biography = ft.TextField(
+            prefix_icon=ft.icons.INFO_OUTLINE_ROUNDED,
+            helper_text="enter artist bio".title(),
+            helper_style=ft.TextStyle(
+                color="#212121",
+                size=10,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            keyboard_type=ft.KeyboardType.NUMBER,
+            border_radius=ft.border_radius.all(5),
+            border_color="#212121",
+            text_size=14,
+            text_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold",
+                weight=ft.FontWeight.BOLD
+            ),
+            label="artist location".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                size=14,
+                font_family="manrope-sem-bold"
+            ),
+        )
 
         #  ============ button to save the records here =============== //
         self.save_records_button = ft.ElevatedButton(
