@@ -19,6 +19,17 @@ class Artist:
     def save_artist_records_func(self):
         """ the function to save the records to the database here"""
         try:
-            data = supabase.table("")
+            data, count = supabase.table("Artist").insert(
+                self.first_name,
+                self.last_name,
+                self.email,
+                self.phone_number,
+                self.gender,
+                self.age,
+                self.genre,
+                self.residence,
+                self.artist_biography
+            )
+
         except Exception as ex:
             print("something went wrong at {}".format(ex))
