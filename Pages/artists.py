@@ -395,7 +395,6 @@ class InputControls(ft.Container):
         self.selected_files.update()
 
 
-
 class Artists(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
