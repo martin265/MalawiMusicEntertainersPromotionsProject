@@ -8,8 +8,14 @@ class Records(ft.Container):
         #  =========== the content for the page will be here ========== //
         self.content = ft.Column(
             controls=[
-                ft.Text(
-                    "records section"
+                ft.ResponsiveRow(
+                    controls=[
+                        ft.Container(
+                            expand=True,
+                            bgcolor="black",
+                            content=ft.Text("hello world")
+                        )
+                    ]
                 )
             ]
         )
