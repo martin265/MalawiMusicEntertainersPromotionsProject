@@ -30,6 +30,7 @@ class Home(ft.Container):
                             ),
                             border_radius=ft.border_radius.all(10),
                             content=ft.Container(
+                                margin=ft.margin.only(bottom=40),
                                 content=ft.Column(
                                     controls=[
                                         #  ========= the container for the
@@ -74,8 +75,8 @@ class Home(ft.Container):
                                                                     alignment=ft.MainAxisAlignment.CENTER,
                                                                     controls=[
                                                                         ft.Icon(
-                                                                            ft.icons.EVENT_NOTE_ROUNDED,
-                                                                            color="#212121",
+                                                                            ft.icons.MY_LIBRARY_MUSIC_ROUNDED,
+                                                                            color="#f5f5f5",
                                                                             size=60
                                                                         ),
                                                                     ]
@@ -84,29 +85,114 @@ class Home(ft.Container):
 
                                                             #  ============ // container for the events // ======//
                                                             ft.Container(
+                                                                content=ft.Row(
+                                                                    alignment=ft.MainAxisAlignment.CENTER,
+                                                                    controls=[
+                                                                        ft.Text(
+                                                                            "artists".capitalize(),
+                                                                            font_family="manrope-sem-bold",
+                                                                            size=30,
+                                                                            color="#f5f5f5"
+                                                                        )
+                                                                    ]
+                                                                )
+                                                            )
+                                                        ]
+                                                    ),
+                                                    col={"sm": 11.5, "md": 11.5, "lg": 3.8}
+                                                ),
+                                                ft.Container(
+                                                    expand=True,
+                                                    gradient=ft.LinearGradient(
+                                                        colors=[
+                                                            "#00583B",
+                                                            "#008D6A"
+                                                        ],
+                                                        begin=ft.alignment.top_left,
+                                                        end=ft.alignment.top_right
+                                                    ),
+                                                    border_radius=ft.border_radius.all(8),
+                                                    content=ft.Column(
+                                                        controls=[
+                                                            #  ============ // container for the events // ======//
+                                                            ft.Container(
+                                                                margin=ft.margin.only(top=20),
+                                                                content=ft.Row(
+                                                                    alignment=ft.MainAxisAlignment.CENTER,
+                                                                    controls=[
+                                                                        ft.Icon(
+                                                                            ft.icons.PAYMENTS_ROUNDED,
+                                                                            color="#f5f5f5",
+                                                                            size=60
+                                                                        ),
+                                                                    ]
+                                                                )
+                                                            ),
+
+                                                            #  ============ // container for the events // ======//
+                                                            ft.Container(
+                                                                content=ft.Row(
+                                                                    alignment=ft.MainAxisAlignment.CENTER,
+                                                                    controls=[
+                                                                        ft.Text(
+                                                                            "payments".capitalize(),
+                                                                            font_family="manrope-sem-bold",
+                                                                            size=30,
+                                                                            color="#f5f5f5"
+                                                                        )
+                                                                    ]
+                                                                )
+                                                            )
+                                                        ]
+                                                    ),
+                                                    col={"sm": 11.5, "md": 11.5, "lg": 3.8}
+                                                ),
+
+                                                ft.Container(
+                                                    expand=True,
+                                                    gradient=ft.LinearGradient(
+                                                        colors=[
+                                                            "#69BAA4",
+                                                            "#4F8073"
+                                                        ],
+                                                        begin=ft.alignment.top_left,
+                                                        end=ft.alignment.top_right
+                                                    ),
+                                                    border_radius=ft.border_radius.all(8),
+                                                    content=ft.Column(
+                                                        controls=[
+                                                            #  ============ // container for the events // ======//
+                                                            ft.Container(
                                                                 margin=ft.margin.only(top=20),
                                                                 content=ft.Row(
                                                                     alignment=ft.MainAxisAlignment.CENTER,
                                                                     controls=[
                                                                         ft.Icon(
                                                                             ft.icons.EVENT_NOTE_ROUNDED,
-                                                                            color="#212121",
+                                                                            color="#f5f5f5",
                                                                             size=60
                                                                         ),
+                                                                    ]
+                                                                )
+                                                            ),
+
+                                                            #  ============ // container for the events // ======//
+                                                            ft.Container(
+                                                                content=ft.Row(
+                                                                    alignment=ft.MainAxisAlignment.CENTER,
+                                                                    controls=[
+                                                                        ft.Text(
+                                                                            "events".capitalize(),
+                                                                            font_family="manrope-sem-bold",
+                                                                            size=30,
+                                                                            color="#f5f5f5"
+                                                                        )
                                                                     ]
                                                                 )
                                                             )
                                                         ]
                                                     ),
-                                                    col={"sm": 12, "md": 12, "lg": 3.8}
-                                                ),
-                                                ft.Container(
-                                                    content=ft.Text("hello world"),
-                                                    col={"sm": 12, "md": 12, "lg": 3.8}
-                                                ),
-                                                ft.Container(
-                                                    content=ft.Text("hello world"),
-                                                    col={"sm": 12, "md": 12, "lg": 3.8}
+                                                    col={"sm": 11.5, "md": 11.5, "lg": 3.8}
                                                 ),
 
                                             ]
