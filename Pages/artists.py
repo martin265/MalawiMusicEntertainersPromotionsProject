@@ -691,14 +691,11 @@ class Artists(ft.Container):
                                                             ft.ElevatedButton(
                                                                 text="check records",
                                                                 on_click={},
-                                                            ),
-
-                                                            ft.ElevatedButton(
-                                                                text="check records",
-                                                                on_click={},
+                                                                col={"sm": 12, "md": 12, "lg": 3}
                                                             ),
                                                         ]
-                                                    )
+                                                    ),
+                                                    col={"sm": 12, "md": 12, "lg": 3}
                                                 ),
                                             ]
                                         )
