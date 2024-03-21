@@ -513,7 +513,7 @@ class Artists(ft.Container):
                                                     controls=[
                                                         ft.Container(
                                                             content=self.inputControls.artist_biography,
-                                                            col={"sm": 5.5, "md": 5.5, "lg": 5.5}
+                                                            col={"sm": 5.5, "md": 5.5, "lg": 11}
                                                         ),
                                                     ]
                                                 ),
