@@ -31,7 +31,7 @@ class Artist:
                     "residence": self.residence,
                     "artist_biography": self.artist_biography
                 }
-            )
+            ).execute()
 
         except Exception as ex:
             print("something went wrong at {}".format(ex))
