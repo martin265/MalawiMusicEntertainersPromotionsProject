@@ -10,9 +10,6 @@ class InputControls(ft.Container):
             "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
             "manrop-bold": "assets/fonts/Manrope/static/Manrope-Bold.ttf"
         }
-        self.selected_files = ft.Text()
-        self.pick_files_dialog = ft.FilePicker(on_result=self.upload_profile_picture)
-        self.page.overlay.append(self.pick_files_dialog)
         #  =========== the input controls will be here ======= //
         self.first_name = ft.TextField(
             prefix_icon=ft.icons.EDIT_DOCUMENT,
@@ -289,22 +286,6 @@ class InputControls(ft.Container):
             on_click=self.validate_artist_records
         )
 
-        #  ============ function to upload the files ========== //
-        self.file_upload = ft.OutlinedButton(
-            adaptive=True,
-            icon=ft.icons.SAVE_ROUNDED,
-            text="select profile picture",
-            height=50,
-            style=ft.ButtonStyle(
-                elevation=None,
-                shadow_color="#7F4D3E",
-            ),
-            on_click=lambda _: self.pick_files_dialog.pick_files(
-                allow_multiple=True,
-                allowed_extensions=["jpg", "jpeg", "pdf"]
-            )
-        )
-
     #  =========== function to validate the records here =========== //
     def validate_artist_records(self, e):
         """the function will be used in validating the input fields"""
@@ -405,11 +386,6 @@ class InputControls(ft.Container):
             self.page.snack_bar.open = True
             self.page.update()
 
-    async def pick_files_result(self, e: ft.FilePickerResultEvent):
-        self.selected_files.value = (
-            ", ".join(map(lambda f: f.name, e.files)) if e.files else "Cancelled!"
-        )
-        await self.selected_files.update_async()
 
 
 class Artists(ft.Container):
@@ -559,11 +535,6 @@ class Artists(ft.Container):
                                                         ft.Container(
                                                             margin=ft.margin.only(left=30, bottom=20, top=20),
                                                             content=self.inputControls.save_records_button,
-                                                            col={"sm": 5.5, "md": 5.5, "lg": 5.5}
-                                                        ),
-                                                        ft.Container(
-                                                            margin=ft.margin.only(left=30, bottom=20, top=20),
-                                                            content=self.inputControls.file_upload,
                                                             col={"sm": 5.5, "md": 5.5, "lg": 5.5}
                                                         ),
                                                     ]
