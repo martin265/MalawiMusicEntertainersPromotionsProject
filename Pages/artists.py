@@ -643,20 +643,21 @@ class Artists(ft.Container):
                                         col={"sm": 12, "md": 12, "lg": 3}
                                     ),
 
-                                    ft.Row(
-                                        wrap=True,
-                                        adaptive=True,
-                                        controls=[
-                                            ft.Text(
-                                                "On this section of the system, all the artists details "
-                                                "will be added to the online database that will be synced with"
-                                                "the mobile application. For coherent data make sure to provide"
-                                                "valid details",
-                                                size=20,
-                                                color="#212121",
-
-                                            )
-                                        ]
+                                    ft.Container(
+                                        content=ft.Row(
+                                            wrap=True,
+                                            adaptive=True,
+                                            controls=[
+                                                ft.Text(
+                                                    "On this section of the system, all the artists details "
+                                                    "will be added to the online database that will be synced with"
+                                                    "the mobile application. For coherent data make sure to provide"
+                                                    "valid details",
+                                                    size=20,
+                                                    color="#212121",
+                                                )
+                                            ]
+                                        )
                                     )
                                 ]
                             ),
