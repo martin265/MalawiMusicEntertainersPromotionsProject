@@ -11,6 +11,8 @@ class InputControls(ft.Container):
             "manrop-bold": "assets/fonts/Manrope/static/Manrope-Bold.ttf"
         }
         self.selected_files = ft.Text()
+        self.pick_files_dialog = ft.FilePicker(on_result=self.upload_profile_picture)
+        self.page.overlay.append(self.pick_files_dialog)
         #  =========== the input controls will be here ======= //
         self.first_name = ft.TextField(
             prefix_icon=ft.icons.EDIT_DOCUMENT,
