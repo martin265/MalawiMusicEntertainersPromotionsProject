@@ -6,3 +6,11 @@ class Records(ft.Container):
         super().__init__()
         self.page = page
 
+    def build_controls(self):
+        self.content = ft.Column(
+            controls=[
+                ft.Text(
+                    "records section"
+                )
+            ]
+        )

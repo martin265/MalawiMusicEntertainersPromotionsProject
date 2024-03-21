@@ -36,7 +36,7 @@ class Dashboard(ft.View):
                     )
                 )
             ),
-            selected_index=0,
+            selected_index=1,
             group_alignment=-0.9,
             label_type=ft.NavigationRailLabelType.ALL,
             min_width=80,
