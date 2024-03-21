@@ -18,6 +18,7 @@ class Artist:
 
 
     def save_artist_records_func(self):
+        """ the function to save the records to the database here"""
         try:
 
         except Exception as ex:
