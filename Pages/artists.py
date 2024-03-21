@@ -644,7 +644,9 @@ class Artists(ft.Container):
                                     ),
 
                                     ft.Container(
+                                        margin=ft.margin.all(10),
                                         content=ft.Row(
+                                            alignment=ft.MainAxisAlignment.CENTER,
                                             wrap=True,
                                             adaptive=True,
                                             controls=[
