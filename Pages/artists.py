@@ -681,14 +681,6 @@ class Artists(ft.Container):
                                         ),
                                         content=ft.Column(
                                             controls=[
-                                                ft.Image(
-                                                    width=self.page.width,
-                                                    src="https://images.pexels.com/photos/755416/pexels-photo-755416.jpeg?auto"
-                                                        "=compress&cs=tinysrgb&w=600",
-                                                    border_radius=ft.border_radius.only(top_left=10, top_right=10),
-                                                    col={"sm": 12, "md": 12, "lg": 3}
-                                                ),
-
                                                 ft.Container(
                                                     margin=ft.margin.all(10),
                                                     content=ft.Row(
@@ -696,16 +688,15 @@ class Artists(ft.Container):
                                                         wrap=True,
                                                         adaptive=True,
                                                         controls=[
-                                                            ft.Text(
-                                                                "On this section of the system, all the artists details"
-                                                                "will be added to the online database that will be "
-                                                                "synced with"
-                                                                "the mobile application. For coherent data make sure "
-                                                                "to provide"
-                                                                "valid details",
-                                                                size=20,
-                                                                color="#2A272A",
-                                                            )
+                                                            ft.ElevatedButton(
+                                                                text="check records",
+                                                                on_click={},
+                                                            ),
+
+                                                            ft.ElevatedButton(
+                                                                text="check records",
+                                                                on_click={},
+                                                            ),
                                                         ]
                                                     )
                                                 ),
