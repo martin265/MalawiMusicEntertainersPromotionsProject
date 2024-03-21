@@ -56,6 +56,14 @@ class Home(ft.Container):
                                             controls=[
                                                 ft.Container(
                                                     expand=True,
+                                                    gradient=ft.LinearGradient(
+                                                        colors=[
+                                                            "",
+                                                            ""
+                                                        ],
+                                                        begin=ft.alignment.top_left,
+                                                        end=ft.alignment.top_right
+                                                    ),
                                                     content=ft.Column(
                                                         controls=[
 
