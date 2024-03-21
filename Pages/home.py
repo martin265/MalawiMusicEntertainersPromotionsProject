@@ -5,6 +5,12 @@ class Home(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
         self.page = page
+        #  ======== the fonts for the system will be here ======= //
+        self.page.fonts = {
+            "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
+            "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
+            "manrop-bold": "assets/fonts/Manrope/static/Manrope-Bold.ttf"
+        }
         #  =========== the content for the page will be here ========== //
         self.content = ft.Column(
             controls=[
@@ -25,7 +31,27 @@ class Home(ft.Container):
                                 content=ft.Column(
                                     controls=[
                                         #  ========= the container for the
-                                        ft.Container(),
+                                        ft.Container(
+                                            content=ft.Column(
+                                                controls=[
+                                                    #  ========= container for the top text
+                                                    ft.Container(
+                                                        content=ft.Row(
+                                                            controls=[
+                                                                ft.Icon(
+                                                                    ft.icons.DASHBOARD_ROUNDED
+                                                                ),
+                                                                ft.Text(
+                                                                    "home",
+                                                                    font_family="manrop-bold",
+                                                                    size=30
+                                                                )
+                                                            ]
+                                                        )
+                                                    )
+                                                ]
+                                            )
+                                        ),
                                         ft.ResponsiveRow(
                                             alignment=ft.MainAxisAlignment.CENTER,
                                             controls=[
@@ -52,4 +78,3 @@ class Home(ft.Container):
                 )
             ]
         )
-
