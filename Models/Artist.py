@@ -16,7 +16,6 @@ class Artist:
         self.residence = residence
         self.artist_biography = artist_biography
 
-
     def save_artist_records_func(self):
         """ the function to save the records to the database here"""
         try:
