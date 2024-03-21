@@ -289,6 +289,22 @@ class InputControls(ft.Container):
             on_click=self.validate_artist_records
         )
 
+        #  ============ function to upload the files ========== //
+        self.file_upload = ft.OutlinedButton(
+            adaptive=True,
+            icon=ft.icons.SAVE_ROUNDED,
+            text="select profile picture",
+            height=50,
+            style=ft.ButtonStyle(
+                elevation=None,
+                shadow_color="#7F4D3E",
+            ),
+            on_click=lambda _: self.pick_files_dialog.pick_files(
+                allow_multiple=True,
+                allowed_extensions=["jpg", "jpeg", "pdf"]
+            )
+        )
+
     #  =========== function to validate the records here =========== //
     def validate_artist_records(self, e):
         """the function will be used in validating the input fields"""
