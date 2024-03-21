@@ -64,22 +64,33 @@ class Home(ft.Container):
                                                         begin=ft.alignment.top_left,
                                                         end=ft.alignment.top_right
                                                     ),
+                                                    border_radius=ft.border_radius.all(8),
                                                     content=ft.Column(
                                                         controls=[
-                                                            ft.Text(
-                                                                "hello world"
+                                                            #  ============ // container for the events // ======//
+                                                            ft.Container(
+                                                                content=ft.Row(
+                                                                    alignment=ft.MainAxisAlignment.CENTER,
+                                                                    controls=[
+                                                                        ft.Icon(
+                                                                            ft.icons.EVENT_NOTE_ROUNDED,
+                                                                            color="#212121",
+                                                                            size=60
+                                                                        )
+                                                                    ]
+                                                                )
                                                             )
                                                         ]
                                                     ),
-                                                    col={"sm": 12, "md": 12, "lg": 4}
+                                                    col={"sm": 12, "md": 12, "lg": 3.8}
                                                 ),
                                                 ft.Container(
                                                     content=ft.Text("hello world"),
-                                                    col={"sm": 12, "md": 12, "lg": 4}
+                                                    col={"sm": 12, "md": 12, "lg": 3.8}
                                                 ),
                                                 ft.Container(
                                                     content=ft.Text("hello world"),
-                                                    col={"sm": 12, "md": 12, "lg": 4}
+                                                    col={"sm": 12, "md": 12, "lg": 3.8}
                                                 ),
 
                                             ]
