@@ -622,12 +622,11 @@ class Artists(ft.Container):
                         #  ============ the side container for the page =============== //
                         ft.Container(
                             expand=True,
+                            margin=ft.margin.only(bottom=30),
                             content=ft.Column(
                                 controls=[
                                     ft.Container(
-                                        expand=True,
                                         border_radius=ft.border_radius.all(10),
-                                        margin=ft.margin.only(bottom=30),
                                         gradient=ft.LinearGradient(
                                             colors=[
                                                 "#CBCCFF",
@@ -669,17 +668,12 @@ class Artists(ft.Container):
                                     ),
 
                                     ft.Container(
-                                        bgcolor="#292F57",
-                                        height=200,
-                                        margin=ft.margin.only(top=20),
-                                        content=ft.Row(
-                                            controls=[
-                                                ft.Text(
-                                                    "hello"
-                                                )
-                                            ]
+                                        content=ft.Text(
+                                            "hello"
                                         )
                                     )
+
+
                                 ]
                             ),
                             col={"sm": 12, "md": 12, "lg": 3}
