@@ -3,6 +3,7 @@ import flet as ft
 from Pages.events import EventsPage
 from Pages.artists import Artists
 from Pages.records import Records
+from Pages.home import Home
 
 
 class Dashboard(ft.View):
@@ -19,6 +20,7 @@ class Dashboard(ft.View):
 
         # =============== list for all the pages will be here ===//
         self.all_available_pages = [
+            Home(page=page),
             EventsPage(page=page),
             Artists(page=page),
             Records(page=page)
