@@ -402,12 +402,12 @@ class InputControls(ft.Container):
                 self.artist.save_artist_records_func()
                 #  ============= // showing the snack bar here =========== //
                 self.page.snack_bar = ft.SnackBar(
-                    bgcolor="#CBCCFF",
+                    bgcolor="#212121",
                     content=ft.Row(
                         controls=[
                             ft.Text(
                                 "Artist records saved successfully".capitalize(),
-                                color="#d50000",
+                                color="white",
                                 size=14,
                                 font_family="manrope-sem-bold",
                                 weight=ft.FontWeight.BOLD
