@@ -362,6 +362,15 @@ class InputControls(ft.Container):
                     font_family="manrope-sem-bold",
                 )
                 self.page.update()
+            #  ================= // the input for the artist biography will be here ======== //
+            elif not self.artist_biography.value:
+                self.artist_biography.error_text = "enter the artist biography".capitalize()
+                self.residence.error_style = ft.TextStyle(
+                    color="#d50000",
+                    size=15,
+                    font_family="manrope-sem-bold",
+                )
+                self.page.update()
             else:
                 print("hello world")
 
