@@ -400,6 +400,7 @@ class InputControls(ft.Container):
                     self.artist_biography.value
                 )
                 self.artist.save_artist_records_func()
+                self.clear_text_fields_func()
                 #  ============= // showing the snack bar here =========== //
                 self.page.snack_bar = ft.SnackBar(
                     bgcolor="#212121",
@@ -417,6 +418,33 @@ class InputControls(ft.Container):
                 )
                 self.page.snack_bar.open = True
                 self.page.update()
+        except Exception as ex:
+            self.page.snack_bar = ft.SnackBar(
+                content=ft.Row(
+                    controls=[
+                        ft.Text(
+                            "something went wrong at {}".format(ex)
+                        )
+                    ]
+                )
+            )
+            self.page.snack_bar.open = True
+            self.page.update()
+
+    # ============= function to clear the text fields =========== //
+    def clear_text_fields_func(self):
+        """the function will be used to clear the text fields here"""
+        try:
+            self.first_name.value = ""
+            self.last_name.value = ""
+            self.email.value = ""
+            self.phone_number.value = ""
+            self.gender.value = ""
+            self.age.value = ""
+            self.genre.value = ""
+            self.residence.value = ""
+            self.artist_biography.value = ""
+
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
                 content=ft.Row(
@@ -616,8 +644,10 @@ class Artists(ft.Container):
                                         col={"sm": 12, "md": 12, "lg": 3}
                                     ),
 
-                                    ft.Text(
-                                        f"the message is {self.inputControls.first_name.value}"
+                                    ft.Row(
+                                        controls=[
+
+                                        ]
                                     )
                                 ]
                             ),
