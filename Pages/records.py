@@ -37,6 +37,7 @@ class Records(ft.Container):
                                                     content=ft.Column(
                                                         controls=[
                                                             ft.Container(
+                                                                margin=ft.margin.only(top=30),
                                                                 content=ft.Row(
                                                                     alignment=ft.MainAxisAlignment.CENTER,
                                                                     controls=[
@@ -44,7 +45,12 @@ class Records(ft.Container):
                                                                             "manage available artist records".capitalize(),
                                                                             size=30,
                                                                             font_family="manrop-bold",
-                                                                            color="#f5f5f5"
+                                                                            color="#212121"
+                                                                        ),
+
+                                                                        ft.ElevatedButton(
+                                                                            text="new page",
+                                                                            on_click={}
                                                                         )
                                                                     ]
                                                                 )
