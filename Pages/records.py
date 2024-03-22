@@ -62,7 +62,7 @@ class Records(ft.Container):
 
                                                                         ft.ElevatedButton(
                                                                             text="new page",
-                                                                            on_click=self.router("/artist_table")
+                                                                            on_click={}
                                                                         )
                                                                     ]
                                                                 )
@@ -90,5 +90,4 @@ class Records(ft.Container):
 
         self.page.update()
         self.page.on_route_change = route
-        self.page.go("/artist_table")
 
