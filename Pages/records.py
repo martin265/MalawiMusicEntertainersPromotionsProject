@@ -12,6 +12,7 @@ class ArtistsRecords(ft.View):
             )
         ]
 
+
 class Records(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
@@ -59,11 +60,6 @@ class Records(ft.Container):
                                                                             font_family="manrop-bold",
                                                                             color="#212121"
                                                                         ),
-
-                                                                        ft.ElevatedButton(
-                                                                            text="new page",
-                                                                            on_click={}
-                                                                        )
                                                                     ]
                                                                 )
                                                             )
@@ -81,13 +77,4 @@ class Records(ft.Container):
                 )
             ]
         )
-
-    def router(self, route):
-        self.page.controls.clear()
-        if self.page.route == "/artist_table":
-            artists = self.artists_records
-            self.page.controls.append(artists)
-
-        self.page.update()
-        self.page.on_route_change = route
 
