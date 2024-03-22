@@ -93,7 +93,6 @@ class Tickets(ft.Container):
                                         # ============ the container for the input controls ======= //
                                         ft.Container(
                                             margin=ft.margin.only(top=20),
-                                            expand=True,
                                             adaptive=True,
                                             content=ft.SafeArea(
                                                 content=ft.Column(
