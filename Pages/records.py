@@ -1,16 +1,29 @@
 import flet as ft
 
 
-class ArtistsRecords(ft.View):
+class ArtistsRecords(ft.Container):
     def __init__(self, page: ft.Page):
-        super().__init__(route="/artist_table")
+        super().__init__()
         self.page = page
-
-        self.controls = [
-            ft.Text(
-                "hello"
-            )
-        ]
+        #  ============ the data table will be here ======= //
+        self.artists_datatable = ft.DataTable(
+            columns=[
+                ft.DataColumn(ft.Text("First name")),
+                ft.DataColumn(ft.Text("last name")),
+                ft.DataColumn(ft.Text("age")),
+                ft.DataColumn(ft.Text("gender")),
+            ],
+            rows=[
+                ft.DataRow(
+                    cells=[
+                        ft.DataCell(ft.Text("john")),
+                        ft.DataCell(ft.Text("john")),
+                        ft.DataCell(ft.Text("john")),
+                        ft.DataCell(ft.Text("john")),
+                    ]
+                )
+            ]
+        )
 
 
 class Records(ft.Container):
@@ -60,6 +73,15 @@ class Records(ft.Container):
                                                                             font_family="manrop-bold",
                                                                             color="#212121"
                                                                         ),
+
+                                                                        #  =========== the container for the table
+                                                                        ft.Container(
+                                                                            content=ft.Row(
+                                                                                controls=[
+                                                                                    self.artists_records.artists_datatable
+                                                                                ]
+                                                                            )
+                                                                        )
                                                                     ]
                                                                 )
                                                             )
