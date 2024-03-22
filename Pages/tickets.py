@@ -32,7 +32,13 @@ class Tickets(ft.Container):
                                     controls=[
                                         #  =========== the container for the top text
                                         ft.Container(
-                                            content=ft.Row()
+                                            content=ft.Row(
+                                                controls=[
+                                                    ft.Text(
+                                                        "add tickets details".capitalize()
+                                                    )
+                                                ]
+                                            )
                                         )
                                     ]
                                 ),
