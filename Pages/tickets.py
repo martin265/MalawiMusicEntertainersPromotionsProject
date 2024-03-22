@@ -13,6 +13,14 @@ class Tickets(ft.Container):
                         controls=[
                             #  ========== the container for the form here
                             ft.Container(
+                                gradient=ft.LinearGradient(
+                                    colors=[
+                                        "",
+                                        ""
+                                    ],
+                                    begin=ft.alignment.top_left,
+                                    end=ft.alignment.bottom_right
+                                ),
                                 content=ft.Column(
                                     controls=[
 
