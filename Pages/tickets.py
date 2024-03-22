@@ -34,6 +34,7 @@ class InputControls(ft.Container):
             border_color="#212121",
             helper_text="ticket price".capitalize(),
             border_radius=ft.border_radius.all(5),
+            keyboard_type=ft.KeyboardType.NUMBER,
             helper_style=ft.TextStyle(
                 color="#212121",
                 font_family="manrope-sem-bold"
@@ -44,6 +45,7 @@ class InputControls(ft.Container):
                 font_family="manrope-sem-bold"
             ),
         )
+
 
 
 class Tickets(ft.Container):
@@ -127,7 +129,7 @@ class Tickets(ft.Container):
                                                                 ),
                                                                 ft.Container(
                                                                     expand=True,
-                                                                    content=self.inputControls.ticket_type,
+                                                                    content=self.inputControls.ticket_price,
                                                                     col={"sm": 12, "md": 4, "lg": 5.5}
                                                                 ),
                                                             ],
