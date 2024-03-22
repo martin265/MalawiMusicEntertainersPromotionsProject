@@ -12,8 +12,10 @@ class Tickets(ft.Container):
         }
         #  ========= the content for the tickets page will be here ==== //
         self.content = ft.Column(
+            adaptive=True,
             controls=[
                 ft.SafeArea(
+                    adaptive=True,
                     content=ft.ResponsiveRow(
                         controls=[
                             #  ========== the container for the form here
@@ -62,7 +64,11 @@ class Tickets(ft.Container):
 
 
                                         # ============ the container for the input controls ======= //
+                                        ft.ResponsiveRow(
+                                            controls=[
 
+                                            ]
+                                        )
 
                                     ]
                                 ),
