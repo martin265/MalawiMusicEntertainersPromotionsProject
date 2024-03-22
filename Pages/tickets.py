@@ -19,7 +19,8 @@ class InputControls(ft.Container):
                 font_family="manrope-sem-bold"
             ),
             options=[
-                ft.dropdown.Option("hello world")
+                ft.dropdown.Option("hello world"),
+                ft.dropdown.Option("hello world"),
             ]
         )
 
