@@ -35,8 +35,8 @@ class Tickets(ft.Container):
             "manrop-bold": "assets/fonts/Manrope/static/Manrope-Bold.ttf"
         }
 
-        # ================ getting the inputs here ============= //
-
+        # ================ getting the inputs from the other class here ============= //
+        self.inputControls = InputControls(page=page)
         #  ========= the content for the tickets page will be here ==== //
         self.content = ft.Column(
             adaptive=True,
