@@ -37,10 +37,20 @@ class Artist:
         except Exception as ex:
             print("something went wrong at {}".format(ex))
 
-
     def fetch_all_artist_records(self):
         """function will be used to fetch records in the database"""
         try:
+            data, count = supabase.table("Artists").select(
+                "first_name",
+                "last_name",
+                "email",
+                "phone_number",
+                "gender",
+                "age",
+                "genre",
+                "residence",
+                "artist_biography"
+            ).execute()
 
         except Exception as ex:
             print("something went wrong at {}".format(ex))
