@@ -34,6 +34,9 @@ class Tickets(ft.Container):
             "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
             "manrop-bold": "assets/fonts/Manrope/static/Manrope-Bold.ttf"
         }
+
+        # ================ getting the inputs here ============= //
+
         #  ========= the content for the tickets page will be here ==== //
         self.content = ft.Column(
             adaptive=True,
