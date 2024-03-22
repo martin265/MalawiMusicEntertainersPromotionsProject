@@ -12,10 +12,11 @@ class InputControls(ft.Container):
         }
         #  =========== adding the input fields for the system here ========= //
         self.ticket_type = ft.Dropdown(
-            border_color="white",
+            border_color="#212121",
             helper_text="select the ticket type".capitalize(),
+            border_radius=ft.border_radius.all(5),
             helper_style=ft.TextStyle(
-                color="white",
+                color="#212121",
                 font_family="manrope-sem-bold"
             ),
             options=[
@@ -50,8 +51,8 @@ class Tickets(ft.Container):
                                 expand=True,
                                 gradient=ft.LinearGradient(
                                     colors=[
-                                        "#272729",
-                                        "#212121"
+                                        "#CBCCFF",
+                                        "#CBCCFF"
                                     ],
                                     begin=ft.alignment.top_left,
                                     end=ft.alignment.bottom_right
@@ -67,7 +68,7 @@ class Tickets(ft.Container):
                                                 controls=[
                                                     ft.Text(
                                                         "add tickets details".capitalize(),
-                                                        color="white",
+                                                        color="#212121",
                                                         size=30,
                                                         font_family="manrop-bold"
                                                     )
@@ -83,7 +84,7 @@ class Tickets(ft.Container):
                                                     ft.Icon(
                                                         ft.icons.AIRPLANE_TICKET_ROUNDED,
                                                         size=50,
-                                                        color="#00C896"
+                                                        color="#292F57"
                                                     )
                                                 ]
                                             )

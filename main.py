@@ -3,7 +3,7 @@ from Views.dashboard import Dashboard
 
 
 def main(page: ft.Page):
-    page.theme_mode = "dark"
+    page.theme_mode = "light"
     page.window_center()
     page.window_min_width = 768
     page.window_min_height = 700
