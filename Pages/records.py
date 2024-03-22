@@ -29,15 +29,6 @@ class Records(ft.Container):
                                             content=ft.Text("hello world"),
                                             col={"sm": 12, "md": 12, "lg": 4}
                                         ),
-                                        ft.Container(
-                                            content=ft.Text("hello world"),
-                                            col={"sm": 12, "md": 12, "lg": 4}
-                                        ),
-                                        ft.Container(
-                                            content=ft.Text("hello world"),
-                                            col={"sm": 12, "md": 12, "lg": 4}
-                                        ),
-
                                     ]
                                 )
                             )
