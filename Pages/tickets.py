@@ -60,6 +60,10 @@ class Tickets(ft.Container):
                                             )
                                         ),
 
+
+                                        # ============ the container for the input controls ======= //
+
+
                                     ]
                                 ),
                                 col={"sm": 12, "md": 8, "lg": 8}
