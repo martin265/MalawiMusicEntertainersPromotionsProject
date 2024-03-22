@@ -17,13 +17,14 @@ class ArtistsRecords(ft.Container):
             rows=[
             ]
         )
+        self.fetch_all_artist_records()
 
     #  ================ // function to fetch the records in the database ======= //
     def fetch_all_artist_records(self):
         """ the function will fetch the records in the database """
         try:
             data, count = supabase.table("Artists").select("*").execute()
-
+            print(data)
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
                 content=ft.Row(
