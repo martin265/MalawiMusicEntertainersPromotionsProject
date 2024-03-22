@@ -91,17 +91,28 @@ class Tickets(ft.Container):
                                         ),
 
                                         # ============ the container for the input controls ======= //
-                                        ft.ResponsiveRow(
-                                            controls=[
-                                                ft.Container(
-                                                    content=self.inputControls.ticket_type,
-                                                    col={"sm": 12, "md": 3.5, "lg": 3.5}
-                                                ),
-                                                ft.Container(
-                                                    content=self.inputControls.ticket_type,
-                                                    col={"sm": 12, "md": 3.5, "lg": 3.5}
-                                                ),
-                                            ]
+                                        ft.Container(
+                                            content=ft.SafeArea(
+                                                content=ft.Column(
+                                                    controls=[
+                                                        ft.ResponsiveRow(
+                                                            alignment=ft.MainAxisAlignment.CENTER,
+                                                            controls=[
+                                                                ft.Container(
+                                                                    expand=True,
+                                                                    content=self.inputControls.ticket_type,
+                                                                    col={"sm": 12, "md": 3.5, "lg": 12}
+                                                                ),
+                                                                ft.Container(
+                                                                    expand=True,
+                                                                    content=self.inputControls.ticket_type,
+                                                                    col={"sm": 12, "md": 3.5, "lg": 12}
+                                                                ),
+                                                            ]
+                                                        )
+                                                    ]
+                                                )
+                                            )
                                         )
 
                                     ]
