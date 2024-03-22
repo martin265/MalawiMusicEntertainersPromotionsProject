@@ -11,8 +11,14 @@ class ArtistsRecords(ft.Container):
             columns=[
                 ft.DataColumn(ft.Text("First name")),
                 ft.DataColumn(ft.Text("last name")),
-                ft.DataColumn(ft.Text("age")),
+                ft.DataColumn(ft.Text("email")),
                 ft.DataColumn(ft.Text("gender")),
+                ft.DataColumn(ft.Text("phone_number")),
+                ft.DataColumn(ft.Text("gender")),
+                ft.DataColumn(ft.Text("age")),
+                ft.DataColumn(ft.Text("genre")),
+                ft.DataColumn(ft.Text("residence")),
+                ft.DataColumn(ft.Text("artist_biography")),
             ],
             rows=[
             ]
