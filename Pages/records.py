@@ -38,6 +38,7 @@ class Records(ft.Container):
                                                         controls=[
                                                             ft.Container(
                                                                 content=ft.Row(
+                                                                    alignment=ft.MainAxisAlignment.CENTER,
                                                                     controls=[
                                                                         ft.Text(
                                                                             "manage available artist records",
