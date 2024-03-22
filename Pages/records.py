@@ -1,4 +1,5 @@
 import flet as ft
+from Models.Artist import Artist
 
 
 class ArtistsRecords(ft.Container):
@@ -14,18 +15,24 @@ class ArtistsRecords(ft.Container):
                 ft.DataColumn(ft.Text("gender")),
             ],
             rows=[
-                ft.DataRow(
-                    cells=[
-                        ft.DataCell(ft.Text("john")),
-                        ft.DataCell(ft.Text("john")),
-                        ft.DataCell(ft.Text("john")),
-                        ft.DataCell(ft.Text("john")),
-                    ]
-                )
             ]
         )
 
 
+    def fetch_all_artist_records(self):
+        try:
+        except Exception as ex:
+            self.page.snack_bar = ft.SnackBar(
+                content=ft.Row(
+                    controls=[
+                        ft.Text(
+                            "something went worng at {}".format(ex)
+                        )
+                    ]
+                )
+            )
+            self.page.snack_bar.open = True
+            self.page.update()
 
 
 
@@ -102,4 +109,3 @@ class Records(ft.Container):
                 )
             ]
         )
-
