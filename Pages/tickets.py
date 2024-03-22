@@ -26,8 +26,10 @@ class InputControls(ft.Container):
                 font_family="manrope-sem-bold"
             ),
             options=[
-                ft.dropdown.Option("hello world"),
-                ft.dropdown.Option("hello world"),
+                ft.dropdown.Option("VIP"),
+                ft.dropdown.Option("GOLD"),
+                ft.dropdown.Option("SILVER"),
+                ft.dropdown.Option("DIAMOND"),
             ]
         )
 
@@ -64,6 +66,28 @@ class InputControls(ft.Container):
                 font_family="manrope-sem-bold"
             ),
         )
+
+        self.payment_method = ft.Dropdown(
+            border_color="#212121",
+            helper_text="select the ticket type".capitalize(),
+            border_radius=ft.border_radius.all(5),
+            prefix_icon=ft.icons.AIRPLANE_TICKET_ROUNDED,
+            helper_style=ft.TextStyle(
+                color="#212121",
+                font_family="manrope-sem-bold"
+            ),
+            hint_text="select ticket type",
+            hint_style=ft.TextStyle(
+                color="#212121",
+                font_family="manrope-sem-bold"
+            ),
+            options=[
+                ft.dropdown.Option("hello world"),
+                ft.dropdown.Option("hello world"),
+            ]
+        )
+
+
 
 
 class Tickets(ft.Container):
