@@ -207,6 +207,23 @@ class Tickets(ft.Container):
                                                                 ),
                                                             ],
                                                             run_spacing=0
+                                                        ),
+
+                                                        ft.ResponsiveRow(
+                                                            alignment=ft.MainAxisAlignment.CENTER,
+                                                            controls=[
+                                                                ft.Container(
+                                                                    expand=True,
+                                                                    content=self.inputControls.ticket_purchase_limit,
+                                                                    col={"sm": 12, "md": 4, "lg": 5.5}
+                                                                ),
+                                                                ft.Container(
+                                                                    expand=True,
+                                                                    content=self.inputControls.age_restriction,
+                                                                    col={"sm": 12, "md": 4, "lg": 5.5}
+                                                                ),
+                                                            ],
+                                                            run_spacing=0
                                                         )
                                                     ]
                                                 )
