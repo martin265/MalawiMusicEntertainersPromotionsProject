@@ -87,6 +87,23 @@ class InputControls(ft.Container):
             ]
         )
 
+        self.age_restriction = ft.TextField(
+            border_color="#212121",
+            helper_text="ticket age limit".capitalize(),
+            border_radius=ft.border_radius.all(5),
+            keyboard_type=ft.KeyboardType.NUMBER,
+            prefix_icon=ft.icons.BLOCK_ROUNDED,
+            helper_style=ft.TextStyle(
+                color="#212121",
+                font_family="manrope-sem-bold"
+            ),
+            hint_text="enter age ticket age limit",
+            hint_style=ft.TextStyle(
+                color="#212121",
+                font_family="manrope-sem-bold"
+            ),
+        )
+
 
 
 
