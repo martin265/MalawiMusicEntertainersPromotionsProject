@@ -92,6 +92,9 @@ class Tickets(ft.Container):
 
                                         # ============ the container for the input controls ======= //
                                         ft.Container(
+                                            margin=ft.margin.only(top=20),
+                                            expand=True,
+                                            adaptive=True,
                                             content=ft.SafeArea(
                                                 content=ft.Column(
                                                     controls=[
@@ -101,12 +104,12 @@ class Tickets(ft.Container):
                                                                 ft.Container(
                                                                     expand=True,
                                                                     content=self.inputControls.ticket_type,
-                                                                    col={"sm": 12, "md": 4, "lg": 6}
+                                                                    col={"sm": 12, "md": 4, "lg": 5.5}
                                                                 ),
                                                                 ft.Container(
                                                                     expand=True,
                                                                     content=self.inputControls.ticket_type,
-                                                                    col={"sm": 12, "md": 4, "lg": 6}
+                                                                    col={"sm": 12, "md": 4, "lg": 5.5}
                                                                 ),
                                                             ],
                                                             run_spacing=0
