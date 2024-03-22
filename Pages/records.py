@@ -1,5 +1,5 @@
 import flet as ft
-from Models.Artist import Artist
+from Config.config import supabase
 
 
 class ArtistsRecords(ft.Container):
@@ -18,22 +18,24 @@ class ArtistsRecords(ft.Container):
             ]
         )
 
-
+    #  ================ // function to fetch the records in the database ======= //
     def fetch_all_artist_records(self):
+        """ the function will fetch the records in the database """
         try:
+            data, count = supabase.table("Artists").select("*").execute()
+
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
                 content=ft.Row(
                     controls=[
                         ft.Text(
-                            "something went worng at {}".format(ex)
+                            "something went wrong at {}".format(ex)
                         )
                     ]
                 )
             )
             self.page.snack_bar.open = True
             self.page.update()
-
 
 
 class Records(ft.Container):
