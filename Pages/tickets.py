@@ -15,6 +15,7 @@ class InputControls(ft.Container):
             border_color="#212121",
             helper_text="select the ticket type".capitalize(),
             border_radius=ft.border_radius.all(5),
+            prefix_icon=ft.icons.AIRPLANE_TICKET_ROUNDED,
             helper_style=ft.TextStyle(
                 color="#212121",
                 font_family="manrope-sem-bold"
@@ -35,6 +36,7 @@ class InputControls(ft.Container):
             helper_text="ticket price".capitalize(),
             border_radius=ft.border_radius.all(5),
             keyboard_type=ft.KeyboardType.NUMBER,
+            prefix_icon=ft.icons.NUMBERS_ROUNDED,
             helper_style=ft.TextStyle(
                 color="#212121",
                 font_family="manrope-sem-bold"
@@ -46,6 +48,22 @@ class InputControls(ft.Container):
             ),
         )
 
+        self.ticket_purchase_limit = ft.TextField(
+            border_color="#212121",
+            helper_text="ticket purchase limit".capitalize(),
+            border_radius=ft.border_radius.all(5),
+            keyboard_type=ft.KeyboardType.NUMBER,
+            prefix_icon=ft.icons.PRODUCTION_QUANTITY_LIMITS_ROUNDED,
+            helper_style=ft.TextStyle(
+                color="#212121",
+                font_family="manrope-sem-bold"
+            ),
+            hint_text="enter ticket purchase limit",
+            hint_style=ft.TextStyle(
+                color="#212121",
+                font_family="manrope-sem-bold"
+            ),
+        )
 
 
 class Tickets(ft.Container):
