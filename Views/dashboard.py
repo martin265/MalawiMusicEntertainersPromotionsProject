@@ -4,6 +4,7 @@ from Pages.events import EventsPage
 from Pages.artists import Artists
 from Pages.records import Records
 from Pages.home import Home
+from Pages.tickets import Tickets
 
 
 class Dashboard(ft.View):
@@ -21,8 +22,8 @@ class Dashboard(ft.View):
         # =============== list for all the pages will be here ===//
         self.all_available_pages = [
             Home(page=page),
-            
             Artists(page=page),
+            Tickets(page=page),
             Records(page=page)
         ]
         #  the navigation for the system will be here ==== //
