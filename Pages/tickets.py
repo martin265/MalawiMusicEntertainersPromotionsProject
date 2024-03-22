@@ -30,6 +30,21 @@ class InputControls(ft.Container):
             ]
         )
 
+        self.ticket_price = ft.TextField(
+            border_color="#212121",
+            helper_text="ticket price".capitalize(),
+            border_radius=ft.border_radius.all(5),
+            helper_style=ft.TextStyle(
+                color="#212121",
+                font_family="manrope-sem-bold"
+            ),
+            hint_text="enter ticket price",
+            hint_style=ft.TextStyle(
+                color="#212121",
+                font_family="manrope-sem-bold"
+            ),
+        )
+
 
 class Tickets(ft.Container):
     def __init__(self, page: ft.Page):
