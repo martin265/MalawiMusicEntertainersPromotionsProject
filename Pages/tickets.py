@@ -142,15 +142,15 @@ class InputControls(ft.Container):
 
         self.refund_policy = ft.TextField(
             border_color="#212121",
-            helper_text="ticket age limit".capitalize(),
+            helper_text="refund and cancellation policy".capitalize(),
             border_radius=ft.border_radius.all(5),
-            keyboard_type=ft.KeyboardType.NUMBER,
-            prefix_icon=ft.icons.BLOCK_ROUNDED,
+            keyboard_type=ft.KeyboardType.TEXT,
+            prefix_icon=ft.icons.POLICY_ROUNDED,
             helper_style=ft.TextStyle(
                 color="#212121",
                 font_family="manrope-sem-bold"
             ),
-            hint_text="enter age ticket age limit",
+            hint_text="refund and cancellation policy",
             hint_style=ft.TextStyle(
                 color="#212121",
                 font_family="manrope-sem-bold"
