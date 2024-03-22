@@ -13,7 +13,7 @@ class InputControls(ft.Container):
         #  =========== adding the input fields for the system here ========= //
         self.ticket_type = ft.Dropdown(
             border_color="white",
-            helper_text="select the tickey type".capitalize(),
+            helper_text="select the ticket type".capitalize(),
             helper_style=ft.TextStyle(
                 color="white",
                 font_family="manrope-sem-bold"
