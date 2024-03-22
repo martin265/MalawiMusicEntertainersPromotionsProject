@@ -127,6 +127,18 @@ class InputControls(ft.Container):
             height=40
         )
 
+        #  =================== // the date and time buttons for the event will be here ===== //
+        self.ticket_sale_start_date = ft.OutlinedButton(
+            text="select start date",
+            icon=ft.icons.DATE_RANGE_ROUNDED,
+            on_click={}
+        )
+        #  =================== // the date and time buttons for the event will be here ===== //
+        self.ticket_sale_end_date = ft.OutlinedButton(
+            text="select end date",
+            icon=ft.icons.TIMER_ROUNDED,
+            on_click={}
+        )
 
 
 
