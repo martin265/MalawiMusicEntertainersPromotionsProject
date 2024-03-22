@@ -43,7 +43,8 @@ class Records(ft.Container):
                                                                         ft.Text(
                                                                             "manage available artist records".capitalize(),
                                                                             size=30,
-                                                                            font_family="manrop-bold"
+                                                                            font_family="manrop-bold",
+                                                                            color="#f5f5f5"
                                                                         )
                                                                     ]
                                                                 )
