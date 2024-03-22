@@ -19,6 +19,11 @@ class InputControls(ft.Container):
                 color="#212121",
                 font_family="manrope-sem-bold"
             ),
+            hint_text="select ticket type",
+            hint_style=ft.TextStyle(
+                color="#212121",
+                font_family="manrope-sem-bold"
+            ),
             options=[
                 ft.dropdown.Option("hello world"),
                 ft.dropdown.Option("hello world"),
