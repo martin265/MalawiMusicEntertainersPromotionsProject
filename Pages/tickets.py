@@ -17,7 +17,7 @@ class Tickets(ft.Container):
                                 gradient=ft.LinearGradient(
                                     colors=[
                                         "#272729",
-                                        "#272729"
+                                        "#212121"
                                     ],
                                     begin=ft.alignment.top_left,
                                     end=ft.alignment.bottom_right
