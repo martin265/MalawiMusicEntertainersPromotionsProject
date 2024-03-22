@@ -38,11 +38,15 @@ class Tickets(ft.Container):
                                                 controls=[
                                                     ft.Text(
                                                         "add tickets details".capitalize(),
-                                                        color="white"
+                                                        color="white",
+                                                        size=30,
+                                                        font_family="manrop-bold"
                                                     )
                                                 ]
                                             )
-                                        )
+                                        ),
+
+                                        # ========== the container for the icon =========== //
                                     ]
                                 ),
                                 col={"sm": 12, "md": 8, "lg": 8}
