@@ -26,6 +26,9 @@ class ArtistsRecords(ft.Container):
         )
 
 
+
+
+
 class Records(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
@@ -73,15 +76,15 @@ class Records(ft.Container):
                                                                             font_family="manrop-bold",
                                                                             color="#212121"
                                                                         ),
-
                                                                         #  =========== the container for the table
-                                                                        ft.Container(
-                                                                            content=ft.Row(
-                                                                                controls=[
-                                                                                    self.artists_records.artists_datatable
-                                                                                ]
-                                                                            )
-                                                                        )
+                                                                    ]
+                                                                )
+                                                            ),
+
+                                                            ft.Container(
+                                                                content=ft.Row(
+                                                                    controls=[
+                                                                        self.artists_records.artists_datatable
                                                                     ]
                                                                 )
                                                             )

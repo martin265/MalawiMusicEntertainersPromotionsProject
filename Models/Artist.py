@@ -36,3 +36,11 @@ class Artist:
 
         except Exception as ex:
             print("something went wrong at {}".format(ex))
+
+
+    def fetch_all_artist_records(self):
+        """function will be used to fetch records in the database"""
+        try:
+
+        except Exception as ex:
+            print("something went wrong at {}".format(ex))
