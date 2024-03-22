@@ -13,6 +13,7 @@ class Tickets(ft.Container):
                         controls=[
                             #  ========== the container for the form here
                             ft.Container(
+                                expand=True,
                                 gradient=ft.LinearGradient(
                                     colors=[
                                         "#272729",
@@ -26,7 +27,7 @@ class Tickets(ft.Container):
                                         ft.Text("hello")
                                     ]
                                 ),
-                                col={"sm": 12, "md": 9, "lg": 8}
+                                col={"sm": 12, "md": 8, "lg": 8}
                             ),
                             #  =========== the container for the other tools
                             ft.Container(
@@ -37,7 +38,7 @@ class Tickets(ft.Container):
                                         )
                                     ]
                                 ),
-                                col={"sm": 12, "md": 9, "lg": 4}
+                                col={"sm": 12, "md": 4, "lg": 4}
                             )
                         ]
                     )
