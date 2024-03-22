@@ -6,6 +6,12 @@ class ArtistsRecords(ft.View):
         super().__init__(route="/artist_table")
         self.page = page
 
+        self.controls = [
+            ft.Text(
+                "hello"
+            )
+        ]
+
 class Records(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
