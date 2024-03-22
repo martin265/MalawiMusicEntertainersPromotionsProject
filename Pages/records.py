@@ -29,7 +29,7 @@ class Records(ft.Container):
                                             controls=[
                                                 ft.Container(
                                                     content=ft.Text("hello world"),
-                                                    col={"sm": 12, "md": 12, "lg": 4}
+                                                    col={"sm": 12, "md": 12, "lg": 12}
                                                 ),
                                             ]
                                         )
