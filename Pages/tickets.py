@@ -92,7 +92,10 @@ class Tickets(ft.Container):
                                         # ============ the container for the input controls ======= //
                                         ft.ResponsiveRow(
                                             controls=[
-
+                                                ft.Container(
+                                                    content=self.inputControls.ticket_type,
+                                                    col={"sm": 12, "md": 3.5, "lg": 3.5}
+                                                ),
                                             ]
                                         )
 
