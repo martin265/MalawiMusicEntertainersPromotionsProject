@@ -41,8 +41,8 @@ class Records(ft.Container):
                                                                     alignment=ft.MainAxisAlignment.CENTER,
                                                                     controls=[
                                                                         ft.Text(
-                                                                            "manage available artist records",
-                                                                            size=40,
+                                                                            "manage available artist records".capitalize(),
+                                                                            size=30,
                                                                             font_family="manrop-bold"
                                                                         )
                                                                     ]
