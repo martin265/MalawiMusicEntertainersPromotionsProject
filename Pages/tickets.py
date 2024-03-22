@@ -69,21 +69,21 @@ class InputControls(ft.Container):
 
         self.payment_method = ft.Dropdown(
             border_color="#212121",
-            helper_text="select the ticket type".capitalize(),
+            helper_text="select payment method".capitalize(),
             border_radius=ft.border_radius.all(5),
-            prefix_icon=ft.icons.AIRPLANE_TICKET_ROUNDED,
+            prefix_icon=ft.icons.SUPERVISOR_ACCOUNT_ROUNDED,
             helper_style=ft.TextStyle(
                 color="#212121",
                 font_family="manrope-sem-bold"
             ),
-            hint_text="select ticket type",
+            hint_text="payment method",
             hint_style=ft.TextStyle(
                 color="#212121",
                 font_family="manrope-sem-bold"
             ),
             options=[
-                ft.dropdown.Option("hello world"),
-                ft.dropdown.Option("hello world"),
+                ft.dropdown.Option("VISA"),
+                ft.dropdown.Option("CASH"),
             ]
         )
 
