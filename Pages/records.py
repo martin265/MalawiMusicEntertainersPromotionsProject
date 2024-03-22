@@ -22,13 +22,17 @@ class Records(ft.Container):
                             ),
                             border_radius=ft.border_radius.all(10),
                             content=ft.Container(
-                                content=ft.ResponsiveRow(
-                                    alignment=ft.MainAxisAlignment.CENTER,
+                                content=ft.Column(
                                     controls=[
-                                        ft.Container(
-                                            content=ft.Text("hello world"),
-                                            col={"sm": 12, "md": 12, "lg": 4}
-                                        ),
+                                        ft.ResponsiveRow(
+                                            alignment=ft.MainAxisAlignment.CENTER,
+                                            controls=[
+                                                ft.Container(
+                                                    content=ft.Text("hello world"),
+                                                    col={"sm": 12, "md": 12, "lg": 4}
+                                                ),
+                                            ]
+                                        )
                                     ]
                                 )
                             )
