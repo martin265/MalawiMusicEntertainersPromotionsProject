@@ -28,7 +28,11 @@ class Records(ft.Container):
                                             alignment=ft.MainAxisAlignment.CENTER,
                                             controls=[
                                                 ft.Container(
-                                                    content=ft.Text("hello world"),
+                                                    content=ft.Column(
+                                                        controls=[
+
+                                                        ]
+                                                    ),
                                                     col={"sm": 12, "md": 12, "lg": 12}
                                                 ),
                                             ]
