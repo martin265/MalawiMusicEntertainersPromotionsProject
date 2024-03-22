@@ -5,6 +5,12 @@ class Records(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
         self.page = page
+        #  ======== the fonts for the system will be here ======= //
+        self.page.fonts = {
+            "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
+            "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
+            "manrop-bold": "assets/fonts/Manrope/static/Manrope-Bold.ttf"
+        }
         #  =========== the content for the page will be here ========== //
         self.content = ft.Column(
             controls=[
@@ -30,7 +36,17 @@ class Records(ft.Container):
                                                 ft.Container(
                                                     content=ft.Column(
                                                         controls=[
-
+                                                            ft.Container(
+                                                                content=ft.Row(
+                                                                    controls=[
+                                                                        ft.Text(
+                                                                            "manage available artist records",
+                                                                            size=40,
+                                                                            font_family="manrop-bold"
+                                                                        )
+                                                                    ]
+                                                                )
+                                                            )
                                                         ]
                                                     ),
                                                     col={"sm": 12, "md": 12, "lg": 12}
