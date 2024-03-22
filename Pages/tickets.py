@@ -107,15 +107,24 @@ class InputControls(ft.Container):
         self.ticket_available = ft.Checkbox(
             tristate=True,
             label="Available Ticket".title(),
-            fill_color="#212121",
-            adaptive=True
+            adaptive=True,
+            label_style=ft.TextStyle(
+                color="#212121",
+                font_family="manrope-sem-bold",
+                size=20
+            ),
         )
 
         self.ticket_unavailable = ft.Checkbox(
             tristate=True,
-            label="Available Ticket".title(),
-            fill_color="#212121",
-            adaptive=True
+            label="Unavailable Ticket".title(),
+            label_style=ft.TextStyle(
+                color="#212121",
+                font_family="manrope-sem-bold",
+                size=20
+            ),
+            adaptive=True,
+            height=40
         )
 
 
@@ -234,7 +243,7 @@ class Tickets(ft.Container):
                                                                     content=ft.Row(
                                                                         controls=[
                                                                             self.inputControls.ticket_available,
-                                                                            self.inputControls.ticket_unavailable
+                                                                            self.inputControls.ticket_unavailable,
                                                                         ]
                                                                     ),
                                                                     col={"sm": 12, "md": 4, "lg": 5.5}
