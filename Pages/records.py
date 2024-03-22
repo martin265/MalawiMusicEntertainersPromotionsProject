@@ -13,12 +13,12 @@ class ArtistsRecords(ft.Container):
                 ft.DataColumn(ft.Text("last name")),
                 ft.DataColumn(ft.Text("email")),
                 ft.DataColumn(ft.Text("gender")),
-                ft.DataColumn(ft.Text("phone_number")),
+                ft.DataColumn(ft.Text("phone number")),
                 ft.DataColumn(ft.Text("gender")),
                 ft.DataColumn(ft.Text("age")),
                 ft.DataColumn(ft.Text("genre")),
                 ft.DataColumn(ft.Text("residence")),
-                ft.DataColumn(ft.Text("artist_biography")),
+                ft.DataColumn(ft.Text("artist biography")),
             ],
             rows=[
             ]
@@ -27,22 +27,10 @@ class ArtistsRecords(ft.Container):
 
     #  ================ // function to fetch the records in the database ======= //
     def fetch_all_artist_records(self):
-        """ the function will fetch the records in the database """
-        try:
-            data, count = supabase.table("Artists").select("*").execute()
-            print(data)
-        except Exception as ex:
-            self.page.snack_bar = ft.SnackBar(
-                content=ft.Row(
-                    controls=[
-                        ft.Text(
-                            "something went wrong at {}".format(ex)
-                        )
-                    ]
-                )
-            )
-            self.page.snack_bar.open = True
-            self.page.update()
+        """Fetch all artist records from the database"""
+        data, count = supabase.table("Artists").select("*").execute()
+        print(data)
+
 
 
 class Records(ft.Container):
