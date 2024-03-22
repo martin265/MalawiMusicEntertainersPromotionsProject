@@ -101,12 +101,12 @@ class Tickets(ft.Container):
                                                                 ft.Container(
                                                                     expand=True,
                                                                     content=self.inputControls.ticket_type,
-                                                                    col={"sm": 12, "md": 4, "lg": 4}
+                                                                    col={"sm": 12, "md": 4, "lg": 6}
                                                                 ),
                                                                 ft.Container(
                                                                     expand=True,
                                                                     content=self.inputControls.ticket_type,
-                                                                    col={"sm": 12, "md": 4, "lg": 4}
+                                                                    col={"sm": 12, "md": 4, "lg": 6}
                                                                 ),
                                                             ],
                                                             run_spacing=0
