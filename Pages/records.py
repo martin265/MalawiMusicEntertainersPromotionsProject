@@ -28,9 +28,8 @@ class ArtistsRecords(ft.Container):
     #  ================ // function to fetch the records in the database ======= //
     def fetch_all_artist_records(self):
         """Fetch all artist records from the database"""
-        data, count = supabase.table("Artists").select("*").execute()
-        print(data)
-
+        data = supabase.table("Artists").select("first_name").execute()
+        # Extracting first names
 
 
 class Records(ft.Container):
