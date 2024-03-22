@@ -21,7 +21,7 @@ class Dashboard(ft.View):
         # =============== list for all the pages will be here ===//
         self.all_available_pages = [
             Home(page=page),
-            EventsPage(page=page),
+            
             Artists(page=page),
             Records(page=page)
         ]
@@ -66,31 +66,13 @@ class Dashboard(ft.View):
                     )
                 ),
 
-                # ============ // the other navigation component will be here ===== //
-                ft.NavigationRailDestination(
-                    icon_content=ft.Icon(
-                        ft.icons.EVENT_NOTE_ROUNDED,
-                        size=30,
-                        color="#212121",
-                        tooltip="events".title(),
-                    ),
-                    label_content=ft.Text(
-                        "events".title(),
-                        style=ft.TextStyle(
-                            size=15,
-                            font_family="manrop-bold"
-                        ),
-                        tooltip="events".title()
-                    )
-                ),
-
                 # =============== // destination for the artists page ============ //
                 ft.NavigationRailDestination(
                     icon_content=ft.Icon(
                         ft.icons.MIC_ROUNDED,
                         size=30,
                         color="#212121",
-                        tooltip="events".title(),
+                        tooltip="artist".title(),
                     ),
                     label_content=ft.Text(
                         "artist".title(),
@@ -102,6 +84,30 @@ class Dashboard(ft.View):
                     ),
                     selected_icon_content=ft.Icon(
                         ft.icons.MIC_EXTERNAL_ON_ROUNDED,
+                        size=30,
+                        color="#212121",
+                        tooltip="artist".title(),
+                    ),
+                ),
+
+                # =============== // destination for the artists page ============ //
+                ft.NavigationRailDestination(
+                    icon_content=ft.Icon(
+                        ft.icons.AIRPLANE_TICKET_OUTLINED,
+                        size=30,
+                        color="#212121",
+                        tooltip="tickets".title(),
+                    ),
+                    label_content=ft.Text(
+                        "tickets".title(),
+                        style=ft.TextStyle(
+                            size=15,
+                            font_family="manrop-bold"
+                        ),
+                        tooltip="tickets".title()
+                    ),
+                    selected_icon_content=ft.Icon(
+                        ft.icons.AIRPLANE_TICKET_ROUNDED,
                         size=30,
                         color="#212121",
                         tooltip="artist".title(),
