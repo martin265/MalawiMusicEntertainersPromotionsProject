@@ -11,7 +11,7 @@ class Dashboard(ft.View):
     def __init__(self, page: ft.Page):
         super().__init__(route="/dashboard")
         self.page = page
-        self.page.theme_mode = ft.ThemeMode.DARK
+        self.page.theme_mode = "light"
         #  ======== the fonts for the system will be here ======= //
         self.page.fonts = {
             "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
