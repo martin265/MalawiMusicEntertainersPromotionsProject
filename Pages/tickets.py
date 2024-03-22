@@ -59,6 +59,7 @@ class Tickets(ft.Container):
                                                 ]
                                             )
                                         ),
+
                                     ]
                                 ),
                                 col={"sm": 12, "md": 8, "lg": 8}
