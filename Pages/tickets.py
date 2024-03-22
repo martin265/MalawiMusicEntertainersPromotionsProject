@@ -47,6 +47,18 @@ class Tickets(ft.Container):
                                         ),
 
                                         # ========== the container for the icon =========== //
+                                        ft.Container(
+                                            content=ft.Row(
+                                                alignment=ft.MainAxisAlignment.CENTER,
+                                                controls=[
+                                                    ft.Icon(
+                                                        ft.icons.AIRPLANE_TICKET_ROUNDED,
+                                                        size=50,
+                                                        color="#00C896"
+                                                    )
+                                                ]
+                                            )
+                                        ),
                                     ]
                                 ),
                                 col={"sm": 12, "md": 8, "lg": 8}
