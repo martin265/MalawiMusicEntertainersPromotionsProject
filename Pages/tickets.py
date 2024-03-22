@@ -224,6 +224,28 @@ class Tickets(ft.Container):
                                                                 ),
                                                             ],
                                                             run_spacing=0
+                                                        ),
+
+                                                        ft.ResponsiveRow(
+                                                            alignment=ft.MainAxisAlignment.CENTER,
+                                                            controls=[
+                                                                ft.Container(
+                                                                    expand=True,
+                                                                    content=ft.Row(
+                                                                        controls=[
+                                                                            self.inputControls.ticket_available,
+                                                                            self.inputControls.ticket_unavailable
+                                                                        ]
+                                                                    ),
+                                                                    col={"sm": 12, "md": 4, "lg": 5.5}
+                                                                ),
+                                                                ft.Container(
+                                                                    expand=True,
+                                                                    content=self.inputControls.payment_method,
+                                                                    col={"sm": 12, "md": 4, "lg": 5.5}
+                                                                ),
+                                                            ],
+                                                            run_spacing=0
                                                         )
                                                     ]
                                                 )
