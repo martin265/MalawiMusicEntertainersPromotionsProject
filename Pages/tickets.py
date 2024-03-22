@@ -109,9 +109,9 @@ class InputControls(ft.Container):
             label="Available Ticket".title(),
             adaptive=True,
             label_style=ft.TextStyle(
-                color="#212121",
+                color="black",
                 font_family="manrope-sem-bold",
-                size=20
+                size=18
             ),
         )
 
@@ -119,9 +119,9 @@ class InputControls(ft.Container):
             tristate=True,
             label="Unavailable Ticket".title(),
             label_style=ft.TextStyle(
-                color="#212121",
+                color="black",
                 font_family="manrope-sem-bold",
-                size=20
+                size=18
             ),
             adaptive=True,
             height=40
