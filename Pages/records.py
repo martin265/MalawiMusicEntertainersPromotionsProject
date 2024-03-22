@@ -1,10 +1,16 @@
 import flet as ft
 
 
+class ArtistsRecords(ft.View):
+    def __init__(self, page: ft.Page):
+        super().__init__(route="/artist_table")
+        self.page = page
+
 class Records(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
         self.page = page
+        self.artists_records = ArtistsRecords(page=page)
         #  ======== the fonts for the system will be here ======= //
         self.page.fonts = {
             "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
@@ -50,7 +56,7 @@ class Records(ft.Container):
 
                                                                         ft.ElevatedButton(
                                                                             text="new page",
-                                                                            on_click={}
+                                                                            on_click=self.router("/artist_table")
                                                                         )
                                                                     ]
                                                                 )
@@ -69,4 +75,14 @@ class Records(ft.Container):
                 )
             ]
         )
+
+    def router(self, route):
+        self.page.controls.clear()
+        if self.page.route == "/artist_table":
+            artists = self.artists_records
+            self.page.controls.append(artists)
+
+        self.page.update()
+        self.page.on_route_change = route
+        self.page.go("/artist_table")
 
