@@ -104,6 +104,20 @@ class InputControls(ft.Container):
             ),
         )
 
+        self.ticket_available = ft.Checkbox(
+            tristate=True,
+            label="Available Ticket".title(),
+            fill_color="#212121",
+            adaptive=True
+        )
+
+        self.ticket_unavailable = ft.Checkbox(
+            tristate=True,
+            label="Available Ticket".title(),
+            fill_color="#212121",
+            adaptive=True
+        )
+
 
 
 
