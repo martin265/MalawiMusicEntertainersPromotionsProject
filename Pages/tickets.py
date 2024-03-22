@@ -95,6 +95,11 @@ class Tickets(ft.Container):
                                             controls=[
                                                 ft.Container(
                                                     content=self.inputControls.ticket_type,
+                                                    col={"sm": 12, "md": 3.5, "lg": 3.5}
+                                                ),
+                                                ft.Container(
+                                                    content=self.inputControls.ticket_type,
+                                                    col={"sm": 12, "md": 3.5, "lg": 3.5}
                                                 ),
                                             ]
                                         )
