@@ -56,7 +56,15 @@ class ArtistsRecords(ft.Container):
             content=ft.Container(
                 content=ft.Column(
                     controls=[
-                        self.first_name
+                        self.first_name,
+                        self.last_name,
+                        self.email,
+                        self.phone_number,
+                        self.gender,
+                        self.age,
+                        self.genre,
+                        self.residence,
+                        self.artist_biography
                     ]
                 )
             )
