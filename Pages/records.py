@@ -91,7 +91,9 @@ class ArtistsRecords(ft.Container):
     def current_clicked_id(self, e):
         """the function will get the current id"""
         self.current_id = e.control.data
-        print(self.current_id)
+        #  ============ the alert dialog to update the records here
+        first_name = e.control.data["first_name"]
+        print(first_name)
 
 
 class Records(ft.Container):
