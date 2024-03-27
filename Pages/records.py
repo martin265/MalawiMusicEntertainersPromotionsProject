@@ -95,6 +95,7 @@ class ArtistsRecords(ft.Container):
     #  ================ // function to fetch the records in the database ======= //
     def fetch_all_artist_records(self):
         """Fetch all artist records from the database"""
+        time.sleep(2)
         data, count = supabase.table("Artists").select("*").execute()
         if not data:
             print("no available records")
