@@ -1,6 +1,6 @@
 import flet as ft
 from Config.config import supabase
-
+import time
 
 class ArtistsRecords(ft.Container):
     def __init__(self, page: ft.Page):
@@ -28,8 +28,19 @@ class ArtistsRecords(ft.Container):
     #  ================ // function to fetch the records in the database ======= //
     def fetch_all_artist_records(self):
         """Fetch all artist records from the database"""
-        data = supabase.table("Artists").select("first_name").execute()
-        # Extracting first names
+        time.sleep(2)
+        data, count = supabase.table("Artists").select("first_name").execute()
+        if not data:
+            print("no available records")
+        else:
+            data_tuple = data
+            data_list = data_tuple[1]
+            # ========== looping through the elements here
+            for single_element in data_list:
+                print(single_element["first_name"])
+
+
+
 
 
 class Records(ft.Container):
@@ -37,6 +48,7 @@ class Records(ft.Container):
         super().__init__()
         self.page = page
         self.artists_records = ArtistsRecords(page=page)
+        self.artists_records.fetch_all_artist_records()
         #  ======== the fonts for the system will be here ======= //
         self.page.fonts = {
             "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
