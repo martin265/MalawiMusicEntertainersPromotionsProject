@@ -83,7 +83,7 @@ class ArtistsRecords(ft.Container):
                                 content=ft.Row(
                                     controls=[
                                         ft.IconButton(
-                                            data=single_element["id"],
+                                            data=single_element,
                                             icon=ft.icons.UPDATE_ROUNDED,
                                             icon_color="#2e7d32",
                                             tooltip="update".capitalize(),
@@ -105,9 +105,9 @@ class ArtistsRecords(ft.Container):
 
     def current_clicked_id(self, e):
         """the function will get the current id"""
-        self.current_id = e.control.data
+        self.current_id = e.control.data["id"]
         #  ============ the alert dialog to update the records here
-        self.first_name = e.control.data["first_name"]
+        self.first_name.value = e.control.data["first_name"]
         self.page.dialog = self.update_records_dialog
         self.update_records_dialog.open = True
         self.page.update()
