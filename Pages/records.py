@@ -52,74 +52,18 @@ class ArtistsRecords(ft.Container):
 
         # ================ the alert dialog for updating the records here
         self.update_records_dialog = ft.AlertDialog(
-            adaptive=True,
-            content=ft.Container(
-                bgcolor="white",
-                border_radius=ft.border_radius.all(10),
-                margin=ft.margin.all(10),
-                content=ft.Column(
-                    scroll=ft.ScrollMode.HIDDEN,
-                    controls=[
-                        ft.Container(
-                            padding=ft.padding.only(top=30),
-                            content=ft.Row(
-                                alignment=ft.MainAxisAlignment.CENTER,
-                                controls=[
-                                    ft.Text(
-                                        "update artist records".capitalize(),
-                                        size=40,
-                                        font_family="manrop-bold"
-                                    )
-                                ]
-                            )
-                        ),
-
-                        ft.Container(
-                            expand=True,
-                            width=self.page.width,
-                            content=ft.SafeArea(
-                                content=ft.Column(
-                                    controls=[
-                                        ft.Row(
-                                            alignment=ft.MainAxisAlignment.CENTER,
-                                            controls=[
-                                                self.first_name, self.last_name
-                                            ]
-                                        ),
-                                        # =========== // ============== //
-                                        ft.Row(
-                                            alignment=ft.MainAxisAlignment.CENTER,
-                                            controls=[
-                                                self.email, self.phone_number
-                                            ]
-                                        ),
-                                        # =========== // ============== //
-                                        ft.Row(
-                                            alignment=ft.MainAxisAlignment.CENTER,
-                                            controls=[
-                                                self.gender, self.age
-                                            ]
-                                        ),
-                                        # =========== // ============== //
-                                        ft.Row(
-                                            alignment=ft.MainAxisAlignment.CENTER,
-                                            controls=[
-                                                self.genre, self.residence
-                                            ]
-                                        ),
-                                        # ================ // =============== //
-                                        ft.Row(
-                                            alignment=ft.MainAxisAlignment.CENTER,
-                                            controls=[
-                                                self.artist_biography
-                                            ]
-                                        ),
-                                    ]
-                                )
-                            )
-                        )
-                    ]
-                )
+            content=ft.Column(
+                controls=[
+                    self.first_name,
+                    self.last_name,
+                    self.email,
+                    self.phone_number,
+                    self.gender,
+                    self.age,
+                    self.genre,
+                    self.residence,
+                    self.artist_biography
+                ]
             )
         )
 
