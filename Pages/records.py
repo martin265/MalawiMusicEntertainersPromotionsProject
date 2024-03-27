@@ -2,6 +2,7 @@ import flet as ft
 from Config.config import supabase
 import time
 
+
 class ArtistsRecords(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
@@ -51,8 +52,6 @@ class ArtistsRecords(ft.Container):
                         ]
                     )
                 )
-
-
 
 
 class Records(ft.Container):
