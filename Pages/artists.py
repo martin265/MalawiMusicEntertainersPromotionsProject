@@ -1,12 +1,13 @@
 import flet as ft
 from Models.Artist import Artist
+from Pages.records import Records
 
 
 class InputControls(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
         self.page = page
-
+        self.artist_records = Records(page=page)
         self.page.fonts = {
             "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
             "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
