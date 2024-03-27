@@ -39,13 +39,16 @@ class ArtistsRecords(ft.Container):
         )
         self.fetch_all_artist_records()
 
+        # ================= // ==================== //
+        self.first_name = ft.TextField()
+
         # ================ the alert dialog for updating the records here
         self.update_records_dialog = ft.AlertDialog(
             adaptive=True,
             content=ft.Container(
                 content=ft.Column(
                     controls=[
-                        ft.Text("hello world")
+                        self.first_name
                     ]
                 )
             )
@@ -104,8 +107,10 @@ class ArtistsRecords(ft.Container):
         """the function will get the current id"""
         self.current_id = e.control.data
         #  ============ the alert dialog to update the records here
-        first_name = e.control.data["first_name"]
-        print(first_name)
+        self.first_name = e.control.data["first_name"]
+        self.page.dialog = self.update_records_dialog
+        self.update_records_dialog.open = True
+        self.page.update()
 
 
 class Records(ft.Container):
