@@ -39,6 +39,18 @@ class ArtistsRecords(ft.Container):
         )
         self.fetch_all_artist_records()
 
+        # ================ the alert dialog for updating the records here
+        self.update_records_dialog = ft.AlertDialog(
+            adaptive=True,
+            content=ft.Container(
+                content=ft.Column(
+                    controls=[
+                        ft.Text("hello world")
+                    ]
+                )
+            )
+        )
+
     #  ================ // function to fetch the records in the database ======= //
     def fetch_all_artist_records(self):
         """Fetch all artist records from the database"""
