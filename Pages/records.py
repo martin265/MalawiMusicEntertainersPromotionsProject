@@ -51,13 +51,6 @@ class ArtistsRecords(ft.Container):
         self.residence = ft.TextField()
         self.artist_biography = ft.TextField()
 
-        # ============== // the update button ============= //
-        self.update_button = ft.OutlinedButton(
-            text="update record",
-            icon=ft.icons.UPDATE_ROUNDED,
-            on_click={}
-        )
-
         # ================= // creating the object for the artist class here ====== //
         self.artist = Artist(
             self.first_name.value,
@@ -69,6 +62,13 @@ class ArtistsRecords(ft.Container):
             self.genre.value,
             self.residence.value,
             self.artist_biography.value
+        )
+
+        # ============== // the update button ============= //
+        self.update_button = ft.OutlinedButton(
+            text="update record",
+            icon=ft.icons.UPDATE_ROUNDED,
+            on_click={}
         )
 
         # ============== // the update button ============= //
