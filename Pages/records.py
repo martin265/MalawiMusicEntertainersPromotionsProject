@@ -89,6 +89,7 @@ class ArtistsRecords(ft.Container):
                 )
 
     def current_clicked_id(self, e):
+        """the function will get the current id"""
         self.current_id = e.control.data
         print(self.current_id)
 
