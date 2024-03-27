@@ -66,12 +66,13 @@ class ArtistsRecords(ft.Container):
                                     controls=[
                                         ft.IconButton(
                                             icon=ft.icons.UPDATE_ROUNDED,
+                                            icon_color="#2e7d32",
                                             on_click={}
                                         ),
 
                                         ft.IconButton(
                                             icon=ft.icons.DELETE_ROUNDED,
-                                            icon_color="red",
+                                            icon_color="#b71c1c",
                                             on_click={}
                                         ),
                                     ]
