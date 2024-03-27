@@ -75,6 +75,8 @@ class ArtistsRecords(ft.Container):
                         ),
 
                         ft.Container(
+                            expand=True,
+                            width=self.page.width,
                             content=ft.SafeArea(
                                 content=ft.Column(
                                     controls=[
