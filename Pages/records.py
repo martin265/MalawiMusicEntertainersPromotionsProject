@@ -12,7 +12,6 @@ class ArtistsRecords(ft.Container):
                 ft.DataColumn(ft.Text("First name")),
                 ft.DataColumn(ft.Text("last name")),
                 ft.DataColumn(ft.Text("email")),
-                ft.DataColumn(ft.Text("gender")),
                 ft.DataColumn(ft.Text("phone number")),
                 ft.DataColumn(ft.Text("gender")),
                 ft.DataColumn(ft.Text("age")),
@@ -29,7 +28,7 @@ class ArtistsRecords(ft.Container):
     def fetch_all_artist_records(self):
         """Fetch all artist records from the database"""
         time.sleep(2)
-        data, count = supabase.table("Artists").select("first_name").execute()
+        data, count = supabase.table("Artists").select("*").execute()
         if not data:
             print("no available records")
         else:
@@ -41,15 +40,14 @@ class ArtistsRecords(ft.Container):
                     ft.DataRow(
                         cells=[
                             ft.DataCell(ft.Text(single_element["first_name"])),
-                            ft.DataCell(ft.Text(single_element["first_name"])),
-                            ft.DataCell(ft.Text(single_element["first_name"])),
-                            ft.DataCell(ft.Text(single_element["first_name"])),
-                            ft.DataCell(ft.Text(single_element["first_name"])),
-                            ft.DataCell(ft.Text(single_element["first_name"])),
-                            ft.DataCell(ft.Text(single_element["first_name"])),
-                            ft.DataCell(ft.Text(single_element["first_name"])),
-                            ft.DataCell(ft.Text(single_element["first_name"])),
-                            ft.DataCell(ft.Text(single_element["first_name"])),
+                            ft.DataCell(ft.Text(single_element["last_name"])),
+                            ft.DataCell(ft.Text(single_element["email"])),
+                            ft.DataCell(ft.Text(single_element["phone_number"])),
+                            ft.DataCell(ft.Text(single_element["gender"])),
+                            ft.DataCell(ft.Text(single_element["age"])),
+                            ft.DataCell(ft.Text(single_element["genre"])),
+                            ft.DataCell(ft.Text(single_element["residence"])),
+                            ft.DataCell(ft.Text(single_element["artist_biography"])),
                         ]
                     )
                 )
@@ -62,7 +60,8 @@ class Records(ft.Container):
         super().__init__()
         self.page = page
         self.artists_records = ArtistsRecords(page=page)
-        self.artists_records.fetch_all_artist_records()
+        # ============ setting the whole page scroll
+        self.page.scroll = ft.ScrollMode.HIDDEN
         #  ======== the fonts for the system will be here ======= //
         self.page.fonts = {
             "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
@@ -112,6 +111,7 @@ class Records(ft.Container):
 
                                                             ft.Container(
                                                                 content=ft.Row(
+                                                                    scroll=ft.ScrollMode.ADAPTIVE,
                                                                     controls=[
                                                                         self.artists_records.artists_datatable
                                                                     ]
