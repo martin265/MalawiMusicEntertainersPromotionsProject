@@ -12,6 +12,8 @@ class ArtistsRecords(ft.Container):
             "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
             "manrop-bold": "assets/fonts/Manrope/static/Manrope-Bold.ttf"
         }
+        # =========== setting the current id =========== //
+
         #  ============ the data table will be here ======= //
         self.artists_datatable = ft.DataTable(
             heading_text_style=ft.TextStyle(
@@ -84,6 +86,9 @@ class ArtistsRecords(ft.Container):
                         ]
                     )
                 )
+
+    def current_clicked_id(self, e):
+
 
 
 class Records(ft.Container):
