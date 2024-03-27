@@ -57,17 +57,34 @@ class ArtistsRecords(ft.Container):
                 bgcolor="white",
                 border_radius=ft.border_radius.all(10),
                 width=800,
+                margin=ft.margin.all(10),
                 content=ft.Column(
                     controls=[
-                        self.first_name,
-                        self.last_name,
-                        self.email,
-                        self.phone_number,
-                        self.gender,
-                        self.age,
-                        self.genre,
-                        self.residence,
-                        self.artist_biography
+                        ft.Container(
+                            content=ft.Row(
+                                controls=[
+                                    ft.Text(
+                                        "update artist records".capitalize()
+                                    )
+                                ]
+                            )
+                        ),
+
+                        ft.Container(
+                            content=ft.Column(
+                                controls=[
+                                    self.first_name,
+                                    self.last_name,
+                                    self.email,
+                                    self.phone_number,
+                                    self.gender,
+                                    self.age,
+                                    self.genre,
+                                    self.residence,
+                                    self.artist_biography
+                                ]
+                            )
+                        )
                     ]
                 )
             )
