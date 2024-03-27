@@ -71,6 +71,7 @@ class ArtistsRecords(ft.Container):
 
                                         ft.IconButton(
                                             icon=ft.icons.DELETE_ROUNDED,
+                                            icon_color="red",
                                             on_click={}
                                         ),
                                     ]
