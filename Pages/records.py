@@ -37,8 +37,22 @@ class ArtistsRecords(ft.Container):
             data_list = data_tuple[1]
             # ========== looping through the elements here
             for single_element in data_list:
-                print(single_element["first_name"])
-
+                self.artists_datatable.rows.append(
+                    ft.DataRow(
+                        cells=[
+                            ft.DataCell(ft.Text(single_element["first_name"])),
+                            ft.DataCell(ft.Text(single_element["first_name"])),
+                            ft.DataCell(ft.Text(single_element["first_name"])),
+                            ft.DataCell(ft.Text(single_element["first_name"])),
+                            ft.DataCell(ft.Text(single_element["first_name"])),
+                            ft.DataCell(ft.Text(single_element["first_name"])),
+                            ft.DataCell(ft.Text(single_element["first_name"])),
+                            ft.DataCell(ft.Text(single_element["first_name"])),
+                            ft.DataCell(ft.Text(single_element["first_name"])),
+                            ft.DataCell(ft.Text(single_element["first_name"])),
+                        ]
+                    )
+                )
 
 
 
