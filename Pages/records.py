@@ -61,7 +61,7 @@ class ArtistsRecords(ft.Container):
         self.close_button = ft.OutlinedButton(
             text="close modal",
             icon=ft.icons.CLOSE_ROUNDED,
-            on_click={}
+            on_click=self.close_alert_dialog
         )
 
         # ================ the alert dialog for updating the records here
