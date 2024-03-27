@@ -70,7 +70,7 @@ class ArtistsRecords(ft.Container):
                                         ),
 
                                         ft.IconButton(
-                                            icon=ft.icons.UPDATE_ROUNDED,
+                                            icon=ft.icons.DELETE_ROUNDED,
                                             on_click={}
                                         ),
                                     ]
