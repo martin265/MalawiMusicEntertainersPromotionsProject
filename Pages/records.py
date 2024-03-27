@@ -181,9 +181,8 @@ class ArtistsRecords(ft.Container):
     # ============ the functions to update and delete records will be down here ===== //
     def update_event_record(self, e):
         """the function that will call the update class here"""
-        self.current_id = e.control.data["id"]
         self.artist.update_artist_record(self.current_id)
-        print("record deleted successfully")
+        print("record deleted successfully {}".format(self.current_id))
 
 
 class Records(ft.Container):
