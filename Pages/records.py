@@ -57,6 +57,13 @@ class ArtistsRecords(ft.Container):
             on_click={}
         )
 
+        # ============== // the update button ============= //
+        self.close_button = ft.OutlinedButton(
+            text="close modal",
+            icon=ft.icons.CLOSE_ROUNDED,
+            on_click={}
+        )
+
         # ================ the alert dialog for updating the records here
         self.update_records_dialog = ft.AlertDialog(
             content=ft.Column(
@@ -73,10 +80,11 @@ class ArtistsRecords(ft.Container):
 
                     #  ============== the container for the update button
                     ft.Container(
+                        margin=ft.margin.only(top=20),
                         content=ft.Row(
                             controls=[
                                 self.update_button,
-                                self.update_button
+                                self.close_button
                             ]
                         )
                     )
@@ -148,6 +156,11 @@ class ArtistsRecords(ft.Container):
         self.artist_biography.value = e.control.data["artist_biography"]
         self.page.dialog = self.update_records_dialog
         self.update_records_dialog.open = True
+        self.page.update()
+
+    def close_alert_dialog(self, e):
+        self.page.dialog = self.update_records_dialog
+        self.update_records_dialog.open = False
         self.page.update()
 
 
