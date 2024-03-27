@@ -59,6 +59,23 @@ class ArtistsRecords(ft.Container):
                             ft.DataCell(ft.Text(single_element["genre"])),
                             ft.DataCell(ft.Text(single_element["residence"])),
                             ft.DataCell(ft.Text(single_element["artist_biography"])),
+
+                            # ============== // the delete and update functions here
+                            ft.DataCell(
+                                content=ft.Row(
+                                    controls=[
+                                        ft.IconButton(
+                                            icon=ft.icons.UPDATE_ROUNDED,
+                                            on_click={}
+                                        ),
+
+                                        ft.IconButton(
+                                            icon=ft.icons.UPDATE_ROUNDED,
+                                            on_click={}
+                                        ),
+                                    ]
+                                )
+                            ),
                         ]
                     )
                 )
