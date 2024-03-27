@@ -1,6 +1,7 @@
 import flet as ft
 from Config.config import supabase
 import time
+from Models.Artist import Artist
 
 
 class ArtistsRecords(ft.Container):
@@ -55,6 +56,19 @@ class ArtistsRecords(ft.Container):
             text="update record",
             icon=ft.icons.UPDATE_ROUNDED,
             on_click={}
+        )
+
+        # ================= // creating the object for the artist class here ====== //
+        self.artist = Artist(
+            self.first_name.value,
+            self.last_name.value,
+            self.email.value,
+            self.phone_number.value,
+            self.gender.value,
+            self.age.value,
+            self.genre.value,
+            self.residence.value,
+            self.artist_biography.value
         )
 
         # ============== // the update button ============= //
