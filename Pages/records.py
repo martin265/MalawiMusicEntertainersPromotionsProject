@@ -54,6 +54,9 @@ class ArtistsRecords(ft.Container):
         self.update_records_dialog = ft.AlertDialog(
             adaptive=True,
             content=ft.Container(
+                bgcolor="white",
+                border_radius=ft.border_radius.all(10),
+                width=800,
                 content=ft.Column(
                     controls=[
                         self.first_name,
