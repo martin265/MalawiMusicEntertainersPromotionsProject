@@ -7,8 +7,18 @@ class ArtistsRecords(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
         self.page = page
+        self.page.fonts = {
+            "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
+            "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
+            "manrop-bold": "assets/fonts/Manrope/static/Manrope-Bold.ttf"
+        }
         #  ============ the data table will be here ======= //
         self.artists_datatable = ft.DataTable(
+            heading_text_style=ft.TextStyle(
+                size=20,
+                weight=ft.FontWeight.BOLD,
+                font_family="manrop-bold"
+            ),
             columns=[
                 ft.DataColumn(ft.Text("First name")),
                 ft.DataColumn(ft.Text("last name")),
