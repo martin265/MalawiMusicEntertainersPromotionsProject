@@ -68,10 +68,11 @@ class ArtistsRecords(ft.Container):
                                 content=ft.Row(
                                     controls=[
                                         ft.IconButton(
+                                            data=single_element["id"],
                                             icon=ft.icons.UPDATE_ROUNDED,
                                             icon_color="#2e7d32",
                                             tooltip="update".capitalize(),
-                                            on_click={}
+                                            on_click=self.current_clicked_id
                                         ),
 
                                         ft.IconButton(
@@ -88,7 +89,7 @@ class ArtistsRecords(ft.Container):
                 )
 
     def current_clicked_id(self, e):
-        self.current_id = e.control.data["id"]
+        self.current_id = e.control.data
         print(self.current_id)
 
 

@@ -7,6 +7,7 @@ def main(page: ft.Page):
     page.window_center()
     page.window_min_width = 768
     page.window_min_height = 700
+    page.bottom_appbar = False
     page.scroll = ft.ScrollMode.ADAPTIVE
 
     # ============= the function for the routing will be here ======== //
