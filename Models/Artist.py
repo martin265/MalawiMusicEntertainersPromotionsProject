@@ -38,9 +38,22 @@ class Artist:
             print("something went wrong at {}".format(ex))
 
     #  ================= // the function will be used to update the records
-    def update_artist_record(self):
+    def update_artist_record(self, current_update_id):
         """the function will update the records"""
         try:
-
+            data, count = supabase.table("Artists").update(
+                {
+                    "first_name": self.first_name,
+                    "last_name": self.last_name,
+                    "email": self.email,
+                    "phone_number": self.phone_number,
+                    "gender": self.gender,
+                    "age": self.age,
+                    "genre": self.genre,
+                    "residence": self.residence,
+                    "artist_biography": self.artist_biography
+                }
+            ).eq(current_update_id).execute()
+            # =========== running the database query here =========== //
         except Exception as ex:
             print(ex)
