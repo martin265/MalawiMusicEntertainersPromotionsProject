@@ -56,7 +56,6 @@ class ArtistsRecords(ft.Container):
             content=ft.Container(
                 bgcolor="white",
                 border_radius=ft.border_radius.all(10),
-                width=800,
                 margin=ft.margin.all(10),
                 content=ft.Column(
                     scroll=ft.ScrollMode.HIDDEN,
@@ -79,15 +78,40 @@ class ArtistsRecords(ft.Container):
                             content=ft.SafeArea(
                                 content=ft.Column(
                                     controls=[
-                                        self.first_name,
-                                        self.last_name,
-                                        self.email,
-                                        self.phone_number,
-                                        self.gender,
-                                        self.age,
-                                        self.genre,
-                                        self.residence,
-                                        self.artist_biography
+                                        ft.Row(
+                                            alignment=ft.MainAxisAlignment.CENTER,
+                                            controls=[
+                                                self.first_name, self.last_name
+                                            ]
+                                        ),
+                                        # =========== // ============== //
+                                        ft.Row(
+                                            alignment=ft.MainAxisAlignment.CENTER,
+                                            controls=[
+                                                self.email, self.phone_number
+                                            ]
+                                        ),
+                                        # =========== // ============== //
+                                        ft.Row(
+                                            alignment=ft.MainAxisAlignment.CENTER,
+                                            controls=[
+                                                self.gender, self.age
+                                            ]
+                                        ),
+                                        # =========== // ============== //
+                                        ft.Row(
+                                            alignment=ft.MainAxisAlignment.CENTER,
+                                            controls=[
+                                                self.genre, self.residence
+                                            ]
+                                        ),
+                                        # ================ // =============== //
+                                        ft.Row(
+                                            alignment=ft.MainAxisAlignment.CENTER,
+                                            controls=[
+                                                self.artist_biography
+                                            ]
+                                        ),
                                     ]
                                 )
                             )
