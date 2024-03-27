@@ -178,6 +178,13 @@ class ArtistsRecords(ft.Container):
         self.update_records_dialog.open = False
         self.page.update()
 
+    # ============ the functions to update and delete records will be down here ===== //
+    def update_event_record(self, e):
+        """the function that will call the update class here"""
+        self.current_id = e.control.data["id"]
+        self.artist.update_artist_record(self.current_id)
+        print("record deleted successfully")
+
 
 class Records(ft.Container):
     def __init__(self, page: ft.Page):
