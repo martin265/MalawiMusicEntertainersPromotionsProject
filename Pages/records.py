@@ -68,25 +68,28 @@ class ArtistsRecords(ft.Container):
                                 controls=[
                                     ft.Text(
                                         "update artist records".capitalize(),
-                                        size=40
+                                        size=40,
+                                        font_family="manrop-bold"
                                     )
                                 ]
                             )
                         ),
 
                         ft.Container(
-                            content=ft.Column(
-                                controls=[
-                                    self.first_name,
-                                    self.last_name,
-                                    self.email,
-                                    self.phone_number,
-                                    self.gender,
-                                    self.age,
-                                    self.genre,
-                                    self.residence,
-                                    self.artist_biography
-                                ]
+                            content=ft.SafeArea(
+                                content=ft.Column(
+                                    controls=[
+                                        self.first_name,
+                                        self.last_name,
+                                        self.email,
+                                        self.phone_number,
+                                        self.gender,
+                                        self.age,
+                                        self.genre,
+                                        self.residence,
+                                        self.artist_biography
+                                    ]
+                                )
                             )
                         )
                     ]
