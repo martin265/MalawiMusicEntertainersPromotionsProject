@@ -15,20 +15,21 @@ class ArtistsRecords(ft.Container):
         #  ============ the data table will be here ======= //
         self.artists_datatable = ft.DataTable(
             heading_text_style=ft.TextStyle(
-                size=20,
+                size=15,
                 weight=ft.FontWeight.BOLD,
                 font_family="manrop-bold"
             ),
             columns=[
-                ft.DataColumn(ft.Text("First name")),
-                ft.DataColumn(ft.Text("last name")),
-                ft.DataColumn(ft.Text("email")),
-                ft.DataColumn(ft.Text("phone number")),
-                ft.DataColumn(ft.Text("gender")),
-                ft.DataColumn(ft.Text("age")),
-                ft.DataColumn(ft.Text("genre")),
-                ft.DataColumn(ft.Text("residence")),
-                ft.DataColumn(ft.Text("artist biography")),
+                ft.DataColumn(ft.Text("First name".capitalize())),
+                ft.DataColumn(ft.Text("last name".capitalize())),
+                ft.DataColumn(ft.Text("email".capitalize())),
+                ft.DataColumn(ft.Text("phone number".capitalize())),
+                ft.DataColumn(ft.Text("gender".capitalize())),
+                ft.DataColumn(ft.Text("age".capitalize())),
+                ft.DataColumn(ft.Text("genre".capitalize())),
+                ft.DataColumn(ft.Text("residence".capitalize())),
+                ft.DataColumn(ft.Text("artist biography".capitalize())),
+                ft.DataColumn(ft.Text("actions".capitalize())),
             ],
             rows=[
             ]
@@ -38,7 +39,6 @@ class ArtistsRecords(ft.Container):
     #  ================ // function to fetch the records in the database ======= //
     def fetch_all_artist_records(self):
         """Fetch all artist records from the database"""
-        time.sleep(2)
         data, count = supabase.table("Artists").select("*").execute()
         if not data:
             print("no available records")
@@ -79,6 +79,8 @@ class Records(ft.Container):
         }
         #  =========== the content for the page will be here ========== //
         self.content = ft.Column(
+            height=self.page.height,
+            scroll=ft.ScrollMode.ADAPTIVE,
             controls=[
                 ft.ResponsiveRow(
                     controls=[
@@ -119,6 +121,7 @@ class Records(ft.Container):
                                                             ),
 
                                                             ft.Container(
+                                                                padding=ft.padding.only(top=30),
                                                                 content=ft.Row(
                                                                     scroll=ft.ScrollMode.ADAPTIVE,
                                                                     controls=[
