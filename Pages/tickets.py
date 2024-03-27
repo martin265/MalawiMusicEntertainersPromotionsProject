@@ -104,8 +104,7 @@ class InputControls(ft.Container):
             ),
         )
 
-        self.ticket_available = ft.Checkbox(
-            tristate=True,
+        self.ticket_available = ft.Radio(
             label="Available Ticket".title(),
             adaptive=True,
             label_style=ft.TextStyle(
@@ -115,8 +114,7 @@ class InputControls(ft.Container):
             ),
         )
 
-        self.ticket_unavailable = ft.Checkbox(
-            tristate=True,
+        self.ticket_available = ft.Radio(
             label="Unavailable Ticket".title(),
             label_style=ft.TextStyle(
                 color="black",
@@ -156,7 +154,6 @@ class InputControls(ft.Container):
                 font_family="manrope-sem-bold"
             ),
         )
-
 
 
 class Tickets(ft.Container):
@@ -272,7 +269,7 @@ class Tickets(ft.Container):
                                                                     content=ft.Row(
                                                                         controls=[
                                                                             self.inputControls.ticket_available,
-                                                                            self.inputControls.ticket_unavailable,
+                                                                            self.inputControls.ticket_available,
                                                                         ]
                                                                     ),
                                                                     col={"sm": 12, "md": 4, "lg": 5.5}
@@ -284,7 +281,30 @@ class Tickets(ft.Container):
                                                                 ),
                                                             ],
                                                             run_spacing=0
-                                                        )
+                                                        ),
+
+                                                        ft.ResponsiveRow(
+                                                            alignment=ft.MainAxisAlignment.CENTER,
+                                                            controls=[
+                                                                ft.Container(
+                                                                    expand=True,
+                                                                    content=ft.Row(
+                                                                        controls=[
+                                                                            self.inputControls.ticket_sale_start_date,
+                                                                            self.inputControls.ticket_sale_end_date,
+                                                                        ]
+                                                                    ),
+                                                                    col={"sm": 12, "md": 4, "lg": 5.5}
+                                                                ),
+                                                                ft.Container(
+                                                                    expand=True,
+                                                                    content=self.inputControls.refund_policy,
+                                                                    col={"sm": 12, "md": 4, "lg": 5.5}
+                                                                ),
+                                                            ],
+                                                            run_spacing=0
+                                                        ),
+
                                                     ]
                                                 )
                                             )
