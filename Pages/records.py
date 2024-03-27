@@ -32,6 +32,7 @@ class ArtistsRecords(ft.Container):
                 ft.DataColumn(ft.Text("actions".capitalize())),
             ],
             rows=[
+
             ]
         )
         self.fetch_all_artist_records()
@@ -67,12 +68,14 @@ class ArtistsRecords(ft.Container):
                                         ft.IconButton(
                                             icon=ft.icons.UPDATE_ROUNDED,
                                             icon_color="#2e7d32",
+                                            tooltip="update".capitalize(),
                                             on_click={}
                                         ),
 
                                         ft.IconButton(
                                             icon=ft.icons.DELETE_ROUNDED,
                                             icon_color="#b71c1c",
+                                            tooltip="delete".capitalize(),
                                             on_click={}
                                         ),
                                     ]
@@ -140,7 +143,7 @@ class Records(ft.Container):
                                                             ),
 
                                                             ft.Container(
-                                                                padding=ft.padding.only(top=30),
+                                                                padding=ft.padding.only(top=30, bottom=20),
                                                                 content=ft.Row(
                                                                     scroll=ft.ScrollMode.ADAPTIVE,
                                                                     controls=[
