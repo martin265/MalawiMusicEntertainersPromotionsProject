@@ -41,6 +41,14 @@ class ArtistsRecords(ft.Container):
 
         # ================= // ==================== //
         self.first_name = ft.TextField()
+        self.last_name = ft.TextField()
+        self.email = ft.TextField()
+        self.phone_number = ft.TextField()
+        self.gender = ft.TextField()
+        self.age = ft.TextField()
+        self.genre = ft.TextField()
+        self.residence = ft.TextField()
+        self.artist_biography = ft.TextField()
 
         # ================ the alert dialog for updating the records here
         self.update_records_dialog = ft.AlertDialog(
