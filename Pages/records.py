@@ -59,12 +59,16 @@ class ArtistsRecords(ft.Container):
                 width=800,
                 margin=ft.margin.all(10),
                 content=ft.Column(
+                    scroll=ft.ScrollMode.HIDDEN,
                     controls=[
                         ft.Container(
+                            padding=ft.padding.only(top=30),
                             content=ft.Row(
+                                alignment=ft.MainAxisAlignment.CENTER,
                                 controls=[
                                     ft.Text(
-                                        "update artist records".capitalize()
+                                        "update artist records".capitalize(),
+                                        size=40
                                     )
                                 ]
                             )
