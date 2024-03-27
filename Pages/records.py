@@ -50,6 +50,13 @@ class ArtistsRecords(ft.Container):
         self.residence = ft.TextField()
         self.artist_biography = ft.TextField()
 
+        # ============== // the update button ============= //
+        self.update_button = ft.OutlinedButton(
+            text="update record",
+            icon=ft.icons.UPDATE_ROUNDED,
+            on_click={}
+        )
+
         # ================ the alert dialog for updating the records here
         self.update_records_dialog = ft.AlertDialog(
             content=ft.Column(
@@ -62,7 +69,17 @@ class ArtistsRecords(ft.Container):
                     self.age,
                     self.genre,
                     self.residence,
-                    self.artist_biography
+                    self.artist_biography,
+
+                    #  ============== the container for the update button
+                    ft.Container(
+                        content=ft.Row(
+                            controls=[
+                                self.update_button,
+                                self.update_button
+                            ]
+                        )
+                    )
                 ]
             )
         )
@@ -121,6 +138,14 @@ class ArtistsRecords(ft.Container):
         self.current_id = e.control.data["id"]
         #  ============ the alert dialog to update the records here
         self.first_name.value = e.control.data["first_name"]
+        self.last_name.value = e.control.data["last_name"]
+        self.email.value = e.control.data["email"]
+        self.phone_number.value = e.control.data["phone_number"]
+        self.gender.value = e.control.data["gender"]
+        self.age.value = e.control.data["age"]
+        self.genre.value = e.control.data["genre"]
+        self.residence.value = e.control.data["residence"]
+        self.artist_biography.value = e.control.data["artist_biography"]
         self.page.dialog = self.update_records_dialog
         self.update_records_dialog.open = True
         self.page.update()
