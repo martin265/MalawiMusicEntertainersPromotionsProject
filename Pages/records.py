@@ -68,7 +68,7 @@ class ArtistsRecords(ft.Container):
         self.update_button = ft.OutlinedButton(
             text="update record",
             icon=ft.icons.UPDATE_ROUNDED,
-            on_click={}
+            on_click=self.update_event_record
         )
 
         # ============== // the update button ============= //
