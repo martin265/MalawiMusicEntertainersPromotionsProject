@@ -200,7 +200,7 @@ class TicketControls(ft.Container):
                 self.page.update()
 
             else:
-                print("hello world")
+                self.events.save_events_details_fun()
 
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
@@ -214,9 +214,6 @@ class TicketControls(ft.Container):
             )
             self.page.snack_bar.open = True
             self.page.update()
-
-    def save_details_func(self, e):
-        self.events.save_events_details_fun()
 
 
 class TicketsPage(ft.Container):
