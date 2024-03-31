@@ -140,13 +140,13 @@ class TicketsPage(ft.Container):
                                             ft.Container(
                                                 expand=True,
                                                 content=self.inputControls.ticket_type,
-                                                col={"sm": 12, "md": 12, "lg": 5.5}
+                                                col={"sm": 11.5, "md": 11.5, "lg": 5.5}
                                             ),
 
                                             ft.Container(
                                                 expand=True,
                                                 content=self.inputControls.ticket_type,
-                                                col={"sm": 12, "md": 12, "lg": 5.5}
+                                                col={"sm": 11.5, "md": 11.5, "lg": 5.5}
                                             ),
 
                                         ]
