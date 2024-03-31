@@ -125,7 +125,8 @@ class TicketsPage(ft.Container):
         self.page = page
         self.page.adaptive = True
         #  ======== the fonts for the system will be here ======= //
-        self.page.scroll = ft.ScrollMode.HIDDEN
+        self.page.scroll = ft.ScrollMode.ADAPTIVE
+        self.page.height = self.page.height
         self.page.fonts = {
             "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
             "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
@@ -136,7 +137,7 @@ class TicketsPage(ft.Container):
         # =============== // adding the controls to the page here ========== //
         self.content = ft.Column(
             height=self.page.height,
-            scroll=ft.ScrollMode.ADAPTIVE,
+            # scroll=ft.ScrollMode.ADAPTIVE,
             controls=[
                 ft.ResponsiveRow(
                     controls=[
@@ -304,7 +305,7 @@ class TicketsPage(ft.Container):
                                             ft.Container(
                                                 expand=True,
                                                 content=self.inputControls.artist_name,
-                                                col={"sm": 11.5, "md": 11.5, "lg": 11.5}
+                                                col={"sm": 11.5, "md": 11.5, "lg": 11}
                                             ),
                                         ]
                                     )
