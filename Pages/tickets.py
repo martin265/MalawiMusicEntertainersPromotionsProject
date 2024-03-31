@@ -118,11 +118,19 @@ class TicketControls(ft.Container):
             ]
         )
 
-
     def validate_event_details(self, e):
+        """function will validate the input fields"""
         try:
             if not self.ticket_type.value:
-                self.ticket_type.error_text = "enter the ticket type"
+                self.ticket_type.error_text = "enter the ticket type".capitalize()
+                self.page.update()
+            # ================= // =================== //
+            elif not self.ticket_price.value:
+                self.ticket_price.error_text = "enter the ticket price".capitalize()
+                self.page.update()
+                # ================= // =================== //
+            elif not self.event_name.value:
+                self.event_name.error_text = "provide the event name".capitalize()
                 self.page.update()
 
         except Exception as ex:
