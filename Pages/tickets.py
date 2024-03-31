@@ -29,6 +29,11 @@ class TicketsPage(ft.Container):
                                 begin=ft.alignment.top_left,
                                 end=ft.alignment.bottom_center
                             ),
+                            content=ft.Column(
+                                controls=[
+                                    ft.Text("tickets page")
+                                ]
+                            ),
                             col={"sm": 12, "md": 12, "lg": 12}
                         )
                     ]
