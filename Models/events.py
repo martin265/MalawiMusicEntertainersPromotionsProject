@@ -1,5 +1,5 @@
 import flet as ft
-
+import supabase
 
 class Events:
     def __init__(self, ticket_type, ticket_price, event_name, event_type,
@@ -22,3 +22,7 @@ class Events:
         self.artists_name = artists_name
 
     def save_events_details_fun(self):
+        try:
+
+        except Exception as ex:
+            print(ex)
