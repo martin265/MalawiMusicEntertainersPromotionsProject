@@ -11,6 +11,7 @@ class TicketControls(ft.Container):
             helper_text="select ticket type"
         )
 
+
 class TicketsPage(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
@@ -23,6 +24,8 @@ class TicketsPage(ft.Container):
             "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
             "manrop-bold": "assets/fonts/Manrope/static/Manrope-Bold.ttf"
         }
+        # ============ getting the input controls here ============ //
+        self.inputControls = TicketControls(page=page)
         # =============== // adding the controls to the page here ========== //
         self.content = ft.Column(
             height=self.page.height,
@@ -73,6 +76,17 @@ class TicketsPage(ft.Container):
                                     ),
 
                                     # ============== /ticket controls will be here/ ==================== //
+                                    ft.Container(
+                                        content=ft.Column(
+                                            controls=[
+                                                ft.Row(
+                                                    controls=[
+                                                        self.inputControls.ticket_type
+                                                    ]
+                                                )
+                                            ]
+                                        )
+                                    )
                                 ]
                             ),
                             col={"sm": 12, "md": 12, "lg": 12}
