@@ -1,4 +1,5 @@
 import flet as ft
+from Models.events import Events
 
 
 class TicketControls(ft.Container):
@@ -120,8 +121,28 @@ class TicketControls(ft.Container):
 
         self.save_events_button = ft.ElevatedButton(
             text="save events details".title(),
-            icon=ft.icons.SAVE_ROUNDED
+            icon=ft.icons.SAVE_ROUNDED,
+            on_click={}
         )
+
+        # ================== // creating an object for the class here =========== //
+        self.events = Events(
+            self.ticket_type.value,
+            self.ticket_price.value,
+            self.event_name.value,
+            self.event_type.value,
+            self.event_capacity.value,
+            self.event_organizers.value,
+            self.special_offers.value,
+            self.accessibility_information.value,
+            self.age_restrictions.value,
+            self.event_description.value,
+            self.payment_method.value,
+            self.event_category.value,
+            self.artist_name.value
+        )
+
+        # ============== creating the object here for the class ============ //
 
     def validate_event_details(self, e):
         """function will validate the input fields"""
@@ -193,6 +214,9 @@ class TicketControls(ft.Container):
             )
             self.page.snack_bar.open = True
             self.page.update()
+
+    def save_details_func(self, e):
+        self.events.save_events_details_fun()
 
 
 class TicketsPage(ft.Container):
