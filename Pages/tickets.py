@@ -121,6 +121,9 @@ class TicketControls(ft.Container):
 
     def validate_event_details(self, e):
         try:
+            if not self.ticket_type.value:
+                self.ticket_type.error_text = "enter the ticket type"
+                self.page.update()
 
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
