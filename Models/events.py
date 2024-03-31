@@ -30,6 +30,7 @@ class Events:
                     "ticket_type": self.ticket_type,
                     "ticket_price": self.ticket_price,
                     "event_name": self.event_name,
+                    "event_type": self.event_type,
                     "event_capacity": self.event_capacity,
                     "event_organizers": self.event_organizers,
                     "special_offers": self.special_offers,
