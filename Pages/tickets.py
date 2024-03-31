@@ -93,6 +93,63 @@ class TicketsPage(ft.Container):
                                             ),
 
                                         ]
+                                    ),
+                                    # ============== /ticket controls will be here/ ==================== //
+                                    ft.ResponsiveRow(
+                                        adaptive=True,
+                                        alignment=ft.MainAxisAlignment.CENTER,
+                                        controls=[
+                                            ft.Container(
+                                                expand=True,
+                                                content=self.inputControls.ticket_type,
+                                                col={"sm": 12, "md": 12, "lg": 5.5}
+                                            ),
+
+                                            ft.Container(
+                                                expand=True,
+                                                content=self.inputControls.ticket_type,
+                                                col={"sm": 12, "md": 12, "lg": 5.5}
+                                            ),
+
+                                        ]
+                                    ),
+                                    # ============== /ticket controls will be here/ ==================== //
+                                    ft.ResponsiveRow(
+                                        adaptive=True,
+                                        alignment=ft.MainAxisAlignment.CENTER,
+                                        controls=[
+                                            ft.Container(
+                                                expand=True,
+                                                content=self.inputControls.ticket_type,
+                                                col={"sm": 12, "md": 12, "lg": 5.5}
+                                            ),
+
+                                            ft.Container(
+                                                expand=True,
+                                                content=self.inputControls.ticket_type,
+                                                col={"sm": 12, "md": 12, "lg": 5.5}
+                                            ),
+
+                                        ]
+                                    ),
+                                    # ============== /ticket controls will be here/ ==================== //
+                                    ft.ResponsiveRow(
+                                        adaptive=True,
+                                        alignment=ft.MainAxisAlignment.CENTER,
+                                        controls=[
+                                            ft.Container(
+                                                expand=True,
+                                                content=self.inputControls.ticket_type,
+                                                col={"sm": 12, "md": 12, "lg": 5.5}
+                                            ),
+
+                                            ft.Container(
+                                                expand=True,
+                                                content=self.inputControls.ticket_type,
+                                                col={"sm": 12, "md": 12, "lg": 5.5}
+                                            ),
+
+                                        ]
                                     )
                                 ]
                             ),
