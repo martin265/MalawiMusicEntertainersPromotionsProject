@@ -136,7 +136,7 @@ class TicketsPage(ft.Container):
         # =============== // adding the controls to the page here ========== //
         self.content = ft.Column(
             height=self.page.height,
-            # scroll=ft.ScrollMode.ADAPTIVE,
+            scroll=ft.ScrollMode.ADAPTIVE,
             controls=[
                 ft.ResponsiveRow(
                     controls=[
@@ -159,7 +159,7 @@ class TicketsPage(ft.Container):
                                             alignment=ft.MainAxisAlignment.CENTER,
                                             controls=[
                                                 ft.Text(
-                                                    "add ticket details".title(),
+                                                    "add event details".title(),
                                                     size=30,
                                                     font_family="manrop-bold"
                                                 )
@@ -174,7 +174,7 @@ class TicketsPage(ft.Container):
                                             alignment=ft.MainAxisAlignment.CENTER,
                                             controls=[
                                                 ft.Icon(
-                                                    ft.icons.AIRPLANE_TICKET_ROUNDED,
+                                                    ft.icons.EVENT_NOTE_ROUNDED,
                                                     size=50,
                                                     color="#212121"
                                                 )
