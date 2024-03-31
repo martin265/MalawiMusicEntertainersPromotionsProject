@@ -53,7 +53,7 @@ class Artist:
                     "residence": self.residence,
                     "artist_biography": self.artist_biography
                 }
-            ).eq(current_update_id).execute()
+            ).eq("id", current_update_id).execute()
             # =========== running the database query here =========== //
         except Exception as ex:
             print(ex)
