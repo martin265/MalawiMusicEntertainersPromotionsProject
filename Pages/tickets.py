@@ -34,7 +34,9 @@ class TicketsPage(ft.Container):
                                 controls=[
                                     # ============ // container for the top text // ======
                                     ft.Container(
+                                        margin=ft.margin.only(top=30),
                                         content=ft.Row(
+                                            alignment=ft.MainAxisAlignment.CENTER,
                                             controls=[
                                                 ft.Text(
                                                     "add ticket details".title(),
