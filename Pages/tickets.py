@@ -194,7 +194,7 @@ class TicketControls(ft.Container):
                 self.page.update()
 
             else:
-                self.events = Events(
+                events = Events(
                     self.ticket_type.value,
                     self.ticket_price.value,
                     self.event_name.value,
@@ -209,7 +209,7 @@ class TicketControls(ft.Container):
                     self.event_category.value,
                     self.artist_name.value
                 )
-                self.events.save_events_details_fun()
+                events.save_events_details_fun()
 
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
