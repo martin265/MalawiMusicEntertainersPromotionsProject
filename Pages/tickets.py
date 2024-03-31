@@ -29,9 +29,21 @@ class TicketsPage(ft.Container):
                                 begin=ft.alignment.top_left,
                                 end=ft.alignment.bottom_center
                             ),
+                            border_radius=ft.border_radius.all(10),
                             content=ft.Column(
                                 controls=[
-                                    ft.Text("tickets page")
+                                    # ============ // container for the top text // ======
+                                    ft.Container(
+                                        content=ft.Row(
+                                            controls=[
+                                                ft.Text(
+                                                    "add ticket details".title(),
+                                                    size=30,
+                                                    font_family="manrop-bold"
+                                                )
+                                            ]
+                                        )
+                                    )
                                 ]
                             ),
                             col={"sm": 12, "md": 12, "lg": 12}
