@@ -94,13 +94,13 @@ class Dashboard(ft.View):
                 # =============== // destination for the artists page ============ //
                 ft.NavigationRailDestination(
                     icon_content=ft.Icon(
-                        ft.icons.AIRPLANE_TICKET_OUTLINED,
+                        ft.icons.EVENT_NOTE_SHARP,
                         size=30,
                         color="#212121",
-                        tooltip="tickets".title(),
+                        tooltip="events".title(),
                     ),
                     label_content=ft.Text(
-                        "tickets".title(),
+                        "events".title(),
                         style=ft.TextStyle(
                             size=15,
                             font_family="manrop-bold"
@@ -108,10 +108,10 @@ class Dashboard(ft.View):
                         tooltip="tickets".title()
                     ),
                     selected_icon_content=ft.Icon(
-                        ft.icons.AIRPLANE_TICKET_ROUNDED,
+                        ft.icons.EVENT_NOTE_ROUNDED,
                         size=30,
                         color="#212121",
-                        tooltip="artist".title(),
+                        tooltip="events".title(),
                     ),
                 ),
 
