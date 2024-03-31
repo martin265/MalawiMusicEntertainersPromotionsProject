@@ -78,6 +78,13 @@ class TicketControls(ft.Container):
             label="age limits"
         )
 
+        # ================= // ======================= //
+        self.event_description = ft.TextField(
+            helper_text="enter event description".capitalize(),
+            keyboard_type=ft.KeyboardType.NUMBER,
+            label="event description"
+        )
+
 
 
 
