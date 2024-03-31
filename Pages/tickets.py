@@ -157,10 +157,24 @@ class TicketControls(ft.Container):
                 self.age_restrictions.error_text = "enter the age".capitalize()
                 self.page.update()
 
-
             elif not self.event_description.value:
                 self.event_description.error_text = "provide the description".capitalize()
                 self.page.update()
+
+            elif not self.payment_method.value:
+                self.payment_method.error_text = "select the payment method".capitalize()
+                self.page.update()
+
+            elif not self.event_category.value:
+                self.event_category.error_text = "provide the event category".capitalize()
+                self.page.update()
+
+            elif not self.artist_name.value:
+                self.artist_name.error_text = "provide the artist name".capitalize()
+                self.page.update()
+
+            else:
+                print("hello world")
 
 
         except Exception as ex:
