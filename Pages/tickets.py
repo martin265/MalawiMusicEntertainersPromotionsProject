@@ -21,6 +21,73 @@ class TicketControls(ft.Container):
             label="ticket price"
         )
 
+        # ================= // ======================= //
+        self.event_name = ft.TextField(
+            helper_text="enter event name".capitalize(),
+            keyboard_type=ft.KeyboardType.TEXT,
+            label="events name"
+        )
+
+        # ================= // ======================= //
+        self.event_type = ft.TextField(
+            helper_text="enter event type".capitalize(),
+            keyboard_type=ft.KeyboardType.TEXT,
+            label="events type"
+        )
+
+        # ================= // ======================= //
+        self.event_capacity = ft.TextField(
+            helper_text="allowable capacity".capitalize(),
+            keyboard_type=ft.KeyboardType.TEXT,
+            label="events name"
+        )
+
+        # ================= // ======================= //
+        self.event_organizers = ft.TextField(
+            helper_text="enter event organizers".capitalize(),
+            keyboard_type=ft.KeyboardType.TEXT,
+            label="events organizers"
+        )
+
+        # ================= // ======================= //
+        self.special_offers = ft.Dropdown(
+            helper_text="special offers".capitalize(),
+            label="special offers",
+            options=[
+                ft.dropdown.Option("Early Bird Discount"),
+                ft.dropdown.Option("Group Discounts"),
+                ft.dropdown.Option("Bundle Deals"),
+                ft.dropdown.Option("Student or Senior Discounts"),
+                ft.dropdown.Option("Flash Sales"),
+                ft.dropdown.Option("Holiday or Seasonal Promotions"),
+                ft.dropdown.Option("Exclusive Access Events"),
+            ]
+        )
+
+        # ================= // ======================= //
+        self.accessibility_information = ft.TextField(
+            helper_text="enter accessibility information".capitalize(),
+            keyboard_type=ft.KeyboardType.TEXT,
+            label="accessibility information"
+        )
+
+        # ================= // ======================= //
+        self.age_restrictions = ft.Dropdown(
+            helper_text="special offers".capitalize(),
+            label="special offers",
+            options=[
+                ft.dropdown.Option("Early Bird Discount"),
+                ft.dropdown.Option("Group Discounts"),
+                ft.dropdown.Option("Bundle Deals"),
+                ft.dropdown.Option("Student or Senior Discounts"),
+                ft.dropdown.Option("Flash Sales"),
+                ft.dropdown.Option("Holiday or Seasonal Promotions"),
+                ft.dropdown.Option("Exclusive Access Events"),
+            ]
+        )
+
+
+
 
 class TicketsPage(ft.Container):
     def __init__(self, page: ft.Page):
@@ -72,7 +139,7 @@ class TicketsPage(ft.Container):
 
                                     # =============== // container for the icon will be here ======== //
                                     ft.Container(
-                                        margin=ft.margin.only(top=10),
+                                        margin=ft.margin.only(top=10, bottom=40),
                                         content=ft.Row(
                                             alignment=ft.MainAxisAlignment.CENTER,
                                             controls=[
