@@ -209,6 +209,19 @@ class TicketControls(ft.Container):
                     self.artist_name.value
                 )
                 events.save_events_details_fun()
+                # ==============showing the snack bar here ============ //
+                self.page.snack_bar = ft.SnackBar(
+                    content=ft.Row(
+                        controls=[
+                            ft.Text(
+                                "Events details saved successfully".capitalize()
+                            )
+                        ]
+                    )
+                )
+                self.page.snack_bar.open = True
+                self.page.update()
+
 
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
@@ -246,6 +259,7 @@ class TicketsPage(ft.Container):
                 ft.ResponsiveRow(
                     controls=[
                         ft.Container(
+                            margin=ft.margin.only(bottom=30),
                             gradient=ft.LinearGradient(
                                 colors=[
                                     "#CBCCFF",
@@ -430,10 +444,5 @@ class TicketsPage(ft.Container):
                     ]
                 ),
 
-                ft.ResponsiveRow(
-                    controls=[
-                        ft.Container(height=20)
-                    ]
-                )
             ]
         )
