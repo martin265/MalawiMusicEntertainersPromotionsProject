@@ -428,6 +428,12 @@ class TicketsPage(ft.Container):
                             col={"sm": 12, "md": 12, "lg": 12}
                         )
                     ]
+                ),
+
+                ft.ResponsiveRow(
+                    controls=[
+                        ft.Container(height=20)
+                    ]
                 )
             ]
         )
