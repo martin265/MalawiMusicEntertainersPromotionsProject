@@ -189,7 +189,7 @@ class Records(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
         self.page = page
-        self.artists_records = ArtistsRecords(page=page)
+        self.artists_records = EventRecords(page=page)
         # ============ setting the whole page scroll
         self.page.scroll = ft.ScrollMode.HIDDEN
         #  ======== the fonts for the system will be here ======= //
