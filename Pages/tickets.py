@@ -126,7 +126,6 @@ class TicketsPage(ft.Container):
         self.page.adaptive = True
         #  ======== the fonts for the system will be here ======= //
         self.page.scroll = ft.ScrollMode.ADAPTIVE
-        self.page.height = self.page.height
         self.page.fonts = {
             "manrope": "assets/fonts/Manrope/static/Manrope-Light.ttf",
             "manrope-sem-bold": "assets/fonts/Manrope/static/Manrope-Regular.ttf",
