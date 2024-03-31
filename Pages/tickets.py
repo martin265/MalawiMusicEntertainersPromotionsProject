@@ -135,7 +135,6 @@ class TicketControls(ft.Container):
 
         # ================== // creating an object for the class here =========== //
 
-
         # ============== creating the object here for the class ============ //
 
     def validate_event_details(self, e):
