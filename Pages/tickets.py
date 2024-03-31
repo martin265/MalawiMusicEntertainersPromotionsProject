@@ -119,7 +119,6 @@ class TicketControls(ft.Container):
         )
 
 
-
 class TicketsPage(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
