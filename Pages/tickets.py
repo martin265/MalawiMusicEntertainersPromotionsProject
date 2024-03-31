@@ -86,17 +86,35 @@ class TicketControls(ft.Container):
         )
 
         # ================= // ======================= //
-        self.special_offers = ft.Dropdown(
-            helper_text="special offers".capitalize(),
-            label="special offers",
+        self.payment_method = ft.Dropdown(
+            helper_text="select payment method".capitalize(),
+            label="payment method",
             options=[
-                ft.dropdown.Option("Early Bird Discount"),
-                ft.dropdown.Option("Group Discounts"),
-                ft.dropdown.Option("Bundle Deals"),
-                ft.dropdown.Option("Student or Senior Discounts"),
-                ft.dropdown.Option("Flash Sales"),
-                ft.dropdown.Option("Holiday or Seasonal Promotions"),
-                ft.dropdown.Option("Exclusive Access Events"),
+                ft.dropdown.Option("Cash"),
+                ft.dropdown.Option("VISA Card"),
+                ft.dropdown.Option("Mpamba"),
+                ft.dropdown.Option("Airtel Money"),
+            ]
+        )
+
+        # ================= // ======================= //
+        self.event_category = ft.Dropdown(
+            helper_text="event category".capitalize(),
+            label="event category",
+            options=[
+                ft.dropdown.Option("Conference".title()),
+                ft.dropdown.Option("Concert".title()),
+                ft.dropdown.Option("workshop".title()),
+                ft.dropdown.Option("fundraiser".title())
+            ]
+        )
+
+        # ================= // ======================= //
+        self.artist_name = ft.Dropdown(
+            helper_text="select artists name".capitalize(),
+            label="artists name",
+            options=[
+                ft.dropdown.Option("Conference".title()),
             ]
         )
 
