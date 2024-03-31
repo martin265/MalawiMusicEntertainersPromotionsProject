@@ -1,6 +1,16 @@
 import flet as ft
 
 
+class TicketControls(ft.Container):
+    def __init__(self, page: ft.Page):
+        super().__init__()
+        self.page = page
+        # ============ // ============== //
+        self.ticket_type = ft.TextField(
+            hint_text="select ticket type",
+            helper_text="select ticket type"
+        )
+
 class TicketsPage(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
@@ -55,12 +65,14 @@ class TicketsPage(ft.Container):
                                             controls=[
                                                 ft.Icon(
                                                     ft.icons.AIRPLANE_TICKET_ROUNDED,
-                                                    size=30,
+                                                    size=50,
                                                     color="#212121"
                                                 )
                                             ]
                                         )
                                     ),
+
+                                    # ============== /ticket controls will be here/ ==================== //
                                 ]
                             ),
                             col={"sm": 12, "md": 12, "lg": 12}
