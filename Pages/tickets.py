@@ -208,32 +208,13 @@ class TicketsPage(ft.Container):
                                         controls=[
                                             ft.Container(
                                                 expand=True,
-                                                content=self.inputControls.ticket_type,
+                                                content=self.inputControls.event_name,
                                                 col={"sm": 12, "md": 12, "lg": 5.5}
                                             ),
 
                                             ft.Container(
                                                 expand=True,
-                                                content=self.inputControls.ticket_type,
-                                                col={"sm": 12, "md": 12, "lg": 5.5}
-                                            ),
-
-                                        ]
-                                    ),
-                                    # ============== /ticket controls will be here/ ==================== //
-                                    ft.ResponsiveRow(
-                                        adaptive=True,
-                                        alignment=ft.MainAxisAlignment.CENTER,
-                                        controls=[
-                                            ft.Container(
-                                                expand=True,
-                                                content=self.inputControls.ticket_type,
-                                                col={"sm": 12, "md": 12, "lg": 5.5}
-                                            ),
-
-                                            ft.Container(
-                                                expand=True,
-                                                content=self.inputControls.ticket_type,
+                                                content=self.inputControls.event_type,
                                                 col={"sm": 12, "md": 12, "lg": 5.5}
                                             ),
 
@@ -246,18 +227,88 @@ class TicketsPage(ft.Container):
                                         controls=[
                                             ft.Container(
                                                 expand=True,
-                                                content=self.inputControls.ticket_type,
+                                                content=self.inputControls.event_capacity,
+                                                col={"sm": 12, "md": 12, "lg": 5.5}
+                                            ),
+
+                                            ft.Container(
+                                                expand=True,
+                                                content=self.inputControls.event_organizers,
+                                                col={"sm": 12, "md": 12, "lg": 5.5}
+                                            ),
+
+                                        ]
+                                    ),
+                                    # ============== /ticket controls will be here/ ==================== //
+                                    ft.ResponsiveRow(
+                                        adaptive=True,
+                                        alignment=ft.MainAxisAlignment.CENTER,
+                                        controls=[
+                                            ft.Container(
+                                                expand=True,
+                                                content=self.inputControls.special_offers,
                                                 col={"sm": 11.5, "md": 11.5, "lg": 5.5}
                                             ),
 
                                             ft.Container(
                                                 expand=True,
-                                                content=self.inputControls.ticket_type,
+                                                content=self.inputControls.accessibility_information,
                                                 col={"sm": 11.5, "md": 11.5, "lg": 5.5}
                                             ),
 
+                                        ]
+                                    ),
+
+                                    ft.ResponsiveRow(
+                                        adaptive=True,
+                                        alignment=ft.MainAxisAlignment.CENTER,
+                                        controls=[
+                                            ft.Container(
+                                                expand=True,
+                                                content=self.inputControls.age_restrictions,
+                                                col={"sm": 11.5, "md": 11.5, "lg": 5.5}
+                                            ),
+
+                                            ft.Container(
+                                                expand=True,
+                                                content=self.inputControls.event_description,
+                                                col={"sm": 11.5, "md": 11.5, "lg": 5.5}
+                                            ),
+
+                                        ]
+                                    ),
+
+                                    ft.ResponsiveRow(
+                                        adaptive=True,
+                                        alignment=ft.MainAxisAlignment.CENTER,
+                                        controls=[
+                                            ft.Container(
+                                                expand=True,
+                                                content=self.inputControls.payment_method,
+                                                col={"sm": 11.5, "md": 11.5, "lg": 5.5}
+                                            ),
+
+                                            ft.Container(
+                                                expand=True,
+                                                content=self.inputControls.event_category,
+                                                col={"sm": 11.5, "md": 11.5, "lg": 5.5}
+                                            ),
+
+                                        ]
+                                    ),
+
+                                    ft.ResponsiveRow(
+                                        adaptive=True,
+                                        alignment=ft.MainAxisAlignment.CENTER,
+                                        controls=[
+                                            ft.Container(
+                                                expand=True,
+                                                content=self.inputControls.artist_name,
+                                                col={"sm": 11.5, "md": 11.5, "lg": 11.5}
+                                            ),
                                         ]
                                     )
+
                                 ]
                             ),
                             col={"sm": 12, "md": 12, "lg": 12}
