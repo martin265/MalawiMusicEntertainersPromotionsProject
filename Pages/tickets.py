@@ -85,6 +85,20 @@ class TicketControls(ft.Container):
             label="event description"
         )
 
+        # ================= // ======================= //
+        self.special_offers = ft.Dropdown(
+            helper_text="special offers".capitalize(),
+            label="special offers",
+            options=[
+                ft.dropdown.Option("Early Bird Discount"),
+                ft.dropdown.Option("Group Discounts"),
+                ft.dropdown.Option("Bundle Deals"),
+                ft.dropdown.Option("Student or Senior Discounts"),
+                ft.dropdown.Option("Flash Sales"),
+                ft.dropdown.Option("Holiday or Seasonal Promotions"),
+                ft.dropdown.Option("Exclusive Access Events"),
+            ]
+        )
 
 
 
