@@ -122,6 +122,14 @@ class TicketControls(ft.Container):
         self.save_events_button = ft.ElevatedButton(
             text="save events details".title(),
             icon=ft.icons.SAVE_ROUNDED,
+            adaptive=True,
+            bgcolor="#212121",
+            color="white",
+            height=50,
+            style=ft.ButtonStyle(
+                elevation=None,
+                shadow_color="#7F4D3E",
+            ),
             on_click=self.validate_event_details
         )
 
@@ -407,7 +415,7 @@ class TicketsPage(ft.Container):
                                     ),
 
                                     ft.Container(
-                                        margin=ft.margin.only(left=30, top=30, bottom=30),
+                                        margin=ft.margin.only(left=50, top=30, bottom=30),
                                         content=ft.Row(
                                             controls=[
                                                 self.inputControls.save_events_button
