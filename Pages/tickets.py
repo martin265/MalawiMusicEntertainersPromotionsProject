@@ -404,6 +404,15 @@ class TicketsPage(ft.Container):
                                                 col={"sm": 11.5, "md": 11.5, "lg": 11}
                                             ),
                                         ]
+                                    ),
+
+                                    ft.Container(
+                                        margin=ft.margin.only(left=30, top=30, bottom=30),
+                                        content=ft.Row(
+                                            controls=[
+                                                self.inputControls.save_events_button
+                                            ]
+                                        )
                                     )
 
                                 ]
