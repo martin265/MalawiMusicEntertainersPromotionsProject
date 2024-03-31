@@ -133,6 +133,25 @@ class TicketControls(ft.Container):
                 self.event_name.error_text = "provide the event name".capitalize()
                 self.page.update()
 
+            elif not self.event_type.value:
+                self.event_type.error_text = "enter event type".capitalize()
+                self.page.update()
+
+            elif not self.event_capacity.value:
+                self.event_capacity.error_text = "event capacity".capitalize()
+                self.page.update()
+
+            elif not self.event_organizers.value:
+                self.event_organizers.error_text = "provide something".capitalize()
+                self.page.update()
+
+            elif not self.special_offers.value:
+                self.special_offers.error_text = "provide the special offers".capitalize()
+                self.page.update()
+
+            elif not self.accessibility_information.value:
+                self.accessibility_information.error_text = "enter some text"
+
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
                 content=ft.Row(
