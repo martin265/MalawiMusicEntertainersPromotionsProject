@@ -39,7 +39,7 @@ class TicketControls(ft.Container):
         self.event_capacity = ft.TextField(
             helper_text="allowable capacity".capitalize(),
             keyboard_type=ft.KeyboardType.TEXT,
-            label="events name"
+            label="event capacity"
         )
 
         # ================= // ======================= //
@@ -81,7 +81,7 @@ class TicketControls(ft.Container):
         # ================= // ======================= //
         self.event_description = ft.TextField(
             helper_text="enter event description".capitalize(),
-            keyboard_type=ft.KeyboardType.NUMBER,
+            keyboard_type=ft.KeyboardType.TEXT,
             label="event description"
         )
 
