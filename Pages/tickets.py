@@ -119,6 +119,23 @@ class TicketControls(ft.Container):
         )
 
 
+    def validate_event_details(self, e):
+        try:
+
+        except Exception as ex:
+            self.page.snack_bar = ft.SnackBar(
+                content=ft.Row(
+                    controls=[
+                        ft.Text(
+                            "something went wrong at {}".format(ex)
+                        )
+                    ]
+                )
+            )
+            self.page.snack_bar.open = True
+            self.page.update()
+
+
 class TicketsPage(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__()
