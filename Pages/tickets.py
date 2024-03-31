@@ -72,18 +72,10 @@ class TicketControls(ft.Container):
         )
 
         # ================= // ======================= //
-        self.age_restrictions = ft.Dropdown(
-            helper_text="special offers".capitalize(),
-            label="special offers",
-            options=[
-                ft.dropdown.Option("Early Bird Discount"),
-                ft.dropdown.Option("Group Discounts"),
-                ft.dropdown.Option("Bundle Deals"),
-                ft.dropdown.Option("Student or Senior Discounts"),
-                ft.dropdown.Option("Flash Sales"),
-                ft.dropdown.Option("Holiday or Seasonal Promotions"),
-                ft.dropdown.Option("Exclusive Access Events"),
-            ]
+        self.age_restrictions = ft.TextField(
+            helper_text="enter the restricted age".capitalize(),
+            keyboard_type=ft.KeyboardType.NUMBER,
+            label="age limits"
         )
 
 
