@@ -151,6 +151,7 @@ class TicketControls(ft.Container):
 
             elif not self.accessibility_information.value:
                 self.accessibility_information.error_text = "enter some text"
+                self.page.update()
 
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
