@@ -8,7 +8,9 @@ class TicketControls(ft.Container):
         # ============ // ============== //
         self.ticket_type = ft.TextField(
             hint_text="select ticket type",
-            helper_text="select ticket type"
+            helper_text="select ticket type",
+            keyboard_type=ft.KeyboardType.TEXT,
+            label="ticket type"
         )
 
 
