@@ -34,7 +34,7 @@ class Events:
                     "event_organizers": self.event_organizers,
                     "special_offers": self.special_offers,
                     "accessibility_infomation": self.accessibility_information,
-                    "age_restriction": self.age_restrictions,
+                    "age_restrictions": self.age_restrictions,
                     "event_description": self.event_description,
                     "payment_method": self.payment_methods,
                     "event_category": self.event_category,

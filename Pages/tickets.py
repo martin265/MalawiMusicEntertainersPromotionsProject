@@ -134,21 +134,7 @@ class TicketControls(ft.Container):
         )
 
         # ================== // creating an object for the class here =========== //
-        self.events = Events(
-            self.ticket_type.value,
-            self.ticket_price.value,
-            self.event_name.value,
-            self.event_type.value,
-            self.event_capacity.value,
-            self.event_organizers.value,
-            self.special_offers.value,
-            self.accessibility_information.value,
-            self.age_restrictions.value,
-            self.event_description.value,
-            self.payment_method.value,
-            self.event_category.value,
-            self.artist_name.value
-        )
+
 
         # ============== creating the object here for the class ============ //
 
@@ -208,6 +194,21 @@ class TicketControls(ft.Container):
                 self.page.update()
 
             else:
+                self.events = Events(
+                    self.ticket_type.value,
+                    self.ticket_price.value,
+                    self.event_name.value,
+                    self.event_type.value,
+                    self.event_capacity.value,
+                    self.event_organizers.value,
+                    self.special_offers.value,
+                    self.accessibility_information.value,
+                    self.age_restrictions.value,
+                    self.event_description.value,
+                    self.payment_method.value,
+                    self.event_category.value,
+                    self.artist_name.value
+                )
                 self.events.save_events_details_fun()
 
         except Exception as ex:
