@@ -122,7 +122,7 @@ class TicketControls(ft.Container):
         self.save_events_button = ft.ElevatedButton(
             text="save events details".title(),
             icon=ft.icons.SAVE_ROUNDED,
-            on_click={}
+            on_click=self.validate_event_details
         )
 
         # ================== // creating an object for the class here =========== //
