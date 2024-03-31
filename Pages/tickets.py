@@ -13,6 +13,14 @@ class TicketControls(ft.Container):
             label="ticket type"
         )
 
+        # ================= // ======================= //
+        self.ticket_price = ft.TextField(
+            hint_text="select ticket price",
+            helper_text="select ticket price",
+            keyboard_type=ft.KeyboardType.TEXT,
+            label="ticket price"
+        )
+
 
 class TicketsPage(ft.Container):
     def __init__(self, page: ft.Page):
@@ -90,7 +98,7 @@ class TicketsPage(ft.Container):
 
                                             ft.Container(
                                                 expand=True,
-                                                content=self.inputControls.ticket_type,
+                                                content=self.inputControls.ticket_price,
                                                 col={"sm": 12, "md": 12, "lg": 5.5}
                                             ),
 
