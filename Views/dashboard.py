@@ -124,7 +124,7 @@ class Dashboard(ft.View):
                         tooltip="events".title(),
                     ),
                     label_content=ft.Text(
-                        "records".title(),
+                        "artist records".title(),
                         style=ft.TextStyle(
                             size=15,
                             font_family="manrop-bold"
@@ -133,6 +133,30 @@ class Dashboard(ft.View):
                     ),
                     selected_icon_content=ft.Icon(
                         ft.icons.FILE_COPY_ROUNDED,
+                        size=30,
+                        color="#212121",
+                        tooltip="artist".title(),
+                    ),
+                ),
+
+                # =================== // ====================== //
+                ft.NavigationRailDestination(
+                    icon_content=ft.Icon(
+                        ft.icons.FILE_OPEN_OUTLINED,
+                        size=30,
+                        color="#212121",
+                        tooltip="events".title(),
+                    ),
+                    label_content=ft.Text(
+                        "event records".title(),
+                        style=ft.TextStyle(
+                            size=15,
+                            font_family="manrop-bold"
+                        ),
+                        tooltip="records".title()
+                    ),
+                    selected_icon_content=ft.Icon(
+                        ft.icons.FILE_OPEN_ROUNDED,
                         size=30,
                         color="#212121",
                         tooltip="artist".title(),
