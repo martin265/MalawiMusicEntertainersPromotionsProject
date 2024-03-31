@@ -153,6 +153,16 @@ class TicketControls(ft.Container):
                 self.accessibility_information.error_text = "enter some text"
                 self.page.update()
 
+            elif not self.age_restrictions.value:
+                self.age_restrictions.error_text = "enter the age".capitalize()
+                self.page.update()
+
+
+            elif not self.event_description.value:
+                self.event_description.error_text = "provide the description".capitalize()
+                self.page.update()
+
+
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
                 content=ft.Row(
