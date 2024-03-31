@@ -118,6 +118,11 @@ class TicketControls(ft.Container):
             ]
         )
 
+        self.save_events_button = ft.ElevatedButton(
+            text="save events details".title(),
+            icon=ft.icons.SAVE_ROUNDED
+        )
+
     def validate_event_details(self, e):
         """function will validate the input fields"""
         try:
@@ -175,7 +180,6 @@ class TicketControls(ft.Container):
 
             else:
                 print("hello world")
-
 
         except Exception as ex:
             self.page.snack_bar = ft.SnackBar(
